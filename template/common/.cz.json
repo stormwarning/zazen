@@ -1,0 +1,31 @@
+{
+  "emoji-cz": {
+    "types": {
+      "Style": {
+        "emoji": "👕",
+        "name": "Code style",
+        "description": "Improving structure/format of the code."
+      },
+
+      "Config": {
+        "emoji": "⚙️",
+        "description": "Adjusting project configuration settings."
+      }
+    },
+
+    // Overwrite the output commit subject in the specified format.
+    // Below is the default format,
+    // [emoji] will be replace with the chose type's emoji,
+    // [name] will be replace with the chose type's name,
+    // [subject] will be replace with the subject you entered.
+    // One example output of the format can be: `✨ Feat: initial commit`
+    "format": "[emoji] [name]: [subject]"
+    // ✨  Feat:      A new feature
+    // 🐛  Fix:       A bug fix
+    // 📚  Docs:      Documentation only changes
+    // 🎨  Style:     Changes that do not affect the meaning of the code
+    // 🔨  Refactor:  A code change that neither fixes a bug nor adds a feature
+    // 🚀  Perf:      A code change that improves performance
+    // 🚨  Test:      Adding missing tests or correcting existing tests
+  }
+}
