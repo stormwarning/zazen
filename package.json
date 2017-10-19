@@ -78,7 +78,10 @@
       "listItemIndent": "mixed"
     }
   },
-  "repository": "stormwarning/zazen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stormwarning/zazen.git"
+  },
   "scripts": {
     "cz": "git-cz",
     "lint": "remark . -qfo",
