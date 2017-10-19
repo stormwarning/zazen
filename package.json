@@ -1,0 +1,88 @@
+{
+  "name": "zazen",
+  "version": "0.0.0",
+  "description":
+    "To practice the Way singleheartedly is, in itself, enlightenment. There is no gap between practice and enlightenment or zazen and daily life.",
+  "homepage": "",
+  "author": "Jeff (http://tidaltheory.co/)",
+  "private": true,
+  "config": {
+    "message": "🔖 %s",
+    "commitizen": {
+      "path": "emoji-cz",
+      "emoji-cz": {
+        "types": {
+          "Style": {
+            "emoji": "👕",
+            "name": "Code style",
+            "description": "Improving structure/format of the code."
+          },
+          "Perf": {
+            "emoji": "⚡️",
+            "name": "Perf",
+            "description": "A code change that improves performance."
+          },
+          "Config": {
+            "emoji": "⚙️",
+            "name": "Config",
+            "description": "Adjusting project configuration settings."
+          },
+          "Content": {
+            "emoji": "✏️",
+            "name": "Content",
+            "description": "Content edits or additions."
+          },
+          "Dependency": {
+            "emoji": "📦",
+            "name": "Dependency",
+            "description": "Adding or up/downgrading project dependencies."
+          },
+          "First": {
+            "emoji": "🎉",
+            "name": "Init",
+            "description": "Initial commit."
+          },
+          "UI": {
+            "emoji": "🎨",
+            "name": "UI",
+            "description": "Visual or interaction changes."
+          }
+        },
+        "format": "[emoji] [subject]"
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "commitizen": "^2.9.6",
+    "emoji-cz": "^0.3.0",
+    "eslint": "^4.6.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier-eslint": "^7.1.0",
+    "remark-cli": "^4.0.0",
+    "remark-preset-github": "0.0.7"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "lint-staged": {
+    "*.md": ["remark . -qfo", "git add"]
+  },
+  "remarkConfig": {
+    "settings": {
+      "listItemIndent": "mixed"
+    }
+  },
+  "repository": "stormwarning/zazen",
+  "scripts": {
+    "cz": "git-cz",
+    "lint": "remark . -qfo",
+    "precommit": "lint-staged && npm test",
+    "test": "npm run lint"
+  }
+}
