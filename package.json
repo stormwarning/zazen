@@ -6,7 +6,6 @@
   "author": "Jeff (http://tidaltheory.co/)",
   "private": true,
   "config": {
-    "message": "🔖 %s",
     "commitizen": {
       "path": "emoji-cz",
       "emoji-cz": {
@@ -75,15 +74,15 @@
       "git add"
     ]
   },
+  "publishConfig": {
+    "message": "🔖 %s"
+  },
   "remarkConfig": {
     "settings": {
       "listItemIndent": "mixed"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stormwarning/zazen.git"
-  },
+  "repository": "stormwarning/zazen",
   "scripts": {
     "cz": "git-cz",
     "lint": "remark . -qfo",
