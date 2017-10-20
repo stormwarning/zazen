@@ -12,7 +12,7 @@
     - Markdown: [remark][]
     - Commit messages: [commitlint][]
 -   **Testing & coverage:**
-    - Jest or AVA?
+    - [Jest][] or [AVA][]?
 -   **Compiling & bundling:** [webpack][]  
     (with a [clearer config](https://medium.com/webpack/unambiguous-webpack-config-with-typescript-8519def2cac7) setup with typescript)
 -   **Publishing & documenting:**
@@ -42,6 +42,10 @@
 [remark]: http://remark.js.org
 
 [commitlint]: https://github.com/marionebl/commitlint
+
+[jest]: https://facebook.github.io/jest/
+
+[ava]: https://github.com/avajs/ava
 
 [webpack]: https://webpack.js.org
 
