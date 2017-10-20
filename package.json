@@ -1,8 +1,7 @@
 {
   "name": "zazen",
   "version": "0.0.0",
-  "description":
-    "To practice the Way singleheartedly is, in itself, enlightenment. There is no gap between practice and enlightenment or zazen and daily life.",
+  "description": "To practice the Way singleheartedly is, in itself, enlightenment. There is no gap between practice and enlightenment or zazen and daily life.",
   "homepage": "",
   "author": "Jeff (http://tidaltheory.co/)",
   "private": true,
@@ -71,7 +70,10 @@
   "keywords": [],
   "license": "MIT",
   "lint-staged": {
-    "*.md": ["remark . -qfo", "git add"]
+    "*.md": [
+      "remark . -qfo",
+      "git add"
+    ]
   },
   "remarkConfig": {
     "settings": {
