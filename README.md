@@ -4,26 +4,36 @@
 
 ## Common settings & utilities
 
-- **Scaffolding:** [sao][]
--   **Linting & formatting:**
-    -   JavaScript: [eslint][] & [prettier][]  
-        ([standard][] style with some modifcations based on personal preference)
-    - Sass: [stylelint][]
-    - Markdown: [remark][]
-    - Commit messages: [commitlint][]
+- [x] **Scaffolding:** [sao][]
+-   [ ] **Linting & formatting:**
+    -   [x] JavaScript: [eslint][] & [prettier][]  
+          [standard][] style with some modifcations based on personal preference.
+    - [x] Sass: [stylelint][]
+    - [ ] Markdown: [remark][]
+    - [ ] Commit messages: [commitlint][]
 -   **Testing & coverage:**
-    - [Jest][] or [AVA][]?
--   **Compiling & bundling:** [webpack][]  
-    (with a [clearer config](https://medium.com/webpack/unambiguous-webpack-config-with-typescript-8519def2cac7) setup with typescript)
+    - [ ] [AVA][]
+-   [ ] **Compiling & bundling:** [webpack][]  
+      With a [clearer config](https://medium.com/webpack/unambiguous-webpack-config-with-typescript-8519def2cac7) setup with typescript.
 -   **Publishing & documenting:**
-    - `git` hooks: [husky][]
-    - Commit messages: [commitizen][] & [emoji-cz][]
-    - Package versioning: [np][]
-    - Changelog: [release][]
+    - [x] `git` hooks: [husky][]
+    - [x] Commit messages: [commitizen][] & [emoji-cz][]
+    - [ ] Package versioning: [np][]
+    - [ ] Changelog: [release][]
+
+## Project type options
+
+- [ ] **Node package**
+-   [ ] **Squarespace site**  
+      Uses Squarespace [developer toolset][] & [eslint config][].
+-   [ ] **Static site**  
+      Need to decide on static generator setup.
 
 ## Inspiration
 
 [Lass](https://github.com/lassjs/lass)
+
+* * *
 
 [delusion]: https://en.wikipedia.org/wiki/Maya_(illusion)
 
@@ -43,8 +53,6 @@
 
 [commitlint]: https://github.com/marionebl/commitlint
 
-[jest]: https://facebook.github.io/jest/
-
 [ava]: https://github.com/avajs/ava
 
 [webpack]: https://webpack.js.org
@@ -58,3 +66,7 @@
 [np]: https://github.com/sindresorhus/np
 
 [release]: https://github.com/zeit/release
+
+[developer toolset]: https://github.com/Squarespace/squarespace-toolbelt
+
+[eslint config]: https://github.com/Squarespace/eslint-config-squarespace
