@@ -4,7 +4,7 @@
   "description": "<%- description %>",
   "homepage": "<%- repo %>",
   "author": "<%- author %> <<%- email %>> (<%- website %>)",
-  <% if (!public) { %>"private": true,<% } %>
+  <% if (!public) { %>"private": true,<% } -%>
   "config": {
     "commitizen": {
       "path": "emoji-cz",
@@ -54,32 +54,32 @@
     <% if (eslint) { %>"babel-eslint": "~7.2.3",
     <% } %>"commitizen": "~2.9.6",
     "emoji-cz": "^0.3.0",
-    "eslint": "~4.6.1",
-    "eslint-config-squarespace": "~1.0.1",
-    "eslint-config-standard": "~10.2.1",
+    <% if (eslint) { %>"eslint": "~4.6.1",
+    <% if (projectType === 'sqsp') { %>"eslint-config-squarespace": "~1.0.1",
+    <% } else { %>"eslint-config-standard": "~10.2.1",
     "eslint-plugin-import": "~2.7.0",
     "eslint-plugin-node": "~5.1.1",
     "eslint-plugin-promise": "~3.5.0",
     "eslint-plugin-standard": "~3.0.1",
-    "husky": "^0.14.3",
-    "lint-staged": "~4.3.0",
-    "prettier-eslint": "~7.1.0",
-    "remark-cli": "~4.0.0",
-    "remark-preset-github": "0.0.7"
+    <% } %><% } %>"husky": "^0.14.3",
+    <% if (linting.length) { %>"lint-staged": "~4.3.0",<% } -%>
+    <% if (eslint) { %>"prettier-eslint": "~7.1.0",<% } -%>
+    <% if (remark) { %>"remark-cli": "~4.0.0",
+    "remark-preset-github": "0.0.7"<% } -%>
   },
   "keywords": [ <%- `${keywords.trim().split(/[, ]+/).map(k => `"${k.trim()}"`).join(', ')}` %> ],
   "license": "<%- license %>",
-  "lint-staged": {
-    "*.md": ["remark . -qfo", "git add"]
-  },
+  <% if (linting.length) { %>"lint-staged": {
+    <% if (remark) { %>"*.md": ["remark . -qfo", "git add"]<% } -%>
+  },<% } -%>
   "publishConfig": {
     "message": "🔖 %s"
   },
-  "remarkConfig": {
+  <% if (remark) { %>"remarkConfig": {
     "settings": {
       "listItemIndent": "mixed"
     }
-  },
+  },<% } -%>
   "repository": "<%- repo %>",
   "scripts": {
     "cz": "git-cz",
