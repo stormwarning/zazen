@@ -200,7 +200,7 @@ module.exports = {
     data (answers) {
         return {
             eslint: answers.linting.find(el => el === 'eslint'),
-            mdlint: answers.linting.find(el => el === 'remark'),
+            remark: answers.linting.find(el => el === 'remark'),
             stylelint: answers.linting.find(el => el === 'stylelint'),
         }
     },
