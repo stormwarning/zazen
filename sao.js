@@ -215,7 +215,7 @@ module.exports = {
             'common/gitignore': '.gitignore',
             'common/package': 'package.json',
             'common/README.md': 'README.md',
-            'common/.eslint.js': answers.eslint ? '.eslint.js' : null,
+            'common/.eslint.js': answers.eslint ? '.eslintrc.js' : null,
             'common/.stylelintrc.json': answers.stylelint
                 ? '.stylelintrc.json'
                 : null,
