@@ -1,39 +1,39 @@
 # 座禅
 
-> Zazen is not "step-by-step meditation". Rather it is simply the easy and pleasant practice of a Buddha, the realisation of the Buddha's Wisdom. The Truth appears, there being no [delusion][]. If you understand this, you are completely free, like a dragon that has obtained water or a tiger that reclines on a mountain. The [supreme Law][] will then appear of itself, _and you will be free of weariness and confusion_.
+> Zazen is not "step-by-step meditation". Rather it is simply the easy and pleasant practice of a Buddha, the realisation of the Buddha's Wisdom. The Truth appears, there being no [delusion][]. If you understand this, you are completely free, like a dragon that has obtained water or a tiger that reclines on a mountain. The [supreme Law][] will then appear of itself, *and you will be free of weariness and confusion*.
 
 ## Common settings & utilities
 
 - [x] **Scaffolding:** [sao][]
--   [ ] **Linting & formatting:**
-    -   [x] JavaScript: [eslint][] & [prettier][]  
-          [standard][] style with some modifcations based on personal preference.
-    - [x] Sass: [stylelint][]
-    - [ ] Markdown: [remark][]
-    - [ ] Commit messages: [commitlint][]
--   **Testing & coverage:**
-    - [ ] [AVA][]
--   [ ] **Compiling & bundling:** [webpack][]  
+- [ ] **Linting & formatting:**
+  - [x] JavaScript: [eslint][] & [prettier][]\
+        [standard][] style with some modifcations based on personal preference.
+  - [x] Sass: [stylelint][]
+  - [x] Markdown: [remark][]
+  - [ ] Commit messages: [commitlint][]
+- **Testing & coverage:**
+  - [ ] [AVA][]
+- [ ] **Compiling & bundling:** [webpack][]\
       With a [clearer config](https://medium.com/webpack/unambiguous-webpack-config-with-typescript-8519def2cac7) setup with typescript.
--   **Publishing & documenting:**
-    - [x] `git` hooks: [husky][]
-    - [x] Commit messages: [commitizen][] & [emoji-cz][]
-    - [ ] Package versioning: [np][]
-    - [ ] Changelog: [release][]
+- **Publishing & documenting:**
+  - [x] `git` hooks: [husky][]
+  - [x] Commit messages: [commitizen][] & [emoji-cz][]
+  - [ ] Package versioning: [np][]
+  - [ ] Changelog: [release][]
 
 ## Project type options
 
 - [ ] **Node package**
--   [ ] **Squarespace site**  
+- [ ] **Squarespace site**\
       Uses Squarespace [developer toolset][] & [eslint config][].
--   [ ] **Static site**  
+- [ ] **Static site**\
       Need to decide on static generator setup.
 
 ## Inspiration
 
 [Lass](https://github.com/lassjs/lass)
 
-* * *
+---
 
 [delusion]: https://en.wikipedia.org/wiki/Maya_(illusion)
 
