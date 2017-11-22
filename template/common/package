@@ -64,17 +64,25 @@
     <% } %><% } %>"husky": "^0.14.3",
     <% if (linting.length) { %>"lint-staged": "~4.3.0",<% } -%>
     "npm-run-all": "~4.1.2",
-    <% if (eslint) { %>"prettier-eslint": "~7.1.0",<% } -%>
+    <% if (eslint) { %>"prettier-eslint-cli": "~4.4.0",<% } -%>
+    <% if (stylelint) { %>"prettier-stylelint": "^0.4.2",<% } -%>
     <% if (remark) { %>"remark-cli": "~4.0.0",
-    "remark-contributors": "^3.1.0",
-    "remark-github": "^7.0.2",
-    "remark-preset-lint-markdown-style-guide": "^2.1.1",
-    "remark-toc": "^4.0.1"<% } -%>
+    "remark-contributors": "~3.1.0",
+    "remark-github": "~7.0.2",
+    "remark-preset-lint-markdown-style-guide": "~2.1.1",
+    "remark-toc": "~4.0.1"<% } -%>
   },
   "keywords": [ <%- `${keywords.trim().split(/[, ]+/).map(k => `"${k.trim()}"`).join(', ')}` %> ],
   "license": "<%- license %>",
   <% if (linting.length) { %>"lint-staged": {
-    <% if (remark) { %>"*.md": ["remark . -qo", "git add"]<% } -%>
+    <% if (eslint) { %>"*.+{js|json}": [
+      "prettier-eslint --list-different",
+      "git add"
+    ],<% } -%>
+    <% if (remark) { %>"*.md": [
+      "remark . -qo",
+      "git add"
+    ]<% } -%>
   },<% } -%>
   "publishConfig": {
     "message": "🔖 %s"
@@ -82,8 +90,14 @@
   <% if (remark) { %>"remarkConfig": {
     "plugins": [
       "preset-lint-markdown-style-guide",
-      ["lint-maximum-line-length", false],
-      ["lint-list-item-spacing", false],
+      [
+        "lint-maximum-line-length",
+        false
+      ],
+      [
+        "lint-list-item-spacing",
+        false
+      ],
       "contributors",
       "github",
       "toc"
@@ -102,7 +116,9 @@
   "scripts": {
     "cz": "git-cz",
     <% if (linting.length) { %>"lint": "npm-run-all lint:*",<% } -%>
+    <% if (eslint) { %>"lint:scripts": "prettier-eslint '**/*.js' --write --list-different",<% } -%>
     <% if (remark) { %>"lint:markdown": "remark . -qo",<% } -%>
+    <% if (stylelint) { %>"lint:styles": "prettier-stylelint --write",<% } -%>
     "precommit": "lint-staged && npm test",
     "test": "npm run lint"
   }
