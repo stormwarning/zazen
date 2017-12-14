@@ -7,27 +7,30 @@
 - [x] **Scaffolding:** [sao][]
 - [ ] **Linting & formatting:**
   - [x] JavaScript: [eslint][] & [prettier][]\
-        [standard][] style with some modifcations based on personal preference.
+         [standard][] style baseline with some modifcations for personal preference.
   - [x] Sass: [stylelint][]
   - [x] Markdown: [remark][]
   - [ ] Commit messages: [commitlint][]
 - **Testing & coverage:**
   - [ ] [AVA][]
-- [ ] **Compiling & bundling:** [webpack][]\
-      With a [clearer config](https://medium.com/webpack/unambiguous-webpack-config-with-typescript-8519def2cac7) setup with typescript.
+- **Compiling & bundling:**
+  - [ ] [webpack][]\
+         With a [clearer config][] setup with Typescript.
+  - [ ] [microbundle][]
 - **Publishing & documenting:**
   - [x] `git` hooks: [husky][]
   - [x] Commit messages: [commitizen][] & [emoji-cz][]
-  - [ ] Package versioning: [np][]
-  - [ ] Changelog: [release][]
+  - [ ] Package releases: [np][]
+  - [ ] Change log: [release][]\
+         Would be nice to have `release` write to a `CHANGELOG.md` file as well.
 
 ## Project type options
 
 - [ ] **Node package**
 - [ ] **Squarespace site**\
-      Uses Squarespace [developer toolset][] & [eslint config][].
+       Uses Squarespace [developer toolset][] & [eslint config][].
 - [ ] **Static site**\
-      Need to decide on static generator setup.
+       Need to decide on static generator setup.
 
 ## Inspiration
 
@@ -56,6 +59,10 @@
 [ava]: https://github.com/avajs/ava
 
 [webpack]: https://webpack.js.org
+
+[clearer config]: https://medium.com/webpack/unambiguous-webpack-config-with-typescript-8519def2cac7
+
+[microbundle]: https://github.com/developit/microbundle
 
 [husky]: https://github.com/typicode/husky
 
