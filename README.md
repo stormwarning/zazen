@@ -1,12 +1,17 @@
 # 座禅
 
-> Zazen is not "step-by-step meditation". Rather it is simply the easy and pleasant practice of a Buddha, the realisation of the Buddha's Wisdom. The Truth appears, there being no [delusion][]. If you understand this, you are completely free, like a dragon that has obtained water or a tiger that reclines on a mountain. The [supreme Law][] will then appear of itself, *and you will be free of weariness and confusion*.
+> Zazen is not “step-by-step meditation”. Rather it is simply the easy and \
+> pleasant practice of a Buddha, the realisation of the Buddha’s Wisdom. The \
+> Truth appears, there being no [delusion][]. If you understand this, you are \
+> completely free, like a dragon that has obtained water or a tiger that \
+> reclines on a mountain. The [supreme Law][] will then appear of itself, *and \
+> you will be free of weariness and confusion*.
 
 ## Common settings & utilities
 
 - [x] **Scaffolding:** [sao][]
 - [ ] **Linting & formatting:**
-  - [x] JavaScript: [eslint][] & [prettier][]\
+  - [x] JavaScript: [eslint][] & [prettier][] \
          [standard][] style baseline with some modifcations for personal preference.
   - [x] Sass: [stylelint][]
   - [x] Markdown: [remark][]
@@ -14,22 +19,22 @@
 - **Testing & coverage:**
   - [ ] [AVA][]
 - **Compiling & bundling:**
-  - [ ] [webpack][]\
+  - [ ] [webpack][] \
          With a [clearer config][] setup with Typescript.
   - [ ] [microbundle][]
 - **Publishing & documenting:**
   - [x] `git` hooks: [husky][]
   - [x] Commit messages: [commitizen][] & [emoji-cz][]
   - [ ] Package releases: [np][]
-  - [ ] Change log: [release][]\
+  - [ ] Change log: [release][] \
          Would be nice to have `release` write to a `CHANGELOG.md` file as well.
 
 ## Project type options
 
 - [ ] **Node package**
-- [ ] **Squarespace site**\
+- [ ] **Squarespace site** \
        Uses Squarespace [developer toolset][] & [eslint config][].
-- [ ] **Static site**\
+- [ ] **Static site** \
        Need to decide on static generator setup.
 
 ## Inspiration
