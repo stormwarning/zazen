@@ -1,10 +1,10 @@
 # 座禅
 
-> Zazen is not “step-by-step meditation”. Rather it is simply the easy and \
-> pleasant practice of a Buddha, the realisation of the Buddha’s Wisdom. The \
-> Truth appears, there being no [delusion][]. If you understand this, you are \
-> completely free, like a dragon that has obtained water or a tiger that \
-> reclines on a mountain. The [supreme Law][] will then appear of itself, *and \
+> Zazen is not “step-by-step meditation”. Rather it is simply the easy and
+> pleasant practice of a Buddha, the realisation of the Buddha’s Wisdom. The
+> Truth appears, there being no [delusion][]. If you understand this, you are
+> completely free, like a dragon that has obtained water or a tiger that
+> reclines on a mountain. The [supreme Law][] will then appear of itself, *and
 > you will be free of weariness and confusion*.
 
 ## Common settings & utilities
@@ -12,7 +12,8 @@
 - [x] **Scaffolding:** [sao][]
 - [ ] **Linting & formatting:**
   - [x] JavaScript: [eslint][] & [prettier][] \
-         [standard][] style baseline with some modifcations for personal preference.
+         [standard][] style baseline with some modifcations for personal
+        preference.
   - [x] Sass: [stylelint][]
   - [x] Markdown: [remark][]
   - [ ] Commit messages: [commitlint][]
