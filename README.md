@@ -36,7 +36,9 @@
 - [ ] **Squarespace site** \
        Uses Squarespace [developer toolset][] & [eslint config][].
 - [ ] **Static site** \
-       Need to decide on static generator setup.
+       Need to decide on static generator setup. [Gatsby][]?
+- [ ] **Vue.js project** \
+       Uses [Nuxt.js][] and offical [Vue style guide][].
 
 ## Inspiration
 
@@ -83,3 +85,9 @@
 [developer toolset]: https://github.com/Squarespace/squarespace-toolbelt
 
 [eslint config]: https://github.com/Squarespace/eslint-config-squarespace
+
+[gatsby]: https://www.gatsbyjs.org
+
+[nuxt.js]: https://nuxtjs.org
+
+[vue style guide]: https://vuejs.org/v2/style-guide/

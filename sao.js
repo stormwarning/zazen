@@ -36,6 +36,10 @@ module.exports = {
             message: 'New project type:',
             choices: [
                 {
+                    name: 'Node package',
+                    value: 'node',
+                },
+                {
                     name: 'Squarespace site',
                     value: 'sqsp',
                     disabled: true,
@@ -46,8 +50,9 @@ module.exports = {
                     disabled: true,
                 },
                 {
-                    name: 'Node package',
-                    value: 'node',
+                    name: 'Vue.js project',
+                    value: 'vue',
+                    disabled: true,
                 },
             ],
             type: 'list',
@@ -182,8 +187,8 @@ module.exports = {
             },
             validate: val => {
                 return isURL(val) &&
-                val.indexOf('https://github.com/') === 0 &&
-                val.lastIndexOf('/') !== val.length - 1
+                    val.indexOf('https://github.com/') === 0 &&
+                    val.lastIndexOf('/') !== val.length - 1
                     ? true
                     : 'Please include a valid GitHub.com URL without a trailing slash'
             },
