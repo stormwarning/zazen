@@ -5,56 +5,9 @@
   "homepage": "<%- repo %>",
   "author": "<%- author %> <<%- email %>> (<%- website %>)",
   <% if (!public) { %>"private": true,<% } -%>
-  "config": {
-    "commitizen": {
-      "path": "emoji-cz",
-      "emoji-cz": {
-        "types": {
-          "Style": {
-            "emoji": "👕",
-            "name": "Code style",
-            "description": "Improving structure/format of the code."
-          },
-          "Perf": {
-            "emoji": "⚡️",
-            "name": "Perf",
-            "description": "A code change that improves performance."
-          },
-          "Config": {
-            "emoji": "⚙️",
-            "name": "Config",
-            "description": "Adjusting project configuration settings."
-          },
-          "Content": {
-            "emoji": "✏️",
-            "name": "Content",
-            "description": "Content edits or additions."
-          },
-          "Dependency": {
-            "emoji": "📦",
-            "name": "Dependency",
-            "description": "Adding or up/downgrading project dependencies."
-          },
-          "First": {
-            "emoji": "🎉",
-            "name": "Init",
-            "description": "Initial commit."
-          },
-          "UI": {
-            "emoji": "🎨",
-            "name": "UI",
-            "description": "Visual or interaction changes."
-          }
-        },
-        "format": "[emoji] [subject]"
-      }
-    }
-  },
   "devDependencies": {
     <% if (eslint) { %>"babel-eslint": "~7.2.3",
-    <% } %>"commitizen": "~2.9.6",
-    "emoji-cz": "^0.3.0",
-    <% if (eslint) { %>"eslint": "~4.6.1",
+    "eslint": "~4.6.1",
     <% if (projectType === 'sqsp') { %>"eslint-config-squarespace": "~1.0.1",
     <% } else { %>"eslint-config-standard": "~10.2.1",
     "eslint-plugin-import": "~2.7.0",
@@ -84,9 +37,6 @@
       "git add"
     ]<% } -%>
   },<% } -%>
-  "publishConfig": {
-    "message": "🔖 %s"
-  },
   <% if (remark) { %>"remarkConfig": {
     "plugins": [
       "preset-lint-markdown-style-guide",
@@ -114,7 +64,6 @@
   },<% } -%>
   "repository": "<%- repo %>",
   "scripts": {
-    "cz": "git-cz",
     <% if (linting.length) { %>"lint": "npm-run-all lint:*",<% } -%>
     <% if (eslint) { %>"lint:scripts": "prettier-eslint '**/*.js' --write --list-different",<% } -%>
     <% if (remark) { %>"lint:markdown": "remark . -qo",<% } -%>

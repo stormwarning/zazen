@@ -5,51 +5,6 @@
   "homepage": "https://github.com/stormwarning/zazen",
   "author": "Jeff (http://tidaltheory.co/)",
   "private": true,
-  "config": {
-    "commitizen": {
-      "path": "emoji-cz",
-      "emoji-cz": {
-        "types": {
-          "Style": {
-            "emoji": "👕",
-            "name": "Code style",
-            "description": "Improving structure/format of the code."
-          },
-          "Perf": {
-            "emoji": "⚡️",
-            "name": "Perf",
-            "description": "A code change that improves performance."
-          },
-          "Config": {
-            "emoji": "⚙️",
-            "name": "Config",
-            "description": "Adjusting project configuration settings."
-          },
-          "Content": {
-            "emoji": "✏️",
-            "name": "Content",
-            "description": "Content edits or additions."
-          },
-          "Dependency": {
-            "emoji": "📦",
-            "name": "Dependency",
-            "description": "Adding or up/downgrading project dependencies."
-          },
-          "First": {
-            "emoji": "🎉",
-            "name": "Init",
-            "description": "Initial commit."
-          },
-          "UI": {
-            "emoji": "🎨",
-            "name": "UI",
-            "description": "Visual or interaction changes."
-          }
-        },
-        "format": "[emoji] [subject]"
-      }
-    }
-  },
   "dependencies": {
     "auto-bind": "^1.1.0",
     "cac": "^4.2.4",
@@ -72,8 +27,6 @@
   },
   "devDependencies": {
     "babel-eslint": "~7.2.3",
-    "commitizen": "~2.9.6",
-    "emoji-cz": "^0.3.0",
     "eslint": "~4.6.1",
     "eslint-config-standard": "~10.2.1",
     "eslint-plugin-import": "~2.7.0",
@@ -121,10 +74,9 @@
   },
   "repository": "stormwarning/zazen",
   "scripts": {
-    "cz": "git-cz",
     "lint": "npm-run-all lint:*",
     "lint:markdown": "remark . -qo",
-    "precommit": "lint-staged && npm test",
+    "_precommit": "lint-staged && npm test",
     "test": "npm run lint"
   }
 }
