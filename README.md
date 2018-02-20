@@ -10,13 +10,13 @@
 ## Common settings & utilities
 
 - [x] **Scaffolding:** [sao][]
-- [ ] **Linting & formatting:**
+- **Linting & formatting:**
   - [x] JavaScript: [eslint][] & [prettier][] \
-         [standard][] style baseline with some modifcations for personal
-        preference.
+         See [zazen-eslint-config][] for configuration.
   - [x] Sass: [stylelint][]
   - [x] Markdown: [remark][]
-  - [ ] Commit messages: [commitlint][]
+  - [ ] Commit messages: [commitlint][] \
+         See [zazen-commit-types][] for message guidlines.
 - **Testing & coverage:**
   - [ ] [AVA][]
 - **Compiling & bundling:**
@@ -25,10 +25,8 @@
   - [ ] [microbundle][]
 - **Publishing & documenting:**
   - [x] `git` hooks: [husky][]
-  - [x] Commit messages: [commitizen][] & [emoji-cz][]
   - [ ] Package releases: [np][]
-  - [ ] Change log: [release][] \
-         Would be nice to have `release` write to a `CHANGELOG.md` file as well.
+  - [ ] Change log: [conventional-changelog-cli][]
 
 ## Project type options
 
@@ -56,13 +54,15 @@
 
 [prettier]: https://prettier.io
 
-[standard]: https://standardjs.com
+[zazen-eslint-config]: https://github.com/stormwarning/zazen-eslint-config
 
 [stylelint]: https://stylelint.io
 
 [remark]: http://remark.js.org
 
 [commitlint]: https://github.com/marionebl/commitlint
+
+[zazen-commit-types]: https://github.com/stormwarning/zazen-commit-types
 
 [ava]: https://github.com/avajs/ava
 
@@ -74,13 +74,9 @@
 
 [husky]: https://github.com/typicode/husky
 
-[commitizen]: http://commitizen.github.io/cz-cli/
-
-[emoji-cz]: https://github.com/kevin940726/emoji-cz
-
 [np]: https://github.com/sindresorhus/np
 
-[release]: https://github.com/zeit/release
+[conventional-changelog-cli]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli
 
 [developer toolset]: https://github.com/Squarespace/squarespace-toolbelt
 
