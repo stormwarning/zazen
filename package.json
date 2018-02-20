@@ -93,12 +93,7 @@
   },
   "keywords": [],
   "license": "MIT",
-  "lint-staged": {
-    "*.md": [
-      "remark . -qo",
-      "git add"
-    ]
-  },
+  "lint-staged": {},
   "publishConfig": {
     "message": "🔖 %s"
   },
