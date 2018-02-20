@@ -94,9 +94,6 @@
   "keywords": [],
   "license": "MIT",
   "lint-staged": {},
-  "publishConfig": {
-    "message": "🔖 %s"
-  },
   "remarkConfig": {
     "plugins": [
       "preset-lint-markdown-style-guide",

@@ -213,6 +213,7 @@ module.exports = {
     move (answers) {
         return {
             'common/.editorconfig': '.editorconfig',
+            'common/.npmrc': '.npmrc',
             'common/.prettierignore': '.prettierignore',
             // We keep `.gitignore` as `gitignore` in the project
             // Because when it's published to npm
