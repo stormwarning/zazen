@@ -1,7 +1,9 @@
 {
 	"name": "@zazen/cli",
 	"version": "0.0.1",
-	"author": "Jeff",
+	"repository": "stormwarning/zazen",
+	"license": "ISC",
+	"author": "Jeff (https://tidaltheory.io)",
 	"type": "module",
 	"bin": {
 		"zazen": "bin/cli.js"
@@ -12,7 +14,8 @@
 	],
 	"scripts": {
 		"build": "esbuild src/cli.js --bundle --platform=node --outdir=dist --external:sade",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"release": "changeset publish"
 	},
 	"lint-staged": {
 		"*.{js,ts}": "eslint --fix",
@@ -33,7 +36,7 @@
 		"@zazen/eslint-config": "3.0.0",
 		"esbuild": "0.14.14",
 		"eslint": "8.7.0",
-		"husky": "^7.0.0",
+		"husky": "7.0.4",
 		"lint-staged": "12.3.1",
 		"prettier": "2.5.1",
 		"prettier-plugin-packagejson": "2.2.15"
