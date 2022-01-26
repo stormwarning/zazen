@@ -1,15 +1,5 @@
-# OS FILES ============================================================
+# OS FILES ===========================================================
 .DS_Store
-.DS_Store?
-.AppleDouble
-.LSOverride
-Desktop.ini
 
-## THUMBNAILS
-._*
-ehthumbs.db
-Thumbs.db
-
-
-# DEPENDENCIES ========================================================
-node_modules/
+# DEPENDENCIES =======================================================
+node_modules

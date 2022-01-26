@@ -1,0 +1,67 @@
+{
+	"name": "zazen",
+	"version": "0.0.2-0",
+	"private": true,
+	"description": "To practice the Way singleheartedly is, in itself, enlightenment. There is no gap between practice and enlightenment or zazen and daily life.",
+	"keywords": [],
+	"homepage": "https://github.com/stormwarning/zazen",
+	"repository": "stormwarning/zazen",
+	"license": "MIT",
+	"author": "Jeff (http://tidaltheory.co/)",
+	"remarkConfig": {
+		"plugins": [
+			"preset-lint-markdown-style-guide",
+			[
+				"lint-maximum-line-length",
+				false
+			],
+			[
+				"lint-list-item-spacing",
+				false
+			],
+			"contributors",
+			"github",
+			"toc"
+		],
+		"settings": {
+			"commonmark": true,
+			"bullet": "-",
+			"listItemIndent": 1,
+			"rule": "-",
+			"ruleSpaces": false,
+			"strong": "*",
+			"emphasis": "*"
+		}
+	},
+	"dependencies": {
+		"auto-bind": "^1.1.0",
+		"cac": "^4.2.4",
+		"camelcase": "^4.1.0",
+		"github-username": "^4.1.0",
+		"github-username-regex": "^1.0.0",
+		"global": "^4.3.2",
+		"is-email": "^1.0.0",
+		"is-url": "^1.2.2",
+		"is-valid-npm-name": "0.0.4",
+		"npm-conf": "^1.1.3",
+		"npm-name-exists": "^1.0.3",
+		"sao": "^0.22.9",
+		"semver": "^5.4.1",
+		"spdx-license-list": "^3.0.1",
+		"speakingurl": "^14.0.1",
+		"superb": "^1.3.0",
+		"update-notifier": "^2.3.0",
+		"uppercamelcase": "^3.0.0"
+	},
+	"devDependencies": {
+		"@zazen/eslint-config": "^0.1.1",
+		"husky": "^0.14.3",
+		"lint-staged": "~4.3.0",
+		"npm-run-all": "~4.1.2",
+		"remark-cli": "~4.0.0",
+		"remark-contributors": "~3.1.0",
+		"remark-github": "~7.0.2",
+		"remark-preset-lint-markdown-style-guide": "~2.1.1",
+		"remark-toc": "~4.0.1"
+	}
+}
