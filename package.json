@@ -10,7 +10,9 @@
 	},
 	"files": [
 		"bin",
-		"lib"
+		"config",
+		"lib",
+		"utils"
 	],
 	"scripts": {
 		"build": "esbuild src/cli.js --bundle --platform=node --outdir=dist --external:sade",

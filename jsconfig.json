@@ -5,6 +5,6 @@
 		"outDir": "dist",
 		"target": "esnext"
 	},
-	"include": ["bin", "src"],
+	"include": ["bin", "config", "lib", "utils"],
 	"exclude": ["node_modules"]
 }
