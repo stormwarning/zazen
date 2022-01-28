@@ -4,6 +4,8 @@ import { createRequire } from 'node:module'
 
 import sade from 'sade'
 
+import configure from '../lib/configure.js'
+
 const require = createRequire(import.meta.url)
 
 /**
@@ -18,10 +20,16 @@ const { version } = require('../package.json')
 
 prog.version(version)
 
+prog.command('init <project>')
+	.describe('Bootstrap a new project')
+	.action((project, opts) => {
+		console.log('project name is', project)
+	})
+
 prog.command('configure')
 	.describe('Generate tooling config files')
-	.action(() => {
-		console.log('this is the configure command')
+	.action(async () => {
+		await configure()
 	})
 
 prog.parse(process.argv)
