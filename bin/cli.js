@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { createRequire } from 'node:module'
+import { createRequire } from 'module'
 
 import sade from 'sade'
 
