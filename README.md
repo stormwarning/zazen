@@ -10,21 +10,21 @@ A CLI to maintain consistent configuration across projects.
 
 -   [ ] Scaffolding
     -   GitHub Actions
-    -   [Changesets][]
-    -   [Renovate][]
-    -   [Husky][]
+    -   [Changesets](https://github.com/changesets/changesets)
+    -   [Renovate](https://docs.renovatebot.com)
+    -   [Husky](https://github.com/typicode/husky)
 -   [x] Maintain configuration
     -   Manages tool configs, allowing escape hatches where needed.
 -   [ ] Linting & formatting
-    -   [ESlint][]
-    -   [Prettier][]
-    -   ~~[Stylelint][]~~
-    -   ~~[Remark][]~~
+    -   [ESlint](https://eslint.org)
+    -   [Prettier](https://prettier.io)
+    -   ~~Stylelint~~
+    -   ~~Remark~~
 -   [ ] Testing & coverage
-    -   [AVA][] (or probably [Jest][])
+    -   [AVA](https://github.com/avajs/ava) (or probably [Jest](https://jestjs.io))
 -   [ ] Building
-    -   [esbuild][]
-    -   [Vite][]
+    -   [esbuild](https://esbuild.github.io)
+    -   [Vite](https://vitejs.dev)
 
 > Zazen is not “step-by-step meditation”. Rather it is simply the easy and
 > pleasant practice of a Buddha, the realisation of the Buddha’s Wisdom. The
@@ -36,21 +36,10 @@ A CLI to maintain consistent configuration across projects.
 ## Inspiration
 
 -   [sku](https://seek-oss.github.io/sku/)
--   [tsdx](https://tsdx.io/)
+-   [tsdx](https://tsdx.io)
 -   [Lass](https://github.com/lassjs/lass)
 
 ---
 
-[changesets]: https://github.com/changesets/changesets
-[renovate]: https://docs.renovatebot.com/
-[husky]: https://github.com/typicode/husky
-[eslint]: https://eslint.org
-[prettier]: https://prettier.io
-[stylelint]: https://stylelint.io
-[remark]: http://remark.js.org
-[ava]: https://github.com/avajs/ava
-[jest]: https://jestjs.io/
-[esbuild]: https://esbuild.github.io/
-[vite]: https://vitejs.dev/
 [delusion]: https://en.wikipedia.org/wiki/Maya_(illusion)
 [supreme law]: https://en.wikipedia.org/wiki/Dharma_(Buddhism)
