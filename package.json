@@ -30,6 +30,7 @@
 	},
 	"dependencies": {
 		"esbuild-register": "3.3.2",
+		"outdent": "0.8.0",
 		"sade": "1.8.1"
 	},
 	"devDependencies": {
