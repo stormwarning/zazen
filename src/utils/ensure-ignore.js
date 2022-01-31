@@ -7,7 +7,7 @@ const DIVIDER =
 /**
  * Ported from [ensure-ignore]{@link https://github.com/seek-oss/ensure-gitignore}.
  */
-export default async function ({
+export async function ensureIgnore({
 	filepath = path.resolve(process.cwd(), '.gitignore'),
 	patterns = [],
 	comment = '',

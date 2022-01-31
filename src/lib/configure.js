@@ -1,16 +1,13 @@
 import { writeFile } from 'fs/promises'
 
-import { buildEslintConfig } from '../config/eslint.js'
-import { buildTsConfig } from '../config/tsconfig.js'
-import { getPathFromCwd } from '../utils/cwd.js'
-import ensureIgnore from '../utils/ensure-ignore.js'
-import { readInternalFile } from '../utils/index.js'
+import { buildEslintConfig, buildTsConfig } from '../config.js'
+import { ensureIgnore, getPathFromCwd, readInternalFile } from '../utils.js'
 
 /**
  * Generates basic project tooling config files and adds the paths to a
  * .gitignore file.
  */
-export default async function () {
+export async function configure() {
 	let gitIgnorePatterns = []
 
 	/** @todo Detect if project is a module and change name to .cjs. */
@@ -19,7 +16,7 @@ export default async function () {
 	gitIgnorePatterns.push(eslintConfigFile)
 
 	let prettierConfigFile = 'prettier.config.js'
-	let prettierConfig = await readInternalFile('../config/prettier.js')
+	let prettierConfig = await readInternalFile('../config/prettier.cjs')
 	await writeFileToCwd(prettierConfigFile, prettierConfig)
 	gitIgnorePatterns.push(prettierConfigFile)
 

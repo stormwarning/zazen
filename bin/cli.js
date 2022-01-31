@@ -4,7 +4,7 @@ import { createRequire } from 'module'
 
 import sade from 'sade'
 
-import configure from '../lib/configure.js'
+import { configure } from '../src/lib.js'
 
 const require = createRequire(import.meta.url)
 

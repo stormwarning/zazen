@@ -3,7 +3,7 @@ import { createRequire } from 'module'
 
 import { register } from 'esbuild-register/dist/node.js'
 
-import { getPathFromCwd } from '../utils/cwd.js'
+import { getPathFromCwd } from '../utils.js'
 
 import defaultConfig from './default-config.js'
 
@@ -48,7 +48,7 @@ const paths = {
 	src: zazenConfig.srcPaths.map(getPathFromCwd),
 }
 
-export const context = {
+export default {
 	paths,
 	eslintDecorator: zazenConfig.setEslintConfig,
 }

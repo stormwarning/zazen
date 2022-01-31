@@ -1,9 +1,10 @@
 import path from 'path'
 
-import { context } from '../context/index.js'
+import context from '../context.js'
+
+const { paths } = context
 
 export function buildTsConfig() {
-	let { paths } = context
 	let includes = paths.src
 
 	if (paths.zazenConfigPath && paths.zazenConfigPath.endsWith('.ts')) {
