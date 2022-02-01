@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "build": "esbuild src/cli.js --bundle --platform=node --outdir=dist --external:sade",
+    "changeset": "changeset add",
     "prepare": "husky install",
     "release": "changeset publish"
   },
