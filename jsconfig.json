@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "esnext",
+    "outDir": "dist",
+    "target": "esnext"
+  },
+  "include": ["bin", "src"],
+  "exclude": ["node_modules"]
+}
