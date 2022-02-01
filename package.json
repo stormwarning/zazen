@@ -1,46 +1,58 @@
 {
-	"name": "@zazen/cli",
-	"version": "0.0.1",
-	"repository": "stormwarning/zazen",
-	"license": "ISC",
-	"author": "Jeff (https://tidaltheory.io)",
-	"type": "module",
-	"bin": {
-		"zazen": "bin/cli.js"
-	},
-	"files": [
-		"bin",
-		"src"
-	],
-	"scripts": {
-		"build": "esbuild src/cli.js --bundle --platform=node --outdir=dist --external:sade",
-		"prepare": "husky install",
-		"release": "changeset publish"
-	},
-	"lint-staged": {
-		"*.{js,ts}": "eslint --fix",
-		"package.json": "prettier --write"
-	},
-	"prettier": {
-		"semi": false,
-		"singleQuote": true,
-		"useTabs": true
-	},
-	"dependencies": {
-		"esbuild-register": "3.3.2",
-		"outdent": "0.8.0",
-		"sade": "1.8.1"
-	},
-	"devDependencies": {
-		"@changesets/changelog-github": "0.4.2",
-		"@changesets/cli": "2.20.0",
-		"@types/sade": "1.7.4",
-		"@zazen/eslint-config": "3.0.1",
-		"esbuild": "0.14.14",
-		"eslint": "8.7.0",
-		"husky": "7.0.4",
-		"lint-staged": "12.3.1",
-		"prettier": "2.5.1",
-		"prettier-plugin-packagejson": "2.2.15"
-	}
+  "name": "@zazen/cli",
+  "version": "0.0.1",
+  "repository": "stormwarning/zazen",
+  "license": "ISC",
+  "author": "Jeff (https://tidaltheory.io)",
+  "type": "module",
+  "bin": {
+    "zazen": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "build": "esbuild src/cli.js --bundle --platform=node --outdir=dist --external:sade",
+    "prepare": "husky install",
+    "release": "changeset publish"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix",
+    "package.json": "prettier --write"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": true,
+    "overrides": [
+      {
+        "files": [
+          "*.json",
+          "*.yml"
+        ],
+        "options": {
+          "tabWidth": 2,
+          "useTabs": false
+        }
+      }
+    ]
+  },
+  "dependencies": {
+    "esbuild-register": "3.3.2",
+    "outdent": "0.8.0",
+    "sade": "1.8.1"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "0.4.2",
+    "@changesets/cli": "2.20.0",
+    "@types/sade": "1.7.4",
+    "@zazen/eslint-config": "3.0.1",
+    "esbuild": "0.14.14",
+    "eslint": "8.7.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.1",
+    "prettier": "2.5.1",
+    "prettier-plugin-packagejson": "2.2.15"
+  }
 }
