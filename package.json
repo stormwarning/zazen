@@ -1,6 +1,7 @@
 {
   "name": "@zazen/cli",
   "version": "0.0.1",
+  "description": "Manage project tooling, free of weariness and confusion.",
   "repository": "stormwarning/zazen",
   "license": "ISC",
   "author": "Jeff (https://tidaltheory.io)",
