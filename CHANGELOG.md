@@ -1,10 +1,10 @@
 # @zazen/cli
 
-## 0.1.2
+## 0.1.2 — 2022-02-01
 
-### Patch Changes
+#### 🐛 Fixed
 
-- [`7803181`](https://github.com/stormwarning/zazen/commit/780318175544b5001e63c8abd387837c058576f3) Thanks [@stormwarning](https://github.com/stormwarning)! - Make default ESLint config a direct dependency
+- Make default ESLint config a direct dependency [`7803181`](https://github.com/stormwarning/zazen/commit/780318175544b5001e63c8abd387837c058576f3)
 
 ### 0.1.1 — 2022-02-01
 
