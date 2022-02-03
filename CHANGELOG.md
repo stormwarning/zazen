@@ -1,10 +1,10 @@
 # @zazen/cli
 
-## 0.2.0
+## 0.2.0 — 2022-02-02
 
-### Minor Changes
+#### ♻️ Changed
 
-- [`b02fe22`](https://github.com/stormwarning/zazen/commit/b02fe225e8ca1081a8f7d9c6858a0fc6c88c3f8a) Thanks [@stormwarning](https://github.com/stormwarning)! - Upgrade `@zazen/eslint-config` to latest
+- Upgrade `@zazen/eslint-config` to latest [`b02fe22`](https://github.com/stormwarning/zazen/commit/b02fe225e8ca1081a8f7d9c6858a0fc6c88c3f8a)
 
 ## 0.1.2 — 2022-02-01
 
