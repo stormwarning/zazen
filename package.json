@@ -41,7 +41,7 @@
     ]
   },
   "dependencies": {
-    "@zazen/eslint-config": "3.0.1",
+    "@zazen/eslint-config": "4.0.0",
     "esbuild-register": "3.3.2",
     "outdent": "0.8.0",
     "sade": "1.8.1"
