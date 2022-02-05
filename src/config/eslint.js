@@ -1,6 +1,6 @@
 import { createRequire } from 'module'
 
-import outdent from 'outdent'
+import { outdent } from 'outdent'
 
 import context from '../context.js'
 
@@ -14,5 +14,6 @@ export function buildEslintConfig() {
 	return outdent`
 		module.exports = {
 			${eslintDecorator(baseConfig)}
-		}`
+		}
+	`
 }

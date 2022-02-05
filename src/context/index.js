@@ -45,7 +45,7 @@ const zazenConfig = {
 }
 const paths = {
 	zazenConfigPath,
-	src: zazenConfig.srcPaths.map(getPathFromCwd),
+	src: zazenConfig.srcPaths.map((path) => getPathFromCwd(path)),
 }
 
 export default {

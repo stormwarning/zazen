@@ -16,14 +16,21 @@ export function buildTsConfig() {
 	let config = {
 		compilerOptions: {
 			allowSyntheticDefaultImports: true,
-			// interop between ESM and CJS modules. Recommended by TS
+
+			// Interop between ESM and CJS modules. Recommended by TS.
 			esModuleInterop: true,
+
 			jsx: 'preserve',
 			lib: ['dom', 'esnext'],
 			noEmit: true,
 			noUnusedLocals: true,
-			// significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS
+
+			/**
+			 * Significant perf increase by skipping checking .d.ts files,
+			 * particularly those in node_modules. Recommended by TS.
+			 */
 			skipLibCheck: true,
+
 			resolveJsonModule: true,
 		},
 		include: includes,

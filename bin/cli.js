@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { createRequire } from 'module'
+import process from 'process'
 
 import sade from 'sade'
 
@@ -22,7 +23,7 @@ prog.version(version)
 
 prog.command('init <project>')
 	.describe('Bootstrap a new project')
-	.action((project, opts) => {
+	.action((project, _options) => {
 		console.log('project name is', project)
 	})
 

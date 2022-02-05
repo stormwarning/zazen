@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'fs/promises'
 import path from 'path'
+import process from 'process'
 
 const DIVIDER =
 	'######################################################################'
@@ -50,11 +51,11 @@ export async function ensureIgnore({
 
 	let output = `${outputPatterns}\n`
 
-	return contents !== output ? await writeFile(filepath, output) : output
+	return contents === output ? output : await writeFile(filepath, output)
 }
 
-function trimArray(arr) {
-	return arr.join('\n').trim().split('\n')
+function trimArray(array) {
+	return array.join('\n').trim().split('\n')
 }
 
 /**
@@ -63,11 +64,11 @@ function trimArray(arr) {
  */
 function dividerComment(comment, end = false) {
 	let commentLength = comment.length + 2
-	let str = [
+	let string = [
 		...DIVIDER.slice(end ? commentLength + 2 : DIVIDER.length - 2),
 		` ${comment} `,
 		...DIVIDER.slice(end ? DIVIDER.length - 2 : commentLength + 2),
 	]
 
-	return str.join('')
+	return string.join('')
 }
