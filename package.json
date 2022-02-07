@@ -52,7 +52,7 @@
     "@changesets/cli": "2.20.0",
     "@types/sade": "1.7.4",
     "ava": "4.0.1",
-    "esbuild": "0.14.14",
+    "esbuild": "0.14.19",
     "eslint": "8.7.0",
     "esm-utils": "2.0.1",
     "husky": "7.0.4",
