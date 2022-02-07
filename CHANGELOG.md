@@ -1,5 +1,11 @@
 # @zazen/cli
 
+## 0.3.1 — 2022-02-06
+
+#### 🐛 Fixed
+
+- Fix output from custom ESLint config [#83](https://github.com/stormwarning/zazen/pull/83)
+
 ## 0.3.0 — 2022-02-04
 
 #### ♻️ Changed
