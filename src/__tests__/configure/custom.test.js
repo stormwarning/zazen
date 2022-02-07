@@ -10,10 +10,10 @@ import { readInternalFile } from '../../utils.js'
 import { readFileContents, readIgnore, setupTest } from './setup.js'
 
 const { __dirname } = createEsmUtils(import.meta)
-const APP_DIR = path.resolve(__dirname, 'default')
+const APP_DIR = path.resolve(__dirname, 'custom')
 
 test.before(async (_t) => {
-	await setupTest(APP_DIR)
+	await setupTest(APP_DIR, ['zazen.config.js'])
 })
 
 test.after.always(async (_t) => {
