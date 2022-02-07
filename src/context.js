@@ -1,3 +1,1 @@
-import context from './context/index.js'
-
-export default context
+export { default } from './context/index.js'

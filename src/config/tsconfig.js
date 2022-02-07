@@ -22,16 +22,17 @@ export function buildTsConfig() {
 
 			jsx: 'preserve',
 			lib: ['dom', 'esnext'],
+			module: 'esnext',
+			moduleResolution: 'node',
 			noEmit: true,
 			noUnusedLocals: true,
+			resolveJsonModule: true,
 
 			/**
 			 * Significant perf increase by skipping checking .d.ts files,
 			 * particularly those in node_modules. Recommended by TS.
 			 */
 			skipLibCheck: true,
-
-			resolveJsonModule: true,
 		},
 		include: includes,
 	}
