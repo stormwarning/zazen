@@ -9,11 +9,9 @@ const coreConfig = require.resolve('@zazen/eslint-config', import.meta.url)
 const { eslintDecorator } = context
 
 export function buildEslintConfig() {
-	let baseConfig = `extends: ['${coreConfig}'],`
+	let baseConfig = { extends: [coreConfig] }
 
 	return outdent`
-		module.exports = {
-			${eslintDecorator(baseConfig)}
-		}
+		module.exports = ${JSON.stringify(eslintDecorator(baseConfig), null, 2)}\n
 	`
 }
