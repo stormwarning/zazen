@@ -7,8 +7,9 @@ import { readFile } from 'fs/promises'
  *
  * @see https://nodejs.org/docs/latest/api/esm.html#importmetaurl
  * @param {string} path
+ * @param {string} encoding
  * @returns {Promise<Buffer>}
  */
-export async function readInternalFile(path) {
-	return await readFile(new URL(path, import.meta.url))
+export async function readInternalFile(path, encoding) {
+	return await readFile(new URL(path, import.meta.url), encoding)
 }
