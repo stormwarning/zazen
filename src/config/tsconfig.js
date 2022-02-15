@@ -15,17 +15,21 @@ export function buildTsConfig() {
 
 	let config = {
 		compilerOptions: {
+			allowJs: true,
 			allowSyntheticDefaultImports: true,
 
 			// Interop between ESM and CJS modules. Recommended by TS.
 			esModuleInterop: true,
 
+			// Recommended by esbuild.
+			isolatedModules: true,
+
 			jsx: 'preserve',
 			lib: ['dom', 'esnext'],
 			module: 'esnext',
 			moduleResolution: 'node',
-			noEmit: true,
 			noUnusedLocals: true,
+			outDir: './dist',
 			resolveJsonModule: true,
 
 			/**
@@ -33,6 +37,9 @@ export function buildTsConfig() {
 			 * particularly those in node_modules. Recommended by TS.
 			 */
 			skipLibCheck: true,
+
+			sourceMap: true,
+			target: 'esnext',
 		},
 		include: includes,
 	}
