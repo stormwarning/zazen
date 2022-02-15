@@ -1,5 +1,16 @@
 # @zazen/cli
 
+## 0.3.2 — 2022-02-15
+
+#### ♻️ Changed
+
+- Update `tsconfig.json` output [#85](https://github.com/stormwarning/zazen/pull/85), [#92](https://github.com/stormwarning/zazen/pull/92)
+
+  Sets `outDir` to `./dist` (will eventually be configurable). Sets `target` and
+  `module` to `esnext` and `moduleResolution` to `node`. Enables `allowJs` for
+  better results in non-TypeScript projects. Enables `isolatedModules` based on
+  [esbuild’s recommendation](https://esbuild.github.io/content-types/#isolated-modules).
+
 ## 0.3.1 — 2022-02-06
 
 #### 🐛 Fixed
