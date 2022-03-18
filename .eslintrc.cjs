@@ -12,7 +12,7 @@ module.exports = {
 		'no-return-await': 'off',
 
 		/**
-		 * @todo [@zazen/eslint-config@>5] Re-enable this when `import/order` works with `node:` prefix.
+		 * @todo [@zazen/eslint-config@>5.1] Re-enable this when `import/order` works with `node:` prefix.
 		 */
 		'unicorn/prefer-node-protocol': 'off',
 
