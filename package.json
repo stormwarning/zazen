@@ -46,8 +46,10 @@
   },
   "dependencies": {
     "@zazen/eslint-config": "5.1.0",
+    "consola": "2.15.3",
     "esbuild-register": "3.3.2",
     "eslint": "8.11.0",
+    "execa": "6.1.0",
     "outdent": "0.8.0",
     "prettier": "2.6.0",
     "prettier-plugin-packagejson": "2.2.16",

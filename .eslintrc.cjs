@@ -15,6 +15,14 @@ module.exports = {
 		 * @todo [@zazen/eslint-config@>5.1] Re-enable this when `import/order` works with `node:` prefix.
 		 */
 		'unicorn/prefer-node-protocol': 'off',
+		/**
+		 * Allow `lib` as an abbreviation.
+		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v41.0.1/docs/rules/prevent-abbreviations.md
+		 */
+		'unicorn/prevent-abbreviations': [
+			'error',
+			{ allowList: { lib: true } },
+		],
 
 		'import/order': [
 			'error',
