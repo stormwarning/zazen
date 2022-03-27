@@ -54,8 +54,8 @@
     "sade": "1.8.1"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "0.4.2",
-    "@changesets/cli": "2.20.0",
+    "@changesets/changelog-github": "0.4.4",
+    "@changesets/cli": "2.22.0",
     "@types/sade": "1.7.4",
     "ava": "4.0.1",
     "esbuild": "0.14.19",
