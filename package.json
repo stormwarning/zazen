@@ -61,7 +61,7 @@
     "@types/sade": "1.7.4",
     "ava": "4.0.1",
     "esbuild": "0.14.19",
-    "esm-utils": "2.0.1",
+    "esm-utils": "3.0.0",
     "husky": "7.0.4",
     "lint-staged": "12.3.3"
   }
