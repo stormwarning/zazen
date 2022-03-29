@@ -34,16 +34,10 @@ prog.command('configure')
 		await configure()
 	})
 
-prog.command('format <glob>')
+prog.command('format <files>')
 	.describe('Apply a consistent code style')
-	.option('-c, --check', 'Check if the given files are formatted')
-	.option(
-		'-l, --list-different',
-		'Print the names of files that are different from Prettier’s formatting'
-	)
-	.option('-w, --write', 'Edit files in-place')
-	.action(async (glob, options) => {
-		await format(glob, options)
+	.action(async (files, options) => {
+		await format(files, options)
 	})
 
 prog.parse(process.argv)

@@ -29,7 +29,7 @@ test('generates an eslint config', async (t) => {
 test('generates a prettier config', async (t) => {
 	let prettierConfig = await readInternalFile(
 		'../config/prettier.cjs',
-		'utf-8'
+		'utf8'
 	)
 	let config = await readFileContents(APP_DIR, 'prettier.config.js')
 
