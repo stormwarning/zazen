@@ -51,7 +51,7 @@
     "eslint": "8.12.0",
     "execa": "6.1.0",
     "outdent": "0.8.0",
-    "prettier": "2.6.0",
+    "prettier": "2.6.1",
     "prettier-plugin-packagejson": "2.2.16",
     "sade": "1.8.1"
   },
