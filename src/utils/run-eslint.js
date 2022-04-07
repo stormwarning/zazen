@@ -1,10 +1,11 @@
 import consola from 'consola'
 import { ESLint } from 'eslint'
 
-export async function runEslint(paths, options) {
+export async function runEslint(paths, options = {}) {
 	let linter = new ESLint({
 		fix: options.fix,
 	})
+	let errors = 0
 
 	try {
 		let report = await linter.lintFiles(paths)
@@ -16,14 +17,14 @@ export async function runEslint(paths, options) {
 		if (options.fix) {
 			ESLint.outputFixes(report)
 		} else {
-			let { errorCount, warningCount, results } = report
+			let { errorCount, warningCount, results } = processReport(report)
 
 			if (errorCount || warningCount) {
-				let formatter = linter.getFormatter()
-				consola.log(formatter(results))
+				let { format } = await linter.loadFormatter()
+				consola.log(format(results))
 			}
 
-			if (errorCount > 0) await Promise.reject()
+			errors = errorCount
 		}
 	} catch (error) {
 		if (error) {
@@ -35,5 +36,37 @@ export async function runEslint(paths, options) {
 		}
 	}
 
+	/**
+	 * For some reason `reject`ing in the conditional block above doesn't exit
+	 * with the correct error code.
+	 */
+	if (errors > 0) await Promise.reject()
 	await Promise.resolve()
+}
+
+function processReport(report) {
+	let result = {
+		results: report,
+		...getReportStatistics(report),
+	}
+
+	return result
+}
+
+const getReportStatistics = (results) => {
+	let statistics = {
+		errorCount: 0,
+		warningCount: 0,
+		fixableErrorCount: 0,
+		fixableWarningCount: 0,
+	}
+
+	for (let result of results) {
+		statistics.errorCount += result.errorCount
+		statistics.warningCount += result.warningCount
+		statistics.fixableErrorCount += result.fixableErrorCount
+		statistics.fixableWarningCount += result.fixableWarningCount
+	}
+
+	return statistics
 }
