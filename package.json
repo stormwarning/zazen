@@ -60,7 +60,7 @@
     "@changesets/cli": "2.22.0",
     "@types/sade": "1.7.4",
     "ava": "4.2.0",
-    "esbuild": "0.14.28",
+    "esbuild": "0.14.38",
     "esm-utils": "3.0.0",
     "husky": "7.0.4",
     "lint-staged": "12.3.7"
