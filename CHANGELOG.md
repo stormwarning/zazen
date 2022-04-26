@@ -1,5 +1,23 @@
 # @zazen/cli
 
+## 0.4.0 — 2022-04-25
+
+#### 🎁 Added
+
+- Add `lint` command [#108](https://github.com/stormwarning/zazen/pull/108)
+
+  Checks files for formatting issues and linter errors.
+
+* Add `format` command [#104](https://github.com/stormwarning/zazen/pull/104)
+
+  Applies ESLint autofixes and Prettier formatting.
+
+#### ♻️ Changed
+
+- Include eslint and prettier in dependencies [#100](https://github.com/stormwarning/zazen/pull/100)
+
+  Preparing for dedicated `lint` and `format` commands.
+
 ## 0.3.2 — 2022-02-15
 
 #### ♻️ Changed
