@@ -6,7 +6,7 @@ import process from 'process'
 import consola from 'consola'
 import sade from 'sade'
 
-import { configure, format } from '../src/lib.js'
+import { configure, format, lint } from '../src/lib.js'
 
 const require = createRequire(import.meta.url)
 
@@ -32,6 +32,13 @@ prog.command('configure')
 	.describe('Generate tooling config files')
 	.action(async () => {
 		await configure()
+	})
+
+prog.command('lint <files>')
+	.describe('Check code for errors & best practices')
+	.action(async (files, options) => {
+		await configure()
+		await lint(files, options)
 	})
 
 prog.command('format <files>')
