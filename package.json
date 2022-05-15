@@ -45,7 +45,7 @@
     ]
   },
   "dependencies": {
-    "@zazen/eslint-config": "5.1.0",
+    "@zazen/eslint-config": "5.2.0",
     "consola": "2.15.3",
     "esbuild-register": "3.3.2",
     "eslint": "8.14.0",
