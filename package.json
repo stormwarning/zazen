@@ -1,6 +1,6 @@
 {
   "name": "@zazen/cli",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Manage project tooling, free of weariness and confusion.",
   "repository": "stormwarning/zazen",
   "license": "ISC",

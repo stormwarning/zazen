@@ -1,5 +1,15 @@
 # @zazen/cli
 
+## 0.4.1
+
+### Patch Changes
+
+- [#124](https://github.com/stormwarning/zazen/pull/124) [`96a226a`](https://github.com/stormwarning/zazen/commit/96a226a6cba379456a7718246b1ec803a7ec7623) Thanks [@renovate](https://github.com/apps/renovate)! - Update @zazen/eslint-config to v5.2.0
+
+* [#117](https://github.com/stormwarning/zazen/pull/117) [`facb094`](https://github.com/stormwarning/zazen/commit/facb0944735a531d3e80af7106283207c231078a) Thanks [@renovate](https://github.com/apps/renovate)! - Update prettier-plugin-packagejson to v2.2.18
+
+- [#114](https://github.com/stormwarning/zazen/pull/114) [`9d16123`](https://github.com/stormwarning/zazen/commit/9d16123ff485e9f3a9b6469f335074c5ac96f80f) Thanks [@renovate](https://github.com/apps/renovate)! - Update eslint to v8.15.0
+
 ## 0.4.0 — 2022-04-25
 
 #### 🎁 Added
