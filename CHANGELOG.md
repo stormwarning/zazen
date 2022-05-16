@@ -1,5 +1,13 @@
 # @zazen/cli
 
+## 0.4.1 — 2022-05-15
+
+#### ♻️ Changed
+
+- Update @zazen/eslint-config to v5.2.0 [#124](https://github.com/stormwarning/zazen/pull/124)
+- Update prettier-plugin-packagejson to v2.2.18 [#117](https://github.com/stormwarning/zazen/pull/117)
+- Update eslint to v8.15.0 [#114](https://github.com/stormwarning/zazen/pull/114)
+
 ## 0.4.0 — 2022-04-25
 
 #### 🎁 Added
@@ -8,7 +16,7 @@
 
   Checks files for formatting issues and linter errors.
 
-* Add `format` command [#104](https://github.com/stormwarning/zazen/pull/104)
+- Add `format` command [#104](https://github.com/stormwarning/zazen/pull/104)
 
   Applies ESLint autofixes and Prettier formatting.
 
