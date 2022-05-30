@@ -63,6 +63,6 @@
     "esbuild": "0.14.39",
     "esm-utils": "4.0.0",
     "husky": "8.0.1",
-    "lint-staged": "12.4.1"
+    "lint-staged": "12.4.3"
   }
 }
