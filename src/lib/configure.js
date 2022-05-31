@@ -1,7 +1,12 @@
 import { writeFile } from 'fs/promises'
 
 import { buildEslintConfig, buildTsConfig } from '../config.js'
-import { ensureIgnore, getPathFromCwd, readInternalFile } from '../utils.js'
+import {
+	ensureIgnore,
+	getPathFromCwd,
+	readInternalFile,
+	runPrettier,
+} from '../utils.js'
 
 /**
  * Generates basic project tooling config files and adds the paths to a
@@ -29,6 +34,9 @@ export async function configure() {
 		patterns: gitIgnorePatterns.map((p) => convertPaths(p)),
 		comment: 'CONFIGURED BY ZAZEN',
 	})
+
+	await runPrettier(eslintConfigFile, { write: true })
+	await runPrettier(prettierConfigFile, { write: true })
 }
 
 /**

@@ -4,7 +4,7 @@ import path from 'path'
 import { runScript } from '../_test-utils/_run-script.js'
 
 export async function readFileContents(directory, filename) {
-	let contents = await readFile(path.join(directory, filename), 'utf-8')
+	let contents = await readFile(path.join(directory, filename), 'utf8')
 	return contents
 }
 
