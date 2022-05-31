@@ -1,6 +1,13 @@
 # @zazen/cli
 
-## 0.4.1 — 2022-05-15
+### 0.4.2 — 2022-05-31
+
+#### ♻️ Changed
+
+- Format generated files after writing [#130](https://github.com/stormwarning/zazen/pull/130)
+- Update eslint to v8.16.0 [#127](https://github.com/stormwarning/zazen/pull/127)
+
+### 0.4.1 — 2022-05-15
 
 #### ♻️ Changed
 
