@@ -1,5 +1,13 @@
 # @zazen/cli
 
+## 0.4.2
+
+### Patch Changes
+
+- [#127](https://github.com/stormwarning/zazen/pull/127) [`368624a`](https://github.com/stormwarning/zazen/commit/368624ad8940af5531e3457d99b8853d81dffd2b) Thanks [@renovate](https://github.com/apps/renovate)! - Update eslint to v8.16.0
+
+* [#130](https://github.com/stormwarning/zazen/pull/130) [`2c3ee1c`](https://github.com/stormwarning/zazen/commit/2c3ee1c5449f59e6563150b1646c8c12552b79d3) Thanks [@stormwarning](https://github.com/stormwarning)! - Format generated files after writing
+
 ## 0.4.1 — 2022-05-15
 
 #### ♻️ Changed
