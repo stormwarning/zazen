@@ -1,10 +1,10 @@
 # @zazen/cli
 
-## 0.5.0
+## 0.5.0 — 2022-10-22
 
 ### Minor Changes
 
-- [`aaf472a`](https://github.com/stormwarning/zazen/commit/aaf472a3cc999ef357566c0761e340f6b609c041) Thanks [@stormwarning](https://github.com/stormwarning)! - Upgrade `@zazen/eslint-config` and other linter packages to latest
+- Upgrade `@zazen/eslint-config` and other linter packages to latest [`aaf472a`](https://github.com/stormwarning/zazen/commit/aaf472a3cc999ef357566c0761e340f6b609c041)
 
 ### 0.4.2 — 2022-05-31
 
