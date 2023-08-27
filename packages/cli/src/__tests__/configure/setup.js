@@ -31,7 +31,7 @@ export async function setupTest(directory, filesToCopy) {
 			type: 'commonjs',
 		},
 		null,
-		2
+		2,
 	)
 	await writeFile(path.join(directory, 'package.json'), packageJson)
 

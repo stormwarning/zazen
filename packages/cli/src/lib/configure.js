@@ -66,7 +66,7 @@ export function prependBanner(string) {
 async function writeFileToCwd(
 	fileName,
 	content,
-	{ banner = true, json = false } = {}
+	{ banner = true, json = false } = {},
 ) {
 	let outPath = getPathFromCwd(fileName)
 	let string = json ? JSON.stringify(content, null, 2) : content

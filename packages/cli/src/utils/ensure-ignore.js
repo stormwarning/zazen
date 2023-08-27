@@ -6,7 +6,7 @@ const DIVIDER =
 	'######################################################################'
 
 /**
- * Ported from [ensure-ignore]{@link https://github.com/seek-oss/ensure-gitignore}.
+ * Ported from {@link https://github.com/seek-oss/ensure-gitignore ensure-ignore}.
  */
 export async function ensureIgnore({
 	filepath = path.resolve(process.cwd(), '.gitignore'),
@@ -15,7 +15,7 @@ export async function ensureIgnore({
 }) {
 	let contents = ''
 	try {
-		contents = await readFile(filepath, 'utf-8')
+		contents = await readFile(filepath, 'utf8')
 	} catch (error) {
 		if (error.code !== 'ENOENT') throw error
 	}
