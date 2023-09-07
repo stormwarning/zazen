@@ -1,5 +1,5 @@
-import { rm } from 'fs/promises'
-import path from 'path'
+import { rm } from 'node:fs/promises'
+import path from 'node:path'
 
 import test from 'ava'
 import createEsmUtils from 'esm-utils'
@@ -27,13 +27,10 @@ test('generates an eslint config', async (t) => {
 })
 
 test('generates a prettier config', async (t) => {
-	let prettierConfig = await readInternalFile(
-		'../config/prettier.cjs',
-		'utf8',
-	)
+	let internal = await readInternalFile('../config/prettier.cjs', 'utf8')
 	let config = await readFileContents(APP_DIR, 'prettier.config.js')
 
-	t.is(config, prependBanner(prettierConfig))
+	t.is(config, prependBanner(internal))
 })
 
 test('generates a gitignore', async (t) => {

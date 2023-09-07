@@ -1,5 +1,5 @@
-import { copyFile, mkdir, readFile, writeFile } from 'fs/promises'
-import path from 'path'
+import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises'
+import path from 'node:path'
 
 import { runScript } from '../_test-utils/_run-script.js'
 

@@ -1,15 +1,14 @@
-import { execSync } from 'child_process'
-import process from 'process'
+import { execSync } from 'node:child_process'
+import process from 'node:process'
 
-import createEsmUtils from 'esm-utils'
-
-const { __dirname } = createEsmUtils(import.meta)
-const BIN = `${__dirname}/../../../bin/cli.js`
+import { getBinPath } from 'get-bin-path'
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export async function runScript(script, cwd, args = []) {
+	let binPath = await getBinPath()
+
 	try {
-		return await execSync(`${BIN} ${script} ${args.join(' ')}`, {
+		return await execSync(`${binPath} ${script} ${args.join(' ')}`, {
 			stdio: 'inherit',
 			cwd,
 			env: process.env,

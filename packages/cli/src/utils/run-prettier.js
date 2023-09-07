@@ -1,3 +1,5 @@
+import { resolve } from 'node:path'
+
 import consola from 'consola'
 import { execaCommand } from 'execa'
 
@@ -7,7 +9,7 @@ export async function runPrettier(path, options = {}) {
 	if (options.write) flag = '-w'
 
 	try {
-		await execaCommand(`npx prettier ${path} ${flag}`)
+		await execaCommand(`npx prettier -c ${flag} ${resolve(path)}`)
 	} catch (error) {
 		if (error) {
 			if (error.stdout && !error.stderr) {
