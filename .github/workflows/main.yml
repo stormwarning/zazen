@@ -19,7 +19,7 @@ jobs:
       # https://github.com/pnpm/action-setup
       - uses: pnpm/action-setup@v2
         with:
-          version: 6
+          version: 8
 
       # https://github.com/actions/setup-node
       - name: Setup Node ${{ matrix.node }}
