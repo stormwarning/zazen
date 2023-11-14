@@ -1,0 +1,40 @@
+{
+  "name": "@zazen/cli",
+  "version": "0.5.0",
+  "description": "Manage project tooling, free of weariness and confusion.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stormwarning/zazen.git",
+    "directory": "packages/cli"
+  },
+  "license": "ISC",
+  "author": "Jeff (https://tidaltheory.io)",
+  "type": "module",
+  "bin": {
+    "zazen": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "old-build": "esbuild src/cli.js --bundle --platform=node --outdir=dist --external:sade",
+    "test": "ava"
+  },
+  "dependencies": {
+    "consola": "2.15.3",
+    "esbuild-register": "3.3.3",
+    "eslint": "8.36.0",
+    "execa": "6.1.0",
+    "outdent": "0.8.0",
+    "prettier": "3.0.2",
+    "sade": "1.8.1"
+  },
+  "devDependencies": {
+    "@types/sade": "1.7.4",
+    "ava": "4.3.3",
+    "esbuild": "0.15.12",
+    "esm-utils": "4.1.0",
+    "get-bin-path": "10.0.0"
+  }
+}

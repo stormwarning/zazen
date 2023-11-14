@@ -9,22 +9,27 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['16.x']
+        node: ['20.x']
 
     steps:
       # https://github.com/actions/checkout
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      # https://github.com/pnpm/action-setup
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       # https://github.com/actions/setup-node
       - name: Setup Node ${{ matrix.node }}
-        uses: actions/setup-node@v3.5.1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+          cache: pnpm
 
-      # https://github.com/bahmutov/npm-install
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: pnpm install --frozen-lockfile
 
       # - name: Build
       #   run: npm run build
