@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "consola": "2.15.3",
-    "esbuild-register": "3.3.3",
+    "esbuild-register": "3.5.0",
     "eslint": "8.36.0",
     "execa": "6.1.0",
     "outdent": "0.8.0",
