@@ -1,5 +1,14 @@
 # @zazen/cli
 
+## 0.6.0
+
+### Minor Changes
+
+- [#160](https://github.com/stormwarning/zazen/pull/160) [`0fbdb4c`](https://github.com/stormwarning/zazen/commit/0fbdb4c6a8dcfc02fa96594ea7d04d9f6aa1e22d) Thanks [@stormwarning](https://github.com/stormwarning)! - Upgrade dependencies
+
+  - Upgrade `eslint` to 8.53.0
+  - Upgrade `prettier` to 3.1.0
+
 ## 0.5.0 — 2022-10-22
 
 ### Minor Changes
