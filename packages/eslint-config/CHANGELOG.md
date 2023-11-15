@@ -1,10 +1,10 @@
 # Change Log
 
-## 6.4.0
+## 6.4.0 — 2023-11-15
 
 ### Minor Changes
 
-- [#160](https://github.com/stormwarning/zazen/pull/160) [`0fbdb4c`](https://github.com/stormwarning/zazen/commit/0fbdb4c6a8dcfc02fa96594ea7d04d9f6aa1e22d) Thanks [@stormwarning](https://github.com/stormwarning)! - Upgrade dependencies
+- Upgrade dependencies [#160](https://github.com/stormwarning/zazen/pull/160)
 
   - Upgrade @rushstack/eslint-patch to 1.5.1
   - Upgrade @typescript-eslint/eslint-plugin to 6.11.0
