@@ -22,19 +22,19 @@
     "test": "ava"
   },
   "dependencies": {
-    "consola": "2.15.3",
-    "esbuild-register": "3.3.3",
-    "eslint": "8.36.0",
-    "execa": "6.1.0",
+    "consola": "3.2.3",
+    "esbuild-register": "3.5.0",
+    "eslint": "8.53.0",
+    "execa": "8.0.1",
     "outdent": "0.8.0",
-    "prettier": "3.0.2",
+    "prettier": "3.1.0",
     "sade": "1.8.1"
   },
   "devDependencies": {
-    "@types/sade": "1.7.4",
-    "ava": "4.3.3",
-    "esbuild": "0.15.12",
-    "esm-utils": "4.1.0",
-    "get-bin-path": "10.0.0"
+    "@types/sade": "1.7.7",
+    "ava": "5.3.1",
+    "esbuild": "0.19.5",
+    "esm-utils": "4.2.1",
+    "get-bin-path": "11.0.0"
   }
 }
