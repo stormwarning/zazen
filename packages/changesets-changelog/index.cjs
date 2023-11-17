@@ -4,7 +4,10 @@
  * @see https://github.com/atlassian/changesets/blob/main/packages/changelog-github/src/index.ts
  */
 
-import { getInfo, getInfoFromPullRequest } from '@changesets/get-github-info'
+const {
+	getInfo,
+	getInfoFromPullRequest,
+} = require('@changesets/get-github-info')
 
 /**
  * @param {Record<string, any> | null} options
@@ -127,4 +130,4 @@ const changelogFunctions = {
 	},
 }
 
-export default changelogFunctions
+module.exports = changelogFunctions
