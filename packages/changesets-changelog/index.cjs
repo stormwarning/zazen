@@ -13,6 +13,7 @@ const {
  * @param {Record<string, any> | null} options
  */
 function validateOptions(options) {
+	console.log('OPTIONS:', options)
 	if (!options || !options.repo) {
 		throw new Error(
 			'Please provide a repo to this changelog generator like this:\n"changelog": ["@zazen/changesets-changelog", { "repo": "org/repo" }]',
