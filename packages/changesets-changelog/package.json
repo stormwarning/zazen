@@ -14,6 +14,9 @@
   },
   "license": "ISC",
   "author": "Jeff (https://tidaltheory.io)",
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "@changesets/get-github-info": "0.5.2",
     "dotenv": "16.3.1"
