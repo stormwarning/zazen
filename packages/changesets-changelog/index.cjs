@@ -8,6 +8,9 @@ const {
 	getInfo,
 	getInfoFromPullRequest,
 } = require('@changesets/get-github-info')
+const { config } = require('dotenv')
+
+config()
 
 /**
  * @param {Record<string, any> | null} options
