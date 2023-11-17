@@ -14,13 +14,23 @@
   },
   "license": "ISC",
   "author": "Jeff (https://tidaltheory.io)",
-  "main": "index.cjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "scripts": {
+    "build": "esbuild index.js --format=cjs --outfile=dist/index.cjs"
+  },
   "dependencies": {
     "@changesets/get-github-info": "0.5.2",
     "dotenv": "16.3.1"
   },
   "devDependencies": {
     "@changesets/parse": "0.3.16",
-    "@changesets/types": "5.2.1"
+    "@changesets/types": "5.2.1",
+    "esbuild": "0.19.5"
   }
 }

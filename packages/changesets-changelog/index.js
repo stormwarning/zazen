@@ -4,11 +4,8 @@
  * @see https://github.com/atlassian/changesets/blob/main/packages/changelog-github/src/index.ts
  */
 
-const {
-	getInfo,
-	getInfoFromPullRequest,
-} = require('@changesets/get-github-info')
-const { config } = require('dotenv')
+import { getInfo, getInfoFromPullRequest } from '@changesets/get-github-info'
+import { config } from 'dotenv'
 
 config()
 
@@ -134,4 +131,4 @@ const changelogFunctions = {
 	},
 }
 
-module.exports = changelogFunctions
+export default changelogFunctions

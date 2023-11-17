@@ -9,7 +9,7 @@
     "build": "pnpm --if-present --filter '@zazen/*' build",
     "changeset": "changeset add",
     "prepare": "husky install",
-    "release": "changeset publish",
+    "release": "pnpm run build && changeset publish",
     "test": "pnpm --if-present --filter '@zazen/*' test"
   },
   "lint-staged": {
