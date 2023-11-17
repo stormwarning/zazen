@@ -1,0 +1,25 @@
+{
+  "name": "@zazen/changesets-changelog",
+  "version": "6.4.0",
+  "description": "Generate changelogs, free of weariness and confusion",
+  "keywords": [
+    "changelog",
+    "changesets"
+  ],
+  "homepage": "https://github.com/stormwarning/zazen/blob/main/packages/changesets-changelog",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stormwarning/zazen.git",
+    "directory": "packages/changesets-changelog"
+  },
+  "license": "ISC",
+  "author": "Jeff (https://tidaltheory.io)",
+  "dependencies": {
+    "@changesets/get-github-info": "0.5.2",
+    "dotenv": "16.3.1"
+  },
+  "devDependencies": {
+    "@changesets/parse": "0.3.16",
+    "@changesets/types": "5.2.1"
+  }
+}
