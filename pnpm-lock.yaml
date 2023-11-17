@@ -51,6 +51,9 @@ importers:
       '@changesets/types':
         specifier: 5.2.1
         version: 5.2.1
+      esbuild:
+        specifier: 0.19.5
+        version: 0.19.5
 
   packages/cli:
     dependencies:

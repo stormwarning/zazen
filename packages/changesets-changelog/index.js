@@ -4,10 +4,10 @@
  * @see https://github.com/atlassian/changesets/blob/main/packages/changelog-github/src/index.ts
  */
 
-const {
-	getInfo,
-	getInfoFromPullRequest,
-} = require('@changesets/get-github-info')
+import { getInfo, getInfoFromPullRequest } from '@changesets/get-github-info'
+import { config } from 'dotenv'
+
+config()
 
 /**
  * @param {Record<string, any> | null} options
@@ -24,6 +24,7 @@ function validateOptions(options) {
 const changelogFunctions = {
 	async getDependencyReleaseLine(changesets, dependenciesUpdated, options) {
 		validateOptions(options)
+
 		if (dependenciesUpdated.length === 0) return ''
 
 		let changesetCommits = await Promise.all(
@@ -47,7 +48,7 @@ const changelogFunctions = {
 		return [changesetLink, ...updatedDepenenciesList].join('\n')
 	},
 
-	async getReleaseLine(changeset, options) {
+	async getReleaseLine(changeset, type, options) {
 		validateOptions(options)
 
 		let [repoOwner] = options.repo.split('/')
@@ -130,4 +131,4 @@ const changelogFunctions = {
 	},
 }
 
-module.exports = changelogFunctions
+export default changelogFunctions
