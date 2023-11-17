@@ -3,7 +3,7 @@
   "access": "public",
   "baseBranch": "main",
   "changelog": [
-    "@changesets/changelog-github",
+    "../packages/changesets-changelog/index.js",
     { "repo": "stormwarning/zazen" }
   ],
   "commit": false,
