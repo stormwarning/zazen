@@ -120,7 +120,7 @@ const changelogFunctions = {
 								`[@${userFromSummary}](https://github.com/${userFromSummary})`,
 						)
 						.join(', ')
-				: links.user.includes(repoOwner) && links.user
+				: null
 		let userThanks = users === null ? '' : `\n  Thanks ${users}!`
 		let versionInfo =
 			links.pull === null ? ` ${links.commit}` : ` (${links.pull})`
