@@ -4,7 +4,7 @@
 
 ### Major Changes
 
-- Initial release ([#168](https://github.com/stormwarning/zazen/pull/168))
+- **Initial release 🎉** ([#168](https://github.com/stormwarning/zazen/pull/168))
 
 ### Patch Changes
 
