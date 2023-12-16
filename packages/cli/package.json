@@ -31,9 +31,9 @@
     "sade": "1.8.1"
   },
   "devDependencies": {
-    "@types/sade": "1.7.7",
+    "@types/sade": "1.7.8",
     "ava": "5.3.1",
-    "esbuild": "0.19.5",
+    "esbuild": "0.19.9",
     "esm-utils": "4.2.1",
     "get-bin-path": "11.0.0"
   }

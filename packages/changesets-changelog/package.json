@@ -29,8 +29,8 @@
     "dotenv": "16.3.1"
   },
   "devDependencies": {
-    "@changesets/parse": "0.3.16",
-    "@changesets/types": "5.2.1",
-    "esbuild": "0.19.5"
+    "@changesets/parse": "0.4.0",
+    "@changesets/types": "6.0.0",
+    "esbuild": "0.19.9"
   }
 }
