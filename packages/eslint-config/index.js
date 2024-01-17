@@ -77,6 +77,7 @@ const config = {
 			{
 				devDependencies: [
 					'**/__tests__/**/*.{mjs,js,ts,tsx}',
+					'**/tests/**/*.{mjs,js,ts,tsx}',
 					'**/*.@(spec|test).{mjs,js,ts,tsx}',
 				],
 			},
