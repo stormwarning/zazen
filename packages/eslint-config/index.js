@@ -16,7 +16,7 @@ const config = {
 		es2021: true,
 	},
 	reportUnusedDisableDirectives: true,
-	plugins: ['prefer-let'],
+	plugins: ['import-sorting', 'prefer-let'],
 	/**
 	 * @see https://github.com/xojs/eslint-config-xo
 	 * @see https://github.com/sindresorhus/eslint-plugin-unicorn
@@ -42,12 +42,19 @@ const config = {
 
 		'unicorn/consistent-destructuring': 'off',
 		'unicorn/consistent-function-scoping': 'off',
-		/** https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md */
+
+		/**
+		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md
+		 */
 		'unicorn/expiring-todo-comments': ['warn', { terms: ['@todo'] }],
+
 		'unicorn/no-null': 'off',
 		'unicorn/no-useless-undefined': 'off',
 		'unicorn/prefer-ternary': ['error', 'only-single-line'],
-		/** https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md */
+
+		/**
+		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
+		 */
 		'unicorn/prevent-abbreviations': [
 			'error',
 			{ allowList: { args: true, lib: true } },
@@ -77,6 +84,7 @@ const config = {
 			{
 				devDependencies: [
 					'**/__tests__/**/*.{mjs,js,ts,tsx}',
+					'**/tests/**/*.{mjs,js,ts,tsx}',
 					'**/*.@(spec|test).{mjs,js,ts,tsx}',
 				],
 			},
@@ -89,34 +97,12 @@ const config = {
 		'import/no-unresolved': 'off',
 		'import/no-useless-path-segments': 'error',
 		'import/no-webpack-loader-syntax': 'error',
-		'import/order': [
-			'error',
-			{
-				alphabetize: {
-					caseInsensitive: true,
-					order: 'asc',
-				},
-				groups: [
-					'builtin',
-					'external',
-					'internal',
-					'parent',
-					['sibling', 'index'],
-					'type',
-				],
-				'newlines-between': 'always',
-				pathGroups: [
-					{
-						pattern: '*.+(css)',
-						group: 'type',
-						position: 'after',
-						patternOptions: {
-							matchBase: true,
-						},
-					},
-				],
-			},
-		],
+
+		/**
+		 * @see https://github.com/stormwarning/eslint-plugin-import-sorting
+		 */
+		'import/order': 'off',
+		'import-sorting/order': 'error',
 	},
 }
 
