@@ -25,7 +25,7 @@
     "build": "esbuild index.js --format=cjs --outfile=dist/index.cjs"
   },
   "dependencies": {
-    "@changesets/get-github-info": "0.5.2",
+    "@changesets/get-github-info": "0.6.0",
     "dotenv": "16.3.1"
   },
   "devDependencies": {
