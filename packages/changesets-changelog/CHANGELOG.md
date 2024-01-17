@@ -1,5 +1,11 @@
 # @zazen/changesets-changelog
 
+## 2.0.1
+
+### Patch Changes
+
+- Update @changesets/get-github-info to v0.6.0 ([#176](https://github.com/stormwarning/zazen/pull/176))
+
 ## 2.0.0
 
 ### Major Changes
