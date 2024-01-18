@@ -7,7 +7,7 @@ const { getReleaseLine } = changelogFunctions
 
 const DOUBLE_SPACE = `  `
 const MOCK_DATA = {
-	commit: 'a085003',
+	commit: 'ed20541',
 	user: 'stormwarning',
 	pull: 420,
 	repo: 'stormwarning/zazen',
@@ -16,7 +16,7 @@ const MOCK_DATA = {
 vi.mock('@changesets/get-github-info', () => {
 	// This is duplicated because `vi.mock` is hoisted.
 	let data = {
-		commit: 'a085003',
+		commit: 'ed20541',
 		user: 'stormwarning',
 		pull: 420,
 		repo: 'stormwarning/zazen',
@@ -52,8 +52,9 @@ vi.mock('@changesets/get-github-info', () => {
 /**
  * @param {string} content
  * @param {string} [commit]
+ * @param {string} [line]
  */
-function getChangeset(content, commit) {
+function getChangeset(content, commit, line = 'multi') {
 	return [
 		{
 			...parse(
@@ -61,9 +62,13 @@ function getChangeset(content, commit) {
 pkg: "minor"
 ---
 
-Change
+Change${
+					line === 'multi'
+						? `
 
-Description of change.
+Description of change.`
+						: ''
+				}
 ${content}
 `,
 			),
@@ -74,6 +79,22 @@ ${content}
 		{ repo: MOCK_DATA.repo },
 	]
 }
+
+it.each(['single', 'multi'])(
+	'outputs a %s-line changelog entry',
+	async (line) => {
+		let singleOutput = `
+- Change ([#420](https://github.com/stormwarning/zazen/pull/420))`
+		let multiOutput = `
+- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
+${DOUBLE_SPACE}
+  Description of change.`
+
+		expect(
+			await getReleaseLine(...getChangeset('', 'ed20541', line)),
+		).toEqual(line === 'single' ? singleOutput : multiOutput)
+	},
+)
 
 describe.each([MOCK_DATA.commit])(
 	'with commit from changeset of %s',

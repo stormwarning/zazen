@@ -127,7 +127,7 @@ const changelogFunctions = {
 		let description =
 			futureLines.length > 0
 				? `\n${futureLines.map((l) => `  ${l}`).join('\n')}`
-				: undefined
+				: ''
 
 		return `\n- ${firstLine}${versionInfo}${userThanks}${description}`
 	},
