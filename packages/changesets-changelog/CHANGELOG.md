@@ -1,5 +1,11 @@
 # @zazen/changesets-changelog
 
+## 2.0.2
+
+### Patch Changes
+
+- Remove extra newline from changelog entries ([#189](https://github.com/stormwarning/zazen/pull/189))
+
 ## 2.0.1
 
 ### Patch Changes
