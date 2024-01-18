@@ -1,5 +1,11 @@
 # @zazen/changesets-changelog
 
+## 2.0.3
+
+### Patch Changes
+
+- Remove trailing newline for changesets without a description ([#192](https://github.com/stormwarning/zazen/pull/192))
+
 ## 2.0.2
 
 ### Patch Changes

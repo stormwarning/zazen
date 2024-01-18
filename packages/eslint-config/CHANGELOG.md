@@ -1,5 +1,17 @@
 # Change Log
 
+## 6.6.0
+
+### Minor Changes
+
+- Update `import/no-duplicates` rule to prefer inline `type` qualifiers ([#188](https://github.com/stormwarning/zazen/pull/188))
+- Update `consistent-type-definitions` rule to prefer `interface` ([#188](https://github.com/stormwarning/zazen/pull/188))
+- Update `naming-convention` rule to allow UPPER_CASE variables ([#188](https://github.com/stormwarning/zazen/pull/188))
+
+### Patch Changes
+
+- Update eslint-plugin-unicorn to v50 ([#187](https://github.com/stormwarning/zazen/pull/187))
+
 ## 6.5.0
 
 ### Minor Changes
