@@ -13,6 +13,15 @@ const config = {
 	extends: ['xo-typescript', 'plugin:etc/recommended', 'prettier'],
 	rules: {
 		/**
+		 * Prefer `interface`, but `type` is allowed in some cases.
+		 * @see https://typescript-eslint.io/rules/consistent-type-definitions
+		 */
+		'@typescript-eslint/consistent-type-definitions': [
+			'error',
+			'interface',
+		],
+
+		/**
 		 * Used in conjunction with `no-import-type-side-effects` and
 		 * `import/no-duplicates` for TypeScript import style.
 		 *
@@ -21,6 +30,50 @@ const config = {
 		'@typescript-eslint/consistent-type-imports': [
 			'error',
 			{ prefer: 'type-imports' },
+		],
+
+		/**
+		 * Could potentially make this more strict in future.
+		 * @see https://typescript-eslint.io/rules/naming-convention
+		 */
+		'@typescript-eslint/naming-convention': [
+			'warn',
+			{
+				selector: ['variableLike', 'memberLike', 'property', 'method'],
+				format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+				leadingUnderscore: 'allowSingleOrDouble',
+			},
+			{
+				// Types should use PascalCase.
+				selector: ['class', 'typeAlias', 'enum', 'typeParameter'],
+				format: ['PascalCase'],
+				leadingUnderscore: 'allow',
+			},
+			{
+				// Enforce a semantic verb prefix on boolean variables.
+				selector: 'variable',
+				types: ['boolean'],
+				format: ['StrictPascalCase'],
+				prefix: ['is', 'has', 'can', 'should', 'will', 'did'],
+			},
+			{
+				// Interface name should not be prefixed with `I`.
+				selector: 'interface',
+				filter: /^(?!I)[A-Z]/.source,
+				format: ['StrictPascalCase'],
+			},
+			{
+				// Type parameter name should either be `T` or a descriptive name.
+				selector: 'typeParameter',
+				filter: /^T$|^[A-Z][A-Za-z]+$/.source,
+				format: ['StrictPascalCase'],
+			},
+			{
+				// Allow any format when quoted.
+				selector: ['classProperty', 'objectLiteralProperty'],
+				format: null,
+				modifiers: ['requiresQuotes'],
+			},
 		],
 
 		/**
