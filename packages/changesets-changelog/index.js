@@ -129,7 +129,7 @@ const changelogFunctions = {
 				? `\n${futureLines.map((l) => `  ${l}`).join('\n')}`
 				: ''
 
-		return `\n- ${firstLine}${versionInfo}${userThanks}${description}`
+		return `- ${firstLine}${versionInfo}${userThanks}${description}`
 	},
 }
 

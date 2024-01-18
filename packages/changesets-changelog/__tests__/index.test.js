@@ -83,10 +83,8 @@ ${content}
 it.each(['single', 'multi'])(
 	'outputs a %s-line changelog entry',
 	async (line) => {
-		let singleOutput = `
-- Change ([#420](https://github.com/stormwarning/zazen/pull/420))`
-		let multiOutput = `
-- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
+		let singleOutput = `- Change ([#420](https://github.com/stormwarning/zazen/pull/420))`
+		let multiOutput = `- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
 ${DOUBLE_SPACE}
   Description of change.`
 
@@ -103,8 +101,7 @@ describe.each([MOCK_DATA.commit])(
 			'override pr with %s keyword',
 			(keyword) => {
 				test.each(['with #', 'without #'])('%s', async (kind) => {
-					let output = `
-- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
+					let output = `- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
 ${DOUBLE_SPACE}
   Description of change.`
 
@@ -122,8 +119,7 @@ ${DOUBLE_SPACE}
 			},
 		)
 		test('override commit with commit keyword', async () => {
-			let output = `
-- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
+			let output = `- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
 ${DOUBLE_SPACE}
   Description of change.`
 
@@ -144,8 +140,7 @@ describe.each(['author', 'user'])(
 	(keyword) => {
 		describe.each(['with @', 'without @'])('%s', async (kind) => {
 			it('ignores author if they are the repo owner', async () => {
-				let output = `
-- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
+				let output = `- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
 ${DOUBLE_SPACE}
   Description of change.`
 
@@ -162,8 +157,7 @@ ${DOUBLE_SPACE}
 			})
 
 			it('thanks author if they are not the repo owner', async () => {
-				let output = `
-- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
+				let output = `- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
   Thanks [@hubot](https://github.com/hubot)!
 ${DOUBLE_SPACE}
   Description of change.`
@@ -179,8 +173,7 @@ ${DOUBLE_SPACE}
 			})
 
 			it('thanks multiple authors', async () => {
-				let output = `
-- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
+				let output = `- Change ([#420](https://github.com/stormwarning/zazen/pull/420))
   Thanks [@hubot](https://github.com/hubot), [@tidaltheory](https://github.com/tidaltheory)!
 ${DOUBLE_SPACE}
   Description of change.`
