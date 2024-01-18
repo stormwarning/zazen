@@ -22,7 +22,8 @@
   },
   "main": "dist/index.cjs",
   "scripts": {
-    "build": "esbuild index.js --format=cjs --outfile=dist/index.cjs"
+    "build": "esbuild index.js --format=cjs --outfile=dist/index.cjs",
+    "test": "vitest run"
   },
   "dependencies": {
     "@changesets/get-github-info": "0.6.0",

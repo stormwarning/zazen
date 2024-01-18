@@ -124,10 +124,12 @@ const changelogFunctions = {
 		let userThanks = users === null ? '' : `\n  Thanks ${users}!`
 		let versionInfo =
 			links.pull === null ? ` ${links.commit}` : ` (${links.pull})`
+		let description =
+			futureLines.length > 0
+				? `\n${futureLines.map((l) => `  ${l}`).join('\n')}`
+				: undefined
 
-		return `\n- ${firstLine}${versionInfo}${userThanks}\n${futureLines
-			.map((l) => `  ${l}`)
-			.join('\n')}`
+		return `\n- ${firstLine}${versionInfo}${userThanks}${description}`
 	},
 }
 

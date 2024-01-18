@@ -8,6 +8,9 @@ const config = {
 	parserOptions: {
 		ecmaVersion: 2021,
 	},
+	settings: {
+		'import/ignore': ['node_modules'],
+	},
 	extends: ['@zazen', '@zazen/eslint-config/node'],
 	rules: {
 		'no-return-await': 'off',
