@@ -125,7 +125,7 @@ const changelogFunctions = {
 		let versionInfo =
 			links.pull === null ? ` ${links.commit}` : ` (${links.pull})`
 
-		return `\n\n- ${firstLine}${versionInfo}${userThanks}\n${futureLines
+		return `\n- ${firstLine}${versionInfo}${userThanks}\n${futureLines
 			.map((l) => `  ${l}`)
 			.join('\n')}`
 	},
