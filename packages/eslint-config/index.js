@@ -78,7 +78,19 @@ const config = {
 		'import/no-amd': 'error',
 		'import/no-anonymous-default-export': 'error',
 		'import/no-cycle': ['error', { ignoreExternal: true }],
-		'import/no-duplicates': 'error',
+
+		/**
+		 * Used in conjunction with `no-import-type-side-effects` and
+		 * `consistent-type-imports` for TypeScript import style.
+		 *
+		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md
+		 */
+		'import/no-duplicates': ['error', { 'prefer-inline': true }],
+
+		/**
+		 * Allow importing devDependencies within test files.
+		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
+		 */
 		'import/no-extraneous-dependencies': [
 			'error',
 			{
@@ -89,6 +101,7 @@ const config = {
 				],
 			},
 		],
+
 		'import/no-mutable-exports': 'error',
 		'import/no-named-as-default-member': 'error',
 		'import/no-named-as-default': 'error',
