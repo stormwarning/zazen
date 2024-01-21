@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.6.1
+
+### Patch Changes
+
+- Fix type import autofix style ([#197](https://github.com/stormwarning/zazen/pull/197))
+- Update eslint-plugin-import-sorting to v1.0.2 ([#193](https://github.com/stormwarning/zazen/pull/193))
+
 ## 6.6.0
 
 ### Minor Changes
