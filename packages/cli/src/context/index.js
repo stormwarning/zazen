@@ -4,7 +4,6 @@ import { createRequire } from 'node:module'
 import { register } from 'esbuild-register/dist/node.js'
 
 import { getPathFromCwd } from '../utils.js'
-
 import defaultConfig from './default-config.js'
 
 const require = createRequire(import.meta.url)

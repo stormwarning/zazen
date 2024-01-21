@@ -3,7 +3,6 @@ import process from 'node:process'
 
 import { getBinPath } from 'get-bin-path'
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
 export async function runScript(script, cwd, args = []) {
 	let binPath = await getBinPath()
 

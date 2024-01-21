@@ -45,7 +45,7 @@ export async function configure() {
  * @param {string} path
  */
 function convertPaths(path) {
-	return path.replace(/\\/g, '/')
+	return path.replaceAll(/\\/, '/')
 }
 
 /**

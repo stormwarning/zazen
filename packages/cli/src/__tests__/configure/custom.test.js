@@ -6,7 +6,6 @@ import createEsmUtils from 'esm-utils'
 
 import { prependBanner } from '../../lib.js'
 import { readInternalFile } from '../../utils.js'
-
 import { readFileContents, readIgnore, setupTest } from './setup.js'
 
 const { __dirname } = createEsmUtils(import.meta)
