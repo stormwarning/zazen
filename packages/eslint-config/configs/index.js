@@ -1,41 +1,42 @@
-/**
- * @see https://github.com/eslint/eslint/issues/3458
- * @see https://www.npmjs.com/package/@rushstack/eslint-patch
- */
-require('@rushstack/eslint-patch/modern-module-resolution')
+import prettier from 'eslint-config-prettier'
+import importSorting from 'eslint-plugin-import-sorting'
+import preferLet from 'eslint-plugin-prefer-let'
+import unicorn from 'eslint-plugin-unicorn'
 
-/** @type {import('eslint').Linter.Config} */
-const config = {
-	root: true,
-	parserOptions: {
-		ecmaFeatures: { jsx: true },
+import { compat } from '../utils/compat.js'
+
+/** @type {import('eslint').Linter.FlatConfig} */
+const rules = {
+	name: 'zazen:base',
+	languageOptions: {
 		ecmaVersion: 2021,
 		sourceType: 'module',
+		parserOptions: {
+			ecmaVersion: 'latest',
+		},
 	},
-	env: {
-		es2021: true,
+	linterOptions: {
+		reportUnusedDisableDirectives: true,
 	},
-	reportUnusedDisableDirectives: true,
-	plugins: ['import-sorting', 'prefer-let'],
-	/**
-	 * @see https://github.com/xojs/eslint-config-xo
-	 * @see https://github.com/sindresorhus/eslint-plugin-unicorn
-	 * @see https://github.com/import-js/eslint-plugin-import
-	 * @see https://github.com/xjamundx/eslint-plugin-promise
-	 * @see https://github.com/prettier/eslint-config-prettier
-	 */
-	extends: [
-		'xo',
-		'plugin:unicorn/recommended',
-		'plugin:import/recommended',
-		'plugin:promise/recommended',
-		'prettier',
-	],
+	plugins: { 'import-sorting': importSorting, 'prefer-let': preferLet },
+	settings: {
+		/**
+		 * Fix error with `parserPath` not available in eslint-plugin-import.
+		 * @see https://github.com/import-js/eslint-plugin-import/issues/2556
+		 */
+		'import/parsers': {
+			espree: ['.js', '.cjs', '.mjs', '.jsx'],
+		},
+
+		/** Fix undefined settings throwing error. */
+		'import-sorting/known-framework': '',
+		'import-sorting/known-first-party': '',
+	},
 	rules: {
 		'no-console': 'warn',
 
 		/**
-		 * @see https://github.com/cowboyd/eslint-plugin-prefer-let
+		 * @see https://github.com/thefrontside/javascript/tree/v3/packages/eslint-plugin-prefer-let
 		 */
 		'prefer-const': 'off',
 		'prefer-let/prefer-let': 'error',
@@ -158,4 +159,27 @@ const config = {
 	},
 }
 
-module.exports = config
+/** @type {import('eslint').Linter.FlatConfig[]} */
+const config = [
+	/** @see https://github.com/sindresorhus/eslint-plugin-unicorn */
+	unicorn.configs['flat/recommended'],
+
+	...compat.extends(
+		/**
+		 * @see https://github.com/xojs/eslint-config-xo
+		 * @todo
+		 */
+		'xo',
+		/** @see https://github.com/import-js/eslint-plugin-import */
+		'plugin:import/recommended',
+		/** @see https://github.com/xjamundx/eslint-plugin-promise */
+		'plugin:promise/recommended',
+	),
+
+	rules,
+
+	/** @see https://github.com/prettier/eslint-config-prettier */
+	prettier,
+]
+
+export default config
