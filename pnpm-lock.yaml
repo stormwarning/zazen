@@ -128,8 +128,8 @@ importers:
         specifier: 2.29.1
         version: 2.29.1(@typescript-eslint/parser@6.19.0)(eslint@8.53.0)
       eslint-plugin-import-sorting:
-        specifier: 1.0.2
-        version: 1.0.2
+        specifier: 1.0.3
+        version: 1.0.3
       eslint-plugin-n:
         specifier: 16.6.2
         version: 16.6.2(eslint@8.53.0)
@@ -2190,8 +2190,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-import-sorting@1.0.2:
-    resolution: {integrity: sha512-PGnPwiWiiS8xNVFtwKxX4ZsWSd6WaT2OLLYIGdHV5Lh8BN2eTrqdKc56Qt2IlxFx9aBB0ng7ALL1/xUuL0ZjMQ==}
+  /eslint-plugin-import-sorting@1.0.3:
+    resolution: {integrity: sha512-nFC58Fvax1cWtH4r7+zANjOzWqmvWI7zT9IRuA/mt4BlS9xXk3ee9aRjrGL5MUBtngLaUf5mjtpGYotI6JgCfw==}
     dependencies:
       object.groupby: 1.0.1
     dev: false
