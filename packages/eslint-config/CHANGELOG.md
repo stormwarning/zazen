@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.6.2
+
+### Patch Changes
+
+- Update typescript-eslint monorepo to v6.19.1 ([#199](https://github.com/stormwarning/zazen/pull/199))
+- Update eslint-plugin-import-sorting to v1.0.3 ([#200](https://github.com/stormwarning/zazen/pull/200))
+
 ## 6.6.1
 
 ### Patch Changes
