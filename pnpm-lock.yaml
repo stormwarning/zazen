@@ -67,8 +67,8 @@ importers:
         specifier: 3.5.0
         version: 3.5.0(esbuild@0.19.9)
       eslint:
-        specifier: 8.53.0
-        version: 8.53.0
+        specifier: 8.56.0
+        version: 8.56.0
       execa:
         specifier: 8.0.1
         version: 8.0.1
@@ -571,7 +571,6 @@ packages:
     dependencies:
       eslint: 8.56.0
       eslint-visitor-keys: 3.4.3
-    dev: true
 
   /@eslint-community/regexpp@4.10.0:
     resolution: {integrity: sha512-Cu96Sd2By9mCNTx2iyKOmq10v22jUVQv0lQnlGNy16oE9589yE+QADPbrMGCkA51cKZSg3Pu/aTJVTGfL/qjUA==}
@@ -618,7 +617,6 @@ packages:
   /@eslint/js@8.56.0:
     resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
 
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
@@ -2405,7 +2403,6 @@ packages:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /esm-utils@4.2.1:
     resolution: {integrity: sha512-a7t8pDmZ5MeYfo2pM5EcqeU+BqKobUFKnWkM17JOhTlR88OSosLa9Ak4bgm+htoF15HRf7tfrXNR62UogmIODg==}
