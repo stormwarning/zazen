@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.6.2
+
+### Patch Changes
+
+- Update typescript-eslint monorepo to v6.19.1 ([#199](https://github.com/stormwarning/zazen/pull/199))
+- Update eslint-plugin-import-sorting to v1.0.3 ([#200](https://github.com/stormwarning/zazen/pull/200))
+
 ## 6.6.1
 
 ### Patch Changes
@@ -24,21 +31,15 @@
 ### Minor Changes
 
 - Add rules for consistent TypeScript import style ([#183](https://github.com/stormwarning/zazen/pull/183))
-
 - Add `tests` glob to `no-extraneous-dependencies` rule options ([#182](https://github.com/stormwarning/zazen/pull/182))
-
 - Use `eslint-plugin-import-sorting` for import sort order ([#181](https://github.com/stormwarning/zazen/pull/181))
 
 ### Patch Changes
 
 - Update @rushstack/eslint-patch to v1.7.0 ([#177](https://github.com/stormwarning/zazen/pull/177))
-
 - Update typescript-eslint plugin & parser to v6.19.0 ([#172](https://github.com/stormwarning/zazen/pull/172))
-
 - Update eslint-plugin-n to v16.6.2 ([#179](https://github.com/stormwarning/zazen/pull/179))
-
 - Update eslint-config-prettier to v9.1.0 ([#178](https://github.com/stormwarning/zazen/pull/178))
-
 - Update eslint-plugin-import to v2.29.1 ([#163](https://github.com/stormwarning/zazen/pull/163))
 
 ## 6.4.0 — 2023-11-15
