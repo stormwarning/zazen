@@ -54,11 +54,29 @@ const rules = {
 		'unicorn/prefer-ternary': ['error', 'only-single-line'],
 
 		/**
+		 * Encourage more readable variable names using complete words.
 		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
+		 * @see https://thenextweb.com/dd/2020/07/13/linux-kernel-will-no-longer-use-terms-blacklist-and-slave/
 		 */
 		'unicorn/prevent-abbreviations': [
 			'error',
-			{ allowList: { args: true, lib: true } },
+			{
+				allowList: { args: true, lib: true },
+				replacements: {
+					whitelist: {
+						include: true,
+					},
+					blacklist: {
+						exclude: true,
+					},
+					master: {
+						main: true,
+					},
+					slave: {
+						secondary: true,
+					},
+				},
+			},
 		],
 
 		'promise/param-names': 'error',
@@ -89,6 +107,14 @@ const rules = {
 		'import/no-duplicates': ['error', { 'prefer-inline': true }],
 
 		/**
+		 * Forbid empty named import blocks.  Might be redundant with
+		 * other rules, but enabled just in case.
+		 *
+		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-empty-named-blocks.md
+		 */
+		'import/no-empty-named-blocks': 'error',
+
+		/**
 		 * Allow importing devDependencies within test files.
 		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
 		 */
@@ -108,7 +134,13 @@ const rules = {
 		'import/no-named-as-default': 'error',
 		'import/no-named-default': 'error',
 		'import/no-self-import': 'error',
+
+		/**
+		 * Buggy, and doesn't work with TypeScript.
+		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md
+		 */
 		'import/no-unresolved': 'off',
+
 		'import/no-useless-path-segments': 'error',
 		'import/no-webpack-loader-syntax': 'error',
 
