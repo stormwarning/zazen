@@ -53,11 +53,29 @@ const config = {
 		'unicorn/prefer-ternary': ['error', 'only-single-line'],
 
 		/**
+		 * Encourage more readable variable names using complete words.
 		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prevent-abbreviations.md
+		 * @see https://thenextweb.com/dd/2020/07/13/linux-kernel-will-no-longer-use-terms-blacklist-and-slave/
 		 */
 		'unicorn/prevent-abbreviations': [
 			'error',
-			{ allowList: { args: true, lib: true } },
+			{
+				allowList: { args: true, lib: true },
+				replacements: {
+					whitelist: {
+						include: true,
+					},
+					blacklist: {
+						exclude: true,
+					},
+					master: {
+						main: true,
+					},
+					slave: {
+						secondary: true,
+					},
+				},
+			},
 		],
 
 		'promise/param-names': 'error',
