@@ -107,7 +107,13 @@ const config = {
 		'import/no-named-as-default': 'error',
 		'import/no-named-default': 'error',
 		'import/no-self-import': 'error',
+
+		/**
+		 * Buggy, and doesn't work with TypeScript.
+		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md
+		 */
 		'import/no-unresolved': 'off',
+
 		'import/no-useless-path-segments': 'error',
 		'import/no-webpack-loader-syntax': 'error',
 
