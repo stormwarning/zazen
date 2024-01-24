@@ -88,6 +88,14 @@ const config = {
 		'import/no-duplicates': ['error', { 'prefer-inline': true }],
 
 		/**
+		 * Forbid empty named import blocks.  Might be redundant with
+		 * other rules, but enabled just in case.
+		 *
+		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-empty-named-blocks.md
+		 */
+		'import/no-empty-named-blocks': 'error',
+
+		/**
 		 * Allow importing devDependencies within test files.
 		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
 		 */
