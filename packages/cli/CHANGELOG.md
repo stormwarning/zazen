@@ -1,5 +1,12 @@
 # @zazen/cli
 
+## 0.6.1
+
+### Patch Changes
+
+- Update prettier to v3.2.4 ([#174](https://github.com/stormwarning/zazen/pull/174))
+- Update eslint to v8.56.0 ([#149](https://github.com/stormwarning/zazen/pull/149))
+
 ## 0.6.0 — 2023-11-15
 
 ### Minor Changes
