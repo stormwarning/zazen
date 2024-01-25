@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.7.0
+
+### Minor Changes
+
+- Expand `unicorn/prevent-abbreviations` replacements ([#206](https://github.com/stormwarning/zazen/pull/206))
+- Add `import/no-empty-named-blocks` rule ([#205](https://github.com/stormwarning/zazen/pull/205))
+
 ## 6.6.2
 
 ### Patch Changes
