@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.8.0
+
+### Minor Changes
+
+- Configure `unicorn/switch-case-braces` to avoid braces where possible ([#214](https://github.com/stormwarning/zazen/pull/214))
+
+### Patch Changes
+
+- Update eslint-plugin-import-sorting to v1.1.0 ([#202](https://github.com/stormwarning/zazen/pull/202))
+- Update typescript-eslint monorepo to v6.21.0 ([#211](https://github.com/stormwarning/zazen/pull/211))
+
 ## 6.7.0
 
 ### Minor Changes
