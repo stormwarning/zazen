@@ -1,0 +1,20 @@
+{
+  "name": "@zazen/prettier-config",
+  "version": "0.0.0",
+  "description": "Apply a consistent code style, free of weariness and confusion",
+  "homepage": "https://github.com/stormwarning/zazen/blob/main/packages/prettier-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stormwarning/zazen.git",
+    "directory": "packages/prettier-config"
+  },
+  "license": "ISC",
+  "author": "Jeff (https://tidaltheory.io)",
+  "type": "module",
+  "dependencies": {
+    "prettier-plugin-packagejson": "2.4.10"
+  },
+  "peerDependencies": {
+    "prettier": ">=3"
+  }
+}

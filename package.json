@@ -19,32 +19,15 @@
     ],
     "package.json": "prettier --write"
   },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-packagejson"
-    ],
-    "semi": false,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": [
-          "*.ts",
-          "*.tsx"
-        ],
-        "options": {
-          "printWidth": 100
-        }
-      }
-    ]
-  },
+  "prettier": "@zazen/prettier-config",
   "devDependencies": {
     "@changesets/cli": "2.27.1",
     "@zazen/eslint-config": "workspace:*",
+    "@zazen/prettier-config": "workspace:*",
     "eslint": "8.56.0",
     "husky": "8.0.3",
     "lint-staged": "15.2.0",
     "prettier": "3.2.4",
-    "prettier-plugin-packagejson": "2.4.9",
     "typescript": "5.3.3",
     "vite": "5.0.12",
     "vitest": "1.2.1"
