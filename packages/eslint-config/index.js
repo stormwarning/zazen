@@ -78,6 +78,12 @@ const config = {
 			},
 		],
 
+		/**
+		 * Only require braces around the case body if scope is needed.
+		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/switch-case-braces.md
+		 */
+		'unicorn/switch-case-braces': ['error', 'avoid'],
+
 		'promise/param-names': 'error',
 		'promise/no-return-wrap': ['error', { allowReject: true }],
 		'promise/no-new-statics': 'error',
