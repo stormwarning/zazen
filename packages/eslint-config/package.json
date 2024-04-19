@@ -35,6 +35,7 @@
 		"README.md"
 	],
 	"scripts": {
+		"inspect": "eslint --inspect-config",
 		"lint": "eslint .",
 		"test": "vitest run"
 	},
