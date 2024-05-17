@@ -101,8 +101,8 @@ importers:
   packages/eslint-config:
     dependencies:
       '@rushstack/eslint-patch':
-        specifier: 1.7.0
-        version: 1.7.0
+        specifier: 1.10.3
+        version: 1.10.3
       '@typescript-eslint/eslint-plugin':
         specifier: 6.21.0
         version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.53.0)(typescript@5.3.3)
@@ -819,8 +819,8 @@ packages:
     dev: true
     optional: true
 
-  /@rushstack/eslint-patch@1.7.0:
-    resolution: {integrity: sha512-Jh4t/593gxs0lJZ/z3NnasKlplXT2f+4y/LZYuaKZW5KAaiVFL/fThhs+17EbUd53jUVJ0QudYCBGbN/psvaqg==}
+  /@rushstack/eslint-patch@1.10.3:
+    resolution: {integrity: sha512-qC/xYId4NMebE6w/V33Fh9gWxLgURiNYgVNObbJl2LZv0GUUItCcCqC5axQSwRaAgaxl2mELq1rMzlswaQ0Zxg==}
     dev: false
 
   /@sinclair/typebox@0.27.8:
