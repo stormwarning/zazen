@@ -5,7 +5,7 @@ import unicorn from 'eslint-plugin-unicorn'
 
 import { compat } from '../utils/compat.js'
 
-/** @type {import('eslint').Linter.FlatConfig} */
+/** @type {import('eslint').Linter.Config} */
 const rules = {
 	name: 'zazen:base',
 	languageOptions: {
@@ -159,22 +159,20 @@ const rules = {
 	},
 }
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
 	/** @see https://github.com/sindresorhus/eslint-plugin-unicorn */
 	unicorn.configs['flat/recommended'],
 
-	...compat.extends(
-		/**
-		 * @see https://github.com/xojs/eslint-config-xo
-		 * @todo
-		 */
-		'xo',
-		/** @see https://github.com/import-js/eslint-plugin-import */
-		'plugin:import/recommended',
-		/** @see https://github.com/xjamundx/eslint-plugin-promise */
-		'plugin:promise/recommended',
-	),
+        /**
+         * @see https://github.com/xojs/eslint-config-xo
+         * @todo
+         */
+        ...compat.extends('xo'),
+        /** @see https://github.com/import-js/eslint-plugin-import */
+        ...compat.extends('plugin:import/recommended'),
+        /** @see https://github.com/xjamundx/eslint-plugin-promise */
+        ...compat.extends('plugin:promise/recommended'),
 
 	rules,
 
