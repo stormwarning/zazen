@@ -1,7 +1,7 @@
 import zazen from '@zazen/eslint-config'
 import zazenNode from '@zazen/eslint-config/node'
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
 	{ ignores: ['**/dist', '**/__tests__/*-errors.js'] },
 	...zazen,

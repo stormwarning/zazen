@@ -2,7 +2,7 @@ import prettier from 'eslint-config-prettier'
 
 import { compat } from '../utils/compat.js'
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
 	/**
 	 * @see https://github.com/xojs/eslint-config-xo-typescript

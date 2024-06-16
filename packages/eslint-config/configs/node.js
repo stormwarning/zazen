@@ -2,7 +2,7 @@ import prettier from 'eslint-config-prettier'
 import n from 'eslint-plugin-n'
 import globals from 'globals'
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
 	{
 		name: 'zazen:node',
