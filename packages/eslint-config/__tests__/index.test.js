@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import eslint from 'eslint/use-at-your-own-risk'
+import { ESLint } from 'eslint'
 import { describe, expect, it } from 'vitest'
 
 import configBase from '../configs/index.js'
@@ -26,17 +26,17 @@ function hasRule(errors, ruleId) {
 }
 
 async function runEslint(string, config) {
-	let { FlatESLint } = eslint
-	let linter = new FlatESLint({
-		overrideConfig: [
-			...config,
-			{
-				rules: {
-					'import/no-unresolved': 'off',
-					'unicorn/expiring-todo-comments': 'off',
-				},
-			},
-		],
+	let linter = new ESLint({
+		overrideConfig: config,
+		// overrideConfig: [
+		// 	// ...config,
+		// 	{
+		// 		rules: {
+		// 			'import/no-unresolved': 'off',
+		// 			'unicorn/expiring-todo-comments': 'off',
+		// 		},
+		// 	},
+		// ],
 	})
 
 	let [firstResult] = await linter.lintText(string, {
@@ -52,10 +52,11 @@ describe.each(['base', 'node'])('%s config', (config) => {
 			path.resolve(__dirname, `./${config}-errors.js`),
 			'utf8',
 		)
-		let errors = await runEslint(code, [
-			...CONFIG_MAP.base.config,
-			...(config === 'base' ? [] : CONFIG_MAP[config].config),
-		])
+		let errors = await runEslint(code, CONFIG_MAP[config].config)
+		// let errors = await runEslint(code, [
+		// 	// ...CONFIG_MAP.base.config,
+		// 	...CONFIG_MAP[config].config,
+		// ])
 
 		for (let rule of CONFIG_MAP[config].errors) {
 			expect(hasRule(errors, rule), JSON.stringify(errors)).toBeTruthy()

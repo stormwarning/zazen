@@ -164,15 +164,15 @@ const config = [
 	/** @see https://github.com/sindresorhus/eslint-plugin-unicorn */
 	unicorn.configs['flat/recommended'],
 
-        /**
-         * @see https://github.com/xojs/eslint-config-xo
-         * @todo
-         */
-        ...compat.extends('xo'),
-        /** @see https://github.com/import-js/eslint-plugin-import */
-        ...compat.extends('plugin:import/recommended'),
-        /** @see https://github.com/xjamundx/eslint-plugin-promise */
-        ...compat.extends('plugin:promise/recommended'),
+	/**
+	 * @see https://github.com/xojs/eslint-config-xo
+	 * @todo
+	 */
+	...compat.extends('xo'),
+	/** @see https://github.com/import-js/eslint-plugin-import */
+	...compat.extends('plugin:import/recommended'),
+	/** @see https://github.com/xjamundx/eslint-plugin-promise */
+	...compat.extends('plugin:promise/recommended'),
 
 	rules,
 
