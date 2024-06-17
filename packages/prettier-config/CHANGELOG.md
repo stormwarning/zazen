@@ -1,5 +1,13 @@
 # @zazen/prettier-config
 
+## 1.1.0
+
+### Minor Changes
+
+- Override options for CSS and Sass code ([#223](https://github.com/stormwarning/zazen/pull/223))
+
+  Increases `printWidth` and uses double quotes, following the `@stylistic` Stylelint conventions.
+
 ## 1.0.0
 
 ### Major Changes
