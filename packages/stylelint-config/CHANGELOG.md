@@ -1,5 +1,14 @@
 # Change Log
 
+## 4.0.0
+
+### Major Changes
+
+- Update minimum required versions ([#221](https://github.com/stormwarning/zazen/pull/221))
+
+  - `node@18`
+  - `stylelint@16`
+
 ## 3.0.0 — 2022-05-07
 
 #### 💣 Breaking
