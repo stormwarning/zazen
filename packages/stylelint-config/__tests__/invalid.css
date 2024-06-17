@@ -1,0 +1,20 @@
+@import URL('//example.com/x.css');
+
+.selector-1 {
+	& .selector-2 {
+		& .selector-3 {
+			& .selector-4 {
+				color: rgba(0, 0, 0, 0.08215);
+			}
+		}
+	}
+}
+.selector-2 {
+	color: red;
+	margin-top: 0px;
+	--custom-property: 0;
+}
+
+madeup {
+	margin: #fff;
+}
