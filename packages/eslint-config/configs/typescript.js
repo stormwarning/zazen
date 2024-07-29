@@ -1,6 +1,5 @@
-import prettier from 'eslint-config-prettier'
-
 import { compat } from '../utils/compat.js'
+import prettier from 'eslint-config-prettier'
 
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
@@ -93,7 +92,7 @@ const config = [
 			 * Disabled in `eslint-plugin-import` `typescript` config.
 			 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/named.md
 			 */
-			'import/named': 'off',
+			'import-x/named': 'off',
 
 			/**
 			 * Organise comparisons left-to-right from lower to higher.

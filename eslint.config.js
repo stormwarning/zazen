@@ -9,7 +9,7 @@ const config = [
 	{
 		name: 'project:base',
 		settings: {
-			'import/ignore': ['node_modules'],
+			'import-x/ignore': ['node_modules'],
 			node: {
 				version: '20',
 			},
@@ -17,7 +17,7 @@ const config = [
 		rules: {
 			// Deprecated rule.
 			'no-return-await': 'off',
-			'import/no-anonymous-default-export': [
+			'import-x/no-anonymous-default-export': [
 				'error',
 				{ allowObject: true },
 			],
@@ -28,14 +28,14 @@ const config = [
 		files: ['**/__tests__/**/*.?(m|c)js'],
 		ignores: ['**/__tests__/*-errors.js'],
 		rules: {
-			'import/no-extraneous-dependencies': 'off',
+			'import-x/no-extraneous-dependencies': 'off',
 		},
 	},
 	{
 		name: 'project:configs',
 		files: ['**/eslint.config.js'],
 		rules: {
-			'import/no-extraneous-dependencies': 'off',
+			'import-x/no-extraneous-dependencies': 'off',
 		},
 	},
 ]

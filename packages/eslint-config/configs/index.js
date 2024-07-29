@@ -1,9 +1,8 @@
+import { compat } from '../utils/compat.js'
 import prettier from 'eslint-config-prettier'
 import importSorting from 'eslint-plugin-import-sorting'
 import preferLet from 'eslint-plugin-prefer-let'
 import unicorn from 'eslint-plugin-unicorn'
-
-import { compat } from '../utils/compat.js'
 
 /** @type {import('eslint').Linter.Config} */
 const rules = {
@@ -24,13 +23,11 @@ const rules = {
 		 * Fix error with `parserPath` not available in eslint-plugin-import.
 		 * @see https://github.com/import-js/eslint-plugin-import/issues/2556
 		 */
-		'import/parsers': {
+		'import-x/parsers': {
 			espree: ['.js', '.cjs', '.mjs', '.jsx'],
 		},
 
-		/** Fix undefined settings throwing error. */
-		'import-sorting/known-framework': '',
-		'import-sorting/known-first-party': '',
+		'import-sorting/known-first-party': /^~/.source,
 	},
 	rules: {
 		'no-console': 'warn',
@@ -92,39 +89,39 @@ const rules = {
 		'promise/valid-params': 'error',
 		'promise/prefer-await-to-then': 'error',
 
-		'import/default': 'error',
-		'import/export': 'error',
-		'import/extensions': ['error', 'always', { ignorePackages: true }],
-		'import/first': 'error',
-		'import/named': 'error',
-		'import/namespace': ['error', { allowComputed: true }],
-		'import/newline-after-import': 'error',
-		'import/no-absolute-path': 'error',
-		'import/no-amd': 'error',
-		'import/no-anonymous-default-export': 'error',
-		'import/no-cycle': ['error', { ignoreExternal: true }],
+		'import-x/default': 'error',
+		'import-x/export': 'error',
+		'import-x/extensions': ['error', 'always', { ignorePackages: true }],
+		'import-x/first': 'error',
+		'import-x/named': 'error',
+		'import-x/namespace': ['error', { allowComputed: true }],
+		'import-x/newline-after-import': 'error',
+		'import-x/no-absolute-path': 'error',
+		'import-x/no-amd': 'error',
+		'import-x/no-anonymous-default-export': 'error',
+		'import-x/no-cycle': ['error', { ignoreExternal: true }],
 
 		/**
 		 * Used in conjunction with `no-import-type-side-effects` and
 		 * `consistent-type-imports` for TypeScript import style.
 		 *
-		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md
+		 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-duplicates.md
 		 */
-		'import/no-duplicates': ['error', { 'prefer-inline': true }],
+		'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
 
 		/**
 		 * Forbid empty named import blocks.  Might be redundant with
 		 * other rules, but enabled just in case.
 		 *
-		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-empty-named-blocks.md
+		 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-empty-named-blocks.md
 		 */
-		'import/no-empty-named-blocks': 'error',
+		'import-x/no-empty-named-blocks': 'error',
 
 		/**
 		 * Allow importing devDependencies within test files.
-		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
+		 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-extraneous-dependencies.md
 		 */
-		'import/no-extraneous-dependencies': [
+		'import-x/no-extraneous-dependencies': [
 			'error',
 			{
 				devDependencies: [
@@ -135,25 +132,25 @@ const rules = {
 			},
 		],
 
-		'import/no-mutable-exports': 'error',
-		'import/no-named-as-default-member': 'error',
-		'import/no-named-as-default': 'error',
-		'import/no-named-default': 'error',
-		'import/no-self-import': 'error',
+		'import-x/no-mutable-exports': 'error',
+		'import-x/no-named-as-default-member': 'error',
+		'import-x/no-named-as-default': 'error',
+		'import-x/no-named-default': 'error',
+		'import-x/no-self-import': 'error',
 
 		/**
 		 * Buggy, and doesn't work with TypeScript.
-		 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md
+		 * @see https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unresolved.md
 		 */
-		'import/no-unresolved': 'off',
+		'import-x/no-unresolved': 'off',
 
-		'import/no-useless-path-segments': 'error',
-		'import/no-webpack-loader-syntax': 'error',
+		'import-x/no-useless-path-segments': 'error',
+		'import-x/no-webpack-loader-syntax': 'error',
 
 		/**
 		 * @see https://github.com/stormwarning/eslint-plugin-import-sorting
 		 */
-		'import/order': 'off',
+		'import-x/order': 'off',
 		'import-sorting/order': 'error',
 		'import-sorting/specifier-order': 'error',
 	},
@@ -170,7 +167,7 @@ const config = [
 	 */
 	...compat.extends('xo'),
 	/** @see https://github.com/import-js/eslint-plugin-import */
-	...compat.extends('plugin:import/recommended'),
+	...compat.extends('plugin:import-x/recommended'),
 	/** @see https://github.com/xjamundx/eslint-plugin-promise */
 	...compat.extends('plugin:promise/recommended'),
 
