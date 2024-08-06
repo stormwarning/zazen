@@ -28,7 +28,7 @@
     "stylelint-plugin-logical-css": "1.2.1"
   },
   "devDependencies": {
-    "stylelint": "16.6.1"
+    "stylelint": "16.8.1"
   },
   "peerDependencies": {
     "stylelint": ">=16"
