@@ -22,7 +22,7 @@
   "dependencies": {
     "@stylistic/stylelint-plugin": "2.1.2",
     "stylelint-config-recess-order": "5.0.1",
-    "stylelint-config-recommended": "14.0.0",
+    "stylelint-config-recommended": "14.0.1",
     "stylelint-no-unsupported-browser-features": "8.0.1",
     "stylelint-order": "6.0.4",
     "stylelint-plugin-logical-css": "1.2.1"
