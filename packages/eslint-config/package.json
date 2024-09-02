@@ -24,7 +24,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "1.7.0",
+    "@rushstack/eslint-patch": "1.10.4",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "eslint-config-prettier": "9.1.0",
