@@ -154,6 +154,7 @@ const config = {
 		 */
 		'import/order': 'off',
 		'import-sorting/order': 'error',
+		'import-sorting/specifier-order': 'error',
 	},
 }
 
