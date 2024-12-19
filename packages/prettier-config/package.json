@@ -11,6 +11,10 @@
   "license": "ISC",
   "author": "Jeff (https://tidaltheory.io)",
   "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
   "dependencies": {
     "prettier-plugin-packagejson": "2.4.10"
   },
