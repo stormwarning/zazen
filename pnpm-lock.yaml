@@ -131,8 +131,8 @@ importers:
         specifier: 2.29.1
         version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint@8.53.0)
       eslint-plugin-import-sorting:
-        specifier: 2.1.0
-        version: 2.1.0(eslint@8.53.0)(typescript@5.3.3)
+        specifier: 2.1.1
+        version: 2.1.1(eslint@8.53.0)(typescript@5.3.3)
       eslint-plugin-n:
         specifier: 16.6.2
         version: 16.6.2(eslint@8.53.0)
@@ -2413,8 +2413,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-import-sorting@2.1.0(eslint@8.53.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-SW/mNjyulFLAvIwDhD4xAj3qMs0MnBcspUcdKsLSthohQogSnWCiDwr4xU4y5CEyTMmXOMFQibHKhpnIb3Pfcw==}
+  /eslint-plugin-import-sorting@2.1.1(eslint@8.53.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-5wK/SWpbbneKTNC4kx/e2Vq7xCFedwP8pPys8JSwtOMvkzPZc8Pi59Wnc3eSyoE1Ohcv2PeEDTR0wpxAleNWZw==}
     engines: {node: '>=16.17.0 || >=18.6.0'}
     dependencies:
       '@typescript-eslint/utils': 7.18.0(eslint@8.53.0)(typescript@5.3.3)
