@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.9.1
+
+### Patch Changes
+
+- Update eslint-plugin-import-sorting to v2.1.1 ([#242](https://github.com/stormwarning/zazen/pull/242))
+
 ## 6.9.0
 
 ### Minor Changes
