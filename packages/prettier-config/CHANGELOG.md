@@ -1,5 +1,11 @@
 # @zazen/prettier-config
 
+## 1.1.1
+
+### Patch Changes
+
+- Add explicit `exports` field ([#240](https://github.com/stormwarning/zazen/pull/240))
+
 ## 1.1.0
 
 ### Minor Changes
