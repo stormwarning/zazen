@@ -9,7 +9,7 @@ import config from '../index.js'
 
 const VALID_CSS = readFileSync('./__tests__/valid.css', 'utf8')
 const INVALID_CSS = readFileSync('./__tests__/invalid.css', 'utf8')
-const RULE_WARNINGS = [
+const RULE_WARNINGS = new Set([
 	'color-function-notation',
 	'alpha-value-notation',
 	'number-max-precision',
@@ -22,7 +22,7 @@ const RULE_WARNINGS = [
 	'order/order',
 	'selector-type-no-unknown',
 	'declaration-property-value-no-unknown',
-]
+])
 
 describe('valid css', async () => {
 	let result = await stylelint.lint({
@@ -53,8 +53,8 @@ describe('invalid css', async () => {
 	})
 
 	it('flags correct warnings', () => {
-		for (let rule of RULE_WARNINGS) {
-			assert.ok(rules.has(rule))
+		for (let rule of rules) {
+			assert.ok(RULE_WARNINGS.has(rule))
 		}
 	})
 })

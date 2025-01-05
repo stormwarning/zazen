@@ -7,4 +7,5 @@
 	display: block;
 	color: #333;
 	background: linear-gradient(#fff, rgb(0 0 0 / 80%));
+	outline: oklch(78.2% 0.177 219.6deg) solid 2px;
 }
