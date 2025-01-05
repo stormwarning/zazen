@@ -1,5 +1,16 @@
 # Change Log
 
+## 4.0.1
+
+### Patch Changes
+
+- Upgrade config dependencies ([#244](https://github.com/stormwarning/zazen/pull/244))
+
+  - `@stylistic/stylelint-plugin` to 3.1.1
+  - `stylelint-config-recess-order` to 5.1.1
+  - `stylelint-config-recommended` to 14.0.1
+  - `stylelint-no-unsupported-browser-features` to 8.0.2
+
 ## 4.0.0
 
 ### Major Changes
