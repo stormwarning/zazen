@@ -1,5 +1,11 @@
 # @zazen/prettier-config
 
+## 1.1.3
+
+### Patch Changes
+
+- Add type declarations ([#255](https://github.com/stormwarning/zazen/pull/255))
+
 ## 1.1.2
 
 ### Patch Changes
