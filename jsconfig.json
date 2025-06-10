@@ -1,10 +1,11 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "checkJs": true,
-    "module": "esnext",
-    "target": "esnext",
-  },
-  "include": ["**/*.js", "**/*.mjs"],
-  "exclude": ["node_modules"],
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"target": "esnext"
+	},
+	"include": ["**/*.js", "**/*.mjs"],
+	"exclude": ["node_modules"]
 }
