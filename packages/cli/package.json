@@ -1,40 +1,40 @@
 {
-  "name": "@zazen/cli",
-  "version": "0.6.1",
-  "description": "Manage project tooling, free of weariness and confusion.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stormwarning/zazen.git",
-    "directory": "packages/cli"
-  },
-  "license": "ISC",
-  "author": "Jeff (https://tidaltheory.io)",
-  "type": "module",
-  "bin": {
-    "zazen": "bin/cli.js"
-  },
-  "files": [
-    "bin",
-    "src"
-  ],
-  "scripts": {
-    "old-build": "esbuild src/cli.js --bundle --platform=node --outdir=dist --external:sade",
-    "test": "ava"
-  },
-  "dependencies": {
-    "consola": "3.2.3",
-    "esbuild-register": "3.5.0",
-    "eslint": "8.56.0",
-    "execa": "8.0.1",
-    "outdent": "0.8.0",
-    "prettier": "3.2.4",
-    "sade": "1.8.1"
-  },
-  "devDependencies": {
-    "@types/sade": "1.7.8",
-    "ava": "5.3.1",
-    "esbuild": "0.19.12",
-    "esm-utils": "4.2.1",
-    "get-bin-path": "11.0.0"
-  }
+	"name": "@zazen/cli",
+	"version": "0.6.1",
+	"description": "Manage project tooling, free of weariness and confusion.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/stormwarning/zazen.git",
+		"directory": "packages/cli"
+	},
+	"license": "ISC",
+	"author": "Jeff (https://tidaltheory.io)",
+	"type": "module",
+	"bin": {
+		"zazen": "bin/cli.js"
+	},
+	"files": [
+		"bin",
+		"src"
+	],
+	"scripts": {
+		"old-build": "esbuild src/cli.js --bundle --platform=node --outdir=dist --external:sade",
+		"test": "ava"
+	},
+	"dependencies": {
+		"consola": "3.2.3",
+		"esbuild-register": "3.5.0",
+		"eslint": "8.56.0",
+		"execa": "8.0.1",
+		"outdent": "0.8.0",
+		"prettier": "3.2.4",
+		"sade": "1.8.1"
+	},
+	"devDependencies": {
+		"@types/sade": "1.7.8",
+		"ava": "5.3.1",
+		"esbuild": "0.19.12",
+		"esm-utils": "4.2.1",
+		"get-bin-path": "11.0.0"
+	}
 }

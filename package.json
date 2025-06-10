@@ -13,13 +13,12 @@
 		"test": "pnpm --if-present --filter '@zazen/*' test"
 	},
 	"lint-staged": {
-		"*.{js,cjs,mjs}": [
+		"*.{js,cjs,mjs,ts}": [
 			"eslint --fix",
 			"prettier --write"
 		],
 		"package.json": "prettier --write"
 	},
-	"prettier": "@zazen/prettier-config",
 	"devDependencies": {
 		"@changesets/cli": "2.27.1",
 		"@types/node": "20.14.2",

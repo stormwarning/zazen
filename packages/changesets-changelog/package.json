@@ -1,37 +1,37 @@
 {
-  "name": "@zazen/changesets-changelog",
-  "version": "2.0.3",
-  "description": "Generate changelogs, free of weariness and confusion",
-  "keywords": [
-    "changelog",
-    "changesets"
-  ],
-  "homepage": "https://github.com/stormwarning/zazen/blob/main/packages/changesets-changelog",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stormwarning/zazen.git",
-    "directory": "packages/changesets-changelog"
-  },
-  "license": "ISC",
-  "author": "Jeff (https://tidaltheory.io)",
-  "type": "module",
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "dist/index.cjs",
-  "scripts": {
-    "build": "esbuild index.js --format=cjs --outfile=dist/index.cjs",
-    "test": "vitest run"
-  },
-  "dependencies": {
-    "@changesets/get-github-info": "0.6.0",
-    "dotenv": "16.3.1"
-  },
-  "devDependencies": {
-    "@changesets/parse": "0.4.0",
-    "@changesets/types": "6.0.0",
-    "esbuild": "0.19.12"
-  }
+	"name": "@zazen/changesets-changelog",
+	"version": "2.0.3",
+	"description": "Generate changelogs, free of weariness and confusion",
+	"keywords": [
+		"changelog",
+		"changesets"
+	],
+	"homepage": "https://github.com/stormwarning/zazen/blob/main/packages/changesets-changelog",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/stormwarning/zazen.git",
+		"directory": "packages/changesets-changelog"
+	},
+	"license": "ISC",
+	"author": "Jeff (https://tidaltheory.io)",
+	"type": "module",
+	"exports": {
+		".": {
+			"require": "./dist/index.cjs"
+		}
+	},
+	"main": "dist/index.cjs",
+	"scripts": {
+		"build": "esbuild index.js --format=cjs --outfile=dist/index.cjs",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"@changesets/get-github-info": "0.6.0",
+		"dotenv": "16.3.1"
+	},
+	"devDependencies": {
+		"@changesets/parse": "0.4.0",
+		"@changesets/types": "6.0.0",
+		"esbuild": "0.19.12"
+	}
 }
