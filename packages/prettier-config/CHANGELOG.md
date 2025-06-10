@@ -1,5 +1,11 @@
 # @zazen/prettier-config
 
+## 1.1.2
+
+### Patch Changes
+
+- Fix plugin path resolution ([#253](https://github.com/stormwarning/zazen/pull/253))
+
 ## 1.1.1
 
 ### Patch Changes
