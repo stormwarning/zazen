@@ -1,6 +1,6 @@
 {
   "name": "@zazen/prettier-config",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Apply a consistent code style, free of weariness and confusion",
   "homepage": "https://github.com/stormwarning/zazen/blob/main/packages/prettier-config",
   "repository": {
