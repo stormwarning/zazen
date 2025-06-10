@@ -1,24 +1,25 @@
 {
-  "name": "@zazen/prettier-config",
-  "version": "1.1.2",
-  "description": "Apply a consistent code style, free of weariness and confusion",
-  "homepage": "https://github.com/stormwarning/zazen/blob/main/packages/prettier-config",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stormwarning/zazen.git",
-    "directory": "packages/prettier-config"
-  },
-  "license": "ISC",
-  "author": "Jeff (https://tidaltheory.io)",
-  "type": "module",
-  "exports": {
-    ".": "./index.js",
-    "./package.json": "./package.json"
-  },
-  "dependencies": {
-    "prettier-plugin-packagejson": "2.4.10"
-  },
-  "peerDependencies": {
-    "prettier": ">=3"
-  }
+	"name": "@zazen/prettier-config",
+	"version": "1.1.2",
+	"description": "Apply a consistent code style, free of weariness and confusion",
+	"homepage": "https://github.com/stormwarning/zazen/blob/main/packages/prettier-config",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/stormwarning/zazen.git",
+		"directory": "packages/prettier-config"
+	},
+	"license": "ISC",
+	"author": "Jeff (https://tidaltheory.io)",
+	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"types": "./index.d.ts",
+	"dependencies": {
+		"prettier-plugin-packagejson": "2.4.10"
+	},
+	"peerDependencies": {
+		"prettier": ">=3"
+	}
 }

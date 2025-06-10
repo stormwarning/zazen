@@ -1,40 +1,40 @@
 {
-  "name": "tidaltheory-monorepo",
-  "version": "0.0.0",
-  "private": true,
-  "repository": "stormwarning/zazen",
-  "author": "Jeff (https://tidaltheory.io)",
-  "type": "module",
-  "scripts": {
-    "build": "pnpm --if-present --filter '@zazen/*' build",
-    "changeset": "changeset add",
-    "prepare": "husky install",
-    "release": "pnpm run build && changeset publish",
-    "test": "pnpm --if-present --filter '@zazen/*' test"
-  },
-  "lint-staged": {
-    "*.{js,cjs,mjs,ts}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "package.json": "prettier --write"
-  },
-  "prettier": "@zazen/prettier-config",
-  "devDependencies": {
-    "@changesets/cli": "2.27.1",
-    "@types/node": "20.14.2",
-    "@zazen/eslint-config": "workspace:*",
-    "@zazen/prettier-config": "workspace:*",
-    "eslint": "8.57.1",
-    "husky": "8.0.3",
-    "lint-staged": "15.2.0",
-    "prettier": "3.4.2",
-    "typescript": "5.3.3",
-    "vite": "5.0.12",
-    "vitest": "1.2.1"
-  },
-  "packageManager": "pnpm@8.14.3",
-  "engines": {
-    "pnpm": "^8.0.0"
-  }
+	"name": "tidaltheory-monorepo",
+	"version": "0.0.0",
+	"private": true,
+	"repository": "stormwarning/zazen",
+	"author": "Jeff (https://tidaltheory.io)",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm --if-present --filter '@zazen/*' build",
+		"changeset": "changeset add",
+		"prepare": "husky install",
+		"release": "pnpm run build && changeset publish",
+		"test": "pnpm --if-present --filter '@zazen/*' test"
+	},
+	"lint-staged": {
+		"*.{js,cjs,mjs}": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"package.json": "prettier --write"
+	},
+	"prettier": "@zazen/prettier-config",
+	"devDependencies": {
+		"@changesets/cli": "2.27.1",
+		"@types/node": "20.14.2",
+		"@zazen/eslint-config": "workspace:*",
+		"@zazen/prettier-config": "workspace:*",
+		"eslint": "8.57.1",
+		"husky": "8.0.3",
+		"lint-staged": "15.2.0",
+		"prettier": "3.4.2",
+		"typescript": "5.3.3",
+		"vite": "5.0.12",
+		"vitest": "1.2.1"
+	},
+	"packageManager": "pnpm@8.14.3",
+	"engines": {
+		"pnpm": "^8.0.0"
+	}
 }
