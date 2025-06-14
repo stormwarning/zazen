@@ -9,7 +9,7 @@
 
 Install the conventions by running:
 
-```shell
+```sh
 npm install --save-dev eslint @zazen/eslint-config
 ```
 
