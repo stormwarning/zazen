@@ -1,5 +1,5 @@
-import prettier from 'eslint-config-prettier'
-import n from 'eslint-plugin-n'
+import configPrettier from 'eslint-config-prettier'
+import pluginN from 'eslint-plugin-n'
 import globals from 'globals'
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -14,7 +14,7 @@ const config = [
 		/**
 		 * @see https://github.com/eslint-community/eslint-plugin-n
 		 */
-		plugins: { n },
+		plugins: { n: pluginN },
 		rules: {
 			/**
 			 * We have this enabled in addition to `import/extensions` as
@@ -52,7 +52,7 @@ const config = [
 			'n/process-exit-as-throw': 'error',
 		},
 	},
-	prettier,
+	configPrettier,
 ]
 
 export default config

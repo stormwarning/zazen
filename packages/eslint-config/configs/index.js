@@ -1,15 +1,34 @@
-import { compat } from '../utils/compat.js'
-import prettier from 'eslint-config-prettier'
-import importSorting from 'eslint-plugin-import-sorting'
-import preferLet from 'eslint-plugin-prefer-let'
-import unicorn from 'eslint-plugin-unicorn'
+import pluginTypeScript from '@typescript-eslint/eslint-plugin'
+import parserTypeScript from '@typescript-eslint/parser'
+import configPrettier from 'eslint-config-prettier'
+import configXo from 'eslint-config-xo'
+// @ts-expect-error -- Something misconfigured in the exported types on this.
+import pluginImportSorting from 'eslint-plugin-import-sorting'
+import pluginImport from 'eslint-plugin-import-x'
+import pluginPreferLet from 'eslint-plugin-prefer-let'
+import pluginPromise from 'eslint-plugin-promise'
+import pluginUnicorn from 'eslint-plugin-unicorn'
+import globals from 'globals'
+
+import {
+	ALL_EXTENSIONS,
+	JS_EXTENSIONS,
+	JSX_FILES_GLOB,
+	TS_EXTENSIONS,
+	TSX_FILES_GLOB,
+} from '../utils/constants.js'
+import { rulesDts, rulesTs } from './typescript.js'
 
 /** @type {import('eslint').Linter.Config} */
-const rules = {
-	name: 'zazen:base',
+const setup = {
+	name: 'zazen:setup',
 	languageOptions: {
-		ecmaVersion: 2021,
+		ecmaVersion: 2022,
+		globals: {
+			...globals.es2022,
+		},
 		sourceType: 'module',
+		parser: parserTypeScript,
 		parserOptions: {
 			ecmaVersion: 'latest',
 		},
@@ -17,18 +36,52 @@ const rules = {
 	linterOptions: {
 		reportUnusedDisableDirectives: true,
 	},
-	plugins: { 'import-sorting': importSorting, 'prefer-let': preferLet },
+	plugins: {
+		'@typescript-eslint': pluginTypeScript,
+		'import-sorting': pluginImportSorting,
+		'import-x': pluginImport,
+		'prefer-let': pluginPreferLet,
+		promise: pluginPromise,
+		// Unicorn: pluginUnicorn,
+	},
 	settings: {
+		'import-x/extensions': ALL_EXTENSIONS,
 		/**
 		 * Fix error with `parserPath` not available in eslint-plugin-import.
 		 * @see https://github.com/import-js/eslint-plugin-import/issues/2556
 		 */
 		'import-x/parsers': {
-			espree: ['.js', '.cjs', '.mjs', '.jsx'],
+			espree: JS_EXTENSIONS,
+			'@typescript-eslint/parser': TS_EXTENSIONS,
+		},
+		'import-x/external-module-folders': [
+			'node_modules',
+			'node_modules/@types',
+		],
+		'import-x/resolver': {
+			node: ALL_EXTENSIONS,
 		},
 
-		'import-sorting/known-first-party': /^~/.source,
+		'import-sorting/internal-patterns': /^~/.source,
 	},
+}
+
+/** @type {import('eslint').Linter.Config} */
+const jsx = {
+	name: 'zazen:setup:jsx',
+	files: [JSX_FILES_GLOB, TSX_FILES_GLOB],
+	languageOptions: {
+		parserOptions: {
+			ecmaFeatures: {
+				jsx: true,
+			},
+		},
+	},
+}
+
+/** @type {import('eslint').Linter.Config} */
+const rules = {
+	name: 'zazen:rules',
 	rules: {
 		'no-console': 'warn',
 
@@ -158,23 +211,24 @@ const rules = {
 
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
-	/** @see https://github.com/sindresorhus/eslint-plugin-unicorn */
-	unicorn.configs['flat/recommended'],
+	setup,
+	jsx,
 
-	/**
-	 * @see https://github.com/xojs/eslint-config-xo
-	 * @todo
-	 */
-	...compat.extends('xo'),
-	/** @see https://github.com/import-js/eslint-plugin-import */
-	...compat.extends('plugin:import-x/recommended'),
+	/** @see https://github.com/un-ts/eslint-plugin-import-x */
+	pluginImport.flatConfigs.recommended,
 	/** @see https://github.com/xjamundx/eslint-plugin-promise */
-	...compat.extends('plugin:promise/recommended'),
+	pluginPromise.configs['flat/recommended'],
+	/** @see https://github.com/sindresorhus/eslint-plugin-unicorn */
+	pluginUnicorn.configs.recommended,
+	/** @see https://github.com/xojs/eslint-config-xo */
+	...configXo,
 
 	rules,
+	rulesTs,
+	rulesDts,
 
 	/** @see https://github.com/prettier/eslint-config-prettier */
-	prettier,
+	configPrettier,
 ]
 
 export default config

@@ -2,10 +2,11 @@ import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import configBase from '../configs/index.js'
-import configNode from '../configs/node.js'
 import { ESLint } from 'eslint'
 import { describe, expect, it } from 'vitest'
+
+import configBase from '../configs/index.js'
+import configNode from '../configs/node.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -20,10 +21,21 @@ const CONFIG_MAP = {
 	},
 }
 
+/**
+ *
+ * @param {import('eslint').Linter.LintMessage[]} errors
+ * @param {string} ruleId
+ */
 function hasRule(errors, ruleId) {
 	return errors.some((error) => error.ruleId === ruleId)
 }
 
+/**
+ *
+ * @param {string} string
+ * @param {import('eslint').Linter.Config} config
+ * @returns
+ */
 async function runEslint(string, config) {
 	let linter = new ESLint({
 		overrideConfig: config,
