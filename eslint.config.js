@@ -1,15 +1,17 @@
 import zazen from '@zazen/eslint-config'
 import zazenNode from '@zazen/eslint-config/node'
+import zazenStylistic from '@zazen/eslint-config/stylistic'
+import { defineConfig } from 'eslint/config'
 
-/** @type {import('eslint').Linter.Config[]} */
-const config = [
-	...zazen,
-	...zazenNode,
-
+const config = defineConfig([
 	{
 		name: 'project:ignores',
 		ignores: ['**/dist', '**/__tests__/*-errors.js'],
 	},
+
+	...zazen,
+	...zazenNode,
+
 	{
 		name: 'project:rules',
 		settings: {
@@ -25,7 +27,6 @@ const config = [
 			],
 		},
 	},
-
 	{
 		name: 'project:rules:tests',
 		files: ['**/__tests__/**/*.?(m|c)js'],
@@ -41,6 +42,8 @@ const config = [
 			'import-x/no-extraneous-dependencies': 'off',
 		},
 	},
-]
+
+	zazenStylistic,
+])
 
 export default config

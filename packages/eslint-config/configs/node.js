@@ -1,4 +1,3 @@
-import configPrettier from 'eslint-config-prettier'
 import pluginN from 'eslint-plugin-n'
 import globals from 'globals'
 
@@ -17,8 +16,10 @@ const config = [
 		plugins: { n: pluginN },
 		rules: {
 			/**
-			 * We have this enabled in addition to `import/extensions` as
-			 * this one has an auto-fix.
+			 * We have this enabled in addition to `import/extensions` as this
+			 * one has an auto-fix.
+			 *
+			 * @see https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/file-extension-in-import.md
 			 */
 			'n/file-extension-in-import': [
 				'error',
@@ -29,6 +30,7 @@ const config = [
 				 */
 				{ '.ts': 'never', '.tsx': 'never' },
 			],
+
 			'n/no-deprecated-api': 'error',
 			'n/no-missing-import': 'off',
 			'n/no-mixed-requires': [
@@ -52,7 +54,6 @@ const config = [
 			'n/process-exit-as-throw': 'error',
 		},
 	},
-	configPrettier,
 ]
 
 export default config

@@ -12,6 +12,13 @@ declare module '@zazen/eslint-config/node' {
 	export default config
 }
 
+declare module '@zazen/eslint-config/stylistic' {
+	import type { Linter } from 'eslint'
+
+	const config: Linter.Config[]
+	export default config
+}
+
 declare module '@zazen/eslint-config/typescript' {
 	import type { Linter } from 'eslint'
 

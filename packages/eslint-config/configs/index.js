@@ -1,14 +1,19 @@
-import pluginTypeScript from '@typescript-eslint/eslint-plugin'
-import parserTypeScript from '@typescript-eslint/parser'
-import configPrettier from 'eslint-config-prettier'
+import pluginStylistic from '@stylistic/eslint-plugin'
 import configXo from 'eslint-config-xo'
 // @ts-expect-error -- Something misconfigured in the exported types on this.
 import pluginImportSorting from 'eslint-plugin-import-sorting'
 import pluginImport from 'eslint-plugin-import-x'
+import pluginPerfectionist from 'eslint-plugin-perfectionist'
 import pluginPreferLet from 'eslint-plugin-prefer-let'
 import pluginPromise from 'eslint-plugin-promise'
 import pluginUnicorn from 'eslint-plugin-unicorn'
+import { defineConfig } from 'eslint/config'
 import globals from 'globals'
+import {
+	config as defineTsConfig,
+	parser as parserTypeScript,
+	plugin as pluginTypeScript,
+} from 'typescript-eslint'
 
 import {
 	ALL_EXTENSIONS,
@@ -19,8 +24,8 @@ import {
 } from '../utils/constants.js'
 import { rulesDts, rulesTs } from './typescript.js'
 
-/** @type {import('eslint').Linter.Config} */
-const setup = {
+// /** @type {import('eslint').Linter.Config} */
+const setup = defineTsConfig({
 	name: 'zazen:setup',
 	languageOptions: {
 		ecmaVersion: 2022,
@@ -35,11 +40,14 @@ const setup = {
 	},
 	linterOptions: {
 		reportUnusedDisableDirectives: true,
+		reportUnusedInlineConfigs: 'warn',
 	},
 	plugins: {
+		'@stylistic': pluginStylistic,
 		'@typescript-eslint': pluginTypeScript,
 		'import-sorting': pluginImportSorting,
 		'import-x': pluginImport,
+		perfectionist: pluginPerfectionist,
 		'prefer-let': pluginPreferLet,
 		promise: pluginPromise,
 		// Unicorn: pluginUnicorn,
@@ -64,7 +72,7 @@ const setup = {
 
 		'import-sorting/internal-patterns': /^~/.source,
 	},
-}
+})
 
 /** @type {import('eslint').Linter.Config} */
 const jsx = {
@@ -91,16 +99,25 @@ const rules = {
 		'prefer-const': 'off',
 		'prefer-let/prefer-let': 'error',
 
-		'unicorn/consistent-destructuring': 'off',
-		'unicorn/consistent-function-scoping': 'off',
+		/**
+		 * Move functions to the highest possible scope.  Disabled in XO but
+		 * maybe it's fine now?
+		 *
+		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-function-scoping.md
+		 */
+		'unicorn/consistent-function-scoping': 'error',
 
 		/**
 		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/expiring-todo-comments.md
 		 */
 		'unicorn/expiring-todo-comments': ['warn', { terms: ['@todo'] }],
 
-		'unicorn/no-null': 'off',
-		'unicorn/no-useless-undefined': 'off',
+		// 'unicorn/no-null': 'off',
+		// 'unicorn/no-useless-undefined': 'off',
+
+		/**
+		 * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-ternary.md
+		 */
 		'unicorn/prefer-ternary': ['error', 'only-single-line'],
 
 		/**
@@ -209,8 +226,7 @@ const rules = {
 	},
 }
 
-/** @type {import('eslint').Linter.Config[]} */
-const config = [
+const config = defineConfig([
 	setup,
 	jsx,
 
@@ -220,15 +236,24 @@ const config = [
 	pluginPromise.configs['flat/recommended'],
 	/** @see https://github.com/sindresorhus/eslint-plugin-unicorn */
 	pluginUnicorn.configs.recommended,
+
 	/** @see https://github.com/xojs/eslint-config-xo */
-	...configXo,
+	{
+		name: 'xo:rules',
+		rules: {
+			...configXo[0].rules,
+
+			/**
+			 * Deprecated rules used in eslint-config-xo.
+			 */
+			'no-buffer-constructor': 'off',
+			'no-return-await': 'off',
+		},
+	},
 
 	rules,
 	rulesTs,
 	rulesDts,
-
-	/** @see https://github.com/prettier/eslint-config-prettier */
-	configPrettier,
-]
+])
 
 export default config
