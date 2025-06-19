@@ -14,36 +14,60 @@
 	},
 	"license": "ISC",
 	"author": "Jeff (https://tidaltheory.io)",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./configs/index.js",
+			"types": "./index.d.ts"
+		},
+		"./node": {
+			"import": "./configs/node.js"
+		},
+		"./stylistic": {
+			"import": "./configs/stylistic.js"
+		},
+		"./typescript": {
+			"import": "./configs/typescript.js"
+		}
+	},
+	"types": "./index.d.ts",
 	"files": [
-		"index.js",
-		"node.js",
-		"typescript.js"
+		"configs",
+		"utils",
+		"index.d.ts",
+		"CHANGELOG.md",
+		"LICENSE.txt",
+		"README.md"
 	],
 	"scripts": {
+		"inspect": "eslint --inspect-config",
 		"lint": "eslint .",
-		"test": "ava"
+		"test": "vitest run"
 	},
 	"dependencies": {
-		"@rushstack/eslint-patch": "1.10.5",
-		"@typescript-eslint/eslint-plugin": "8.22.0",
-		"@typescript-eslint/parser": "8.22.0",
-		"eslint-config-prettier": "9.1.0",
-		"eslint-config-xo": "0.45.0",
-		"eslint-config-xo-typescript": "5.0.0",
+		"@eslint/eslintrc": "3.3.1",
+		"@stylistic/eslint-plugin": "5.0.0-beta.4",
+		"eslint-config-prettier": "10.1.5",
+		"eslint-config-xo": "0.47.0",
+		"eslint-config-xo-typescript": "8.0.1",
 		"eslint-plugin-etc": "2.0.3",
-		"eslint-plugin-import": "2.31.0",
 		"eslint-plugin-import-sorting": "2.2.0",
-		"eslint-plugin-n": "17.15.1",
+		"eslint-plugin-import-x": "4.15.2",
+		"eslint-plugin-n": "17.20.0",
+		"eslint-plugin-perfectionist": "4.15.0",
 		"eslint-plugin-prefer-let": "4.0.0",
 		"eslint-plugin-promise": "7.2.1",
-		"eslint-plugin-unicorn": "56.0.1"
+		"eslint-plugin-unicorn": "59.0.1",
+		"globals": "16.2.0",
+		"typescript-eslint": "8.34.1"
 	},
 	"devDependencies": {
 		"ava": "5.3.1",
+		"eslint": "9.29.0",
 		"is-plain-obj": "4.1.0"
 	},
 	"peerDependencies": {
-		"eslint": ">=8.57.0",
+		"eslint": ">=9.25.0",
 		"prettier": ">=2"
 	},
 	"engines": {

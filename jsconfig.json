@@ -1,9 +1,18 @@
 {
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
+		// Modules
 		"module": "nodenext",
 		"moduleResolution": "nodenext",
+
+		// JavaScript Support
+		"allowJs": true,
+		"checkJs": true,
+
+		// Interop Constraints
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+
+		// Language and Environment
 		"target": "esnext"
 	},
 	"include": ["**/*.js", "**/*.mjs", "**/*.ts"],
