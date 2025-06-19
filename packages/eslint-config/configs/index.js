@@ -24,7 +24,6 @@ import {
 } from '../utils/constants.js'
 import { rulesDts, rulesTs } from './typescript.js'
 
-// /** @type {import('eslint').Linter.Config} */
 const setup = defineTsConfig({
 	name: 'zazen:setup',
 	languageOptions: {
@@ -245,6 +244,7 @@ const config = defineConfig([
 
 			/**
 			 * Deprecated rules used in eslint-config-xo.
+			 * @todo [eslint-config-xo@>0.47.0]: Check if these are needed.
 			 */
 			'no-buffer-constructor': 'off',
 			'no-return-await': 'off',
