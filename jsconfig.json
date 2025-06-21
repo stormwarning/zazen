@@ -1,8 +1,14 @@
 {
 	"compilerOptions": {
+		// Type Checking
+		"strictNullChecks": true,
+
 		// Modules
 		"module": "nodenext",
 		"moduleResolution": "nodenext",
+
+		// Emit
+		"noEmit": true,
 
 		// JavaScript Support
 		"allowJs": true,
@@ -16,5 +22,5 @@
 		"target": "esnext"
 	},
 	"include": ["**/*.js", "**/*.mjs", "**/*.ts"],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", "**/__tests__/*-errors.js"]
 }

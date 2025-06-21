@@ -1,4 +1,3 @@
-import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -7,6 +6,7 @@ import { describe, expect, it } from 'vitest'
 
 import configBase from '../configs/index.js'
 import configNode from '../configs/node.js'
+import configTypeScript from '../configs/typescript.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -16,13 +16,20 @@ const CONFIG_MAP = {
 		errors: ['prefer-let/prefer-let', 'unicorn/prefer-ternary'],
 	},
 	node: {
-		config: configNode,
-		errors: ['n/no-deprecated-api', 'import-x/extensions'],
+		config: [...configBase, ...configNode],
+		errors: [
+			'n/no-deprecated-api',
+			'import-x/extensions',
+			'unicorn/prefer-node-protocol',
+		],
+	},
+	typescript: {
+		config: [...configBase, ...configTypeScript],
+		errors: ['@typescript-eslint/naming-convention'],
 	},
 }
 
 /**
- *
  * @param {import('eslint').Linter.LintMessage[]} errors
  * @param {string} ruleId
  */
@@ -31,32 +38,30 @@ function hasRule(errors, ruleId) {
 }
 
 /**
- *
- * @param {string} string
+ * @param {string} name
  * @param {import('eslint').Linter.Config} config
  * @returns
  */
-async function runEslint(string, config) {
+async function runEslint(name, config) {
 	let linter = new ESLint({
+		overrideConfigFile: true,
 		overrideConfig: config,
 	})
-
-	let [firstResult] = await linter.lintText(string, {
-		filePath: 'test-file.js',
-	})
+	let [firstResult] = await linter.lintFiles(
+		path.resolve(
+			__dirname,
+			`./${name}-errors.${name === 'typescript' ? 'ts' : 'js'}`,
+		),
+	)
 
 	return firstResult.messages
 }
 
-describe.each(['base', 'node'])('%s config', (config) => {
+describe.each(['base', 'node', 'typescript'])('%s config', (name) => {
 	it('reports expected errors', async () => {
-		let code = await readFile(
-			path.resolve(__dirname, `./${config}-errors.js`),
-			'utf8',
-		)
-		let errors = await runEslint(code, CONFIG_MAP[config].config)
+		let errors = await runEslint(name, CONFIG_MAP[name].config)
 
-		for (let rule of CONFIG_MAP[config].errors) {
+		for (let rule of CONFIG_MAP[name].errors) {
 			expect(hasRule(errors, rule), JSON.stringify(errors)).toBeTruthy()
 		}
 	})
