@@ -143,16 +143,24 @@ export const rulesDts = {
 const typeAware = {
 	name: 'zazen:rules:typescript:type-aware',
 	files: [TS_FILES_GLOB],
-	extends: [
-		tsEslint.configs.strictTypeCheckedOnly,
-		tsEslint.configs.stylisticTypeCheckedOnly,
-	],
 	languageOptions: {
 		parserOptions: {
 			projectService: true,
 		},
 	},
 	rules: {
+		/**
+		 * @see https://typescript-eslint.io/rules/?=xrecommended-strict-typeInformation
+		 * @see https://typescript-eslint.io/rules/?=xrecommended-xstrict-stylistic-typeInformation
+		 */
+		...tsEslint.configs.strictTypeCheckedOnly.find(
+			({ name }) => name === 'typescript-eslint/strict-type-checked-only',
+		)?.rules,
+		...tsEslint.configs.stylisticTypeCheckedOnly.find(
+			({ name }) =>
+				name === 'typescript-eslint/stylistic-type-checked-only',
+		)?.rules,
+
 		/**
 		 * Could potentially make this more strict in future.
 		 * @see https://typescript-eslint.io/rules/naming-convention
