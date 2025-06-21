@@ -1,5 +1,15 @@
 # Change Log
 
+## 7.0.1
+
+### Patch Changes
+
+- Disable `etc/no-assign-mutated-array` in TypeScript config ([#258](https://github.com/stormwarning/zazen/pull/258))
+
+  Seems like it has issues with the latest version of the TypeScript parser.
+
+- Fix error in `naming-convention` rule ([#258](https://github.com/stormwarning/zazen/pull/258))
+
 ## 7.0.0
 
 ### Major Changes
