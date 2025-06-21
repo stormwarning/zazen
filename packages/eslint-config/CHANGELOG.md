@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- Extract just the rules from typescript-eslint configs ([#260](https://github.com/stormwarning/zazen/pull/260))
+
 ## 7.0.1
 
 ### Patch Changes
