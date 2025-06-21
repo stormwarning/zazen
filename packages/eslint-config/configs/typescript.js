@@ -192,7 +192,7 @@ const typeAware = {
 			{
 				// Allow any format when quoted.
 				selector: ['classProperty', 'objectLiteralProperty'],
-				format: undefined,
+				format: null, // eslint-disable-line unicorn/no-null
 				modifiers: ['requiresQuotes'],
 			},
 		],
@@ -229,10 +229,14 @@ const typeAware = {
 		'@typescript-eslint/no-unused-vars': 'off',
 
 		/**
-		 * Avoid assigning mutated arrays.
+		 * Avoid assigning mutated arrays.  Seems like this hasn't been updated
+		 * to work with the latest typescript-eslint parser, so disabled until
+		 * the next update.
+		 *
+		 * @todo [eslint-plugin-etc@>2.0.3] Check if this works with eslint@9.
 		 * @see https://github.com/cartant/eslint-plugin-etc/blob/main/docs/rules/no-assign-mutated-array.md
 		 */
-		'etc/no-assign-mutated-array': 'error',
+		// 'etc/no-assign-mutated-array': 'error',
 	},
 }
 
