@@ -68,6 +68,15 @@ export const rulesTs = {
 		],
 
 		/**
+		 * Allow empty extended interfaces.
+		 * @see https://typescript-eslint.io/rules/no-empty-object-type
+		 */
+		'@typescript-eslint/no-empty-object-type': [
+			'error',
+			{ allowInterfaces: 'with-single-extends' },
+		],
+
+		/**
 		 * Used in conjunction with `consistent-type-imports` and
 		 * `import/no-duplicates` for TypeScript import style.
 		 *
