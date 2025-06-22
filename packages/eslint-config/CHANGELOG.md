@@ -1,5 +1,12 @@
 # Change Log
 
+## 7.2.0
+
+### Minor Changes
+
+- Remove TS options from `file-extension-in-import` ([#263](https://github.com/stormwarning/zazen/pull/263))
+- Add `no-empty-object-type` option for interfaces ([#262](https://github.com/stormwarning/zazen/pull/262))
+
 ## 7.1.0
 
 ### Minor Changes
