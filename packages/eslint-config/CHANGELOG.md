@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.3.0
+
+### Minor Changes
+
+- Allow unused vars with a leading underscore ([#265](https://github.com/stormwarning/zazen/pull/265))
+
 ## 7.2.0
 
 ### Minor Changes
