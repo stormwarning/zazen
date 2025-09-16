@@ -85,6 +85,23 @@ export const rulesTs = {
 		'@typescript-eslint/no-import-type-side-effects': 'error',
 
 		/**
+		 * Ignore unused vars prefixed with an underscore.
+		 * @see https://typescript-eslint.io/rules/no-unused-vars/
+		 */
+		'@typescript-eslint/no-unused-vars': [
+			'warn',
+			{
+				args: 'all',
+				argsIgnorePattern: '^_',
+				caughtErrors: 'all',
+				caughtErrorsIgnorePattern: '^_',
+				destructuredArrayIgnorePattern: '^_',
+				varsIgnorePattern: '^_',
+				ignoreRestSiblings: true,
+			},
+		],
+
+		/**
 		 * Allow functions to be defined after use.  This allows small utility
 		 * functions to be within the file they are used, but keeping the more
 		 * "important" code at the top.
