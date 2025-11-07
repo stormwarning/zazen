@@ -15,7 +15,7 @@ declare module '@zazen/eslint-config/node' {
 declare module '@zazen/eslint-config/stylistic' {
 	import type { Linter } from 'eslint'
 
-	const config: Linter.Config[]
+	const config: Linter.Config
 	export default config
 }
 

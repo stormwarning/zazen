@@ -1,4 +1,3 @@
-import pluginStylistic from '@stylistic/eslint-plugin'
 import configXo from 'eslint-config-xo'
 // @ts-expect-error -- Something misconfigured in the exported types on this.
 import pluginImportSorting from 'eslint-plugin-import-sorting'
@@ -42,7 +41,6 @@ const setup = defineTsConfig({
 		reportUnusedInlineConfigs: 'warn',
 	},
 	plugins: {
-		'@stylistic': pluginStylistic,
 		'@typescript-eslint': pluginTypeScript,
 		'import-sorting': pluginImportSorting,
 		'import-x': pluginImport,
