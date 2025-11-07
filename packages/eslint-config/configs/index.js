@@ -90,7 +90,25 @@ const jsx = {
 const rules = {
 	name: 'zazen:rules',
 	rules: {
-		'no-console': 'warn',
+		/**
+		 * Allow some key console methods.
+		 * @see https://eslint.org/docs/latest/rules/no-console
+		 */
+		'no-console': [
+			'warn',
+			{
+				allow: [
+					'debug',
+					'warn',
+					'error',
+					'info',
+					'group',
+					'groupEnd',
+					'groupCollapsed',
+					'table',
+				],
+			},
+		],
 
 		/**
 		 * @see https://github.com/thefrontside/javascript/tree/v3/packages/eslint-plugin-prefer-let
