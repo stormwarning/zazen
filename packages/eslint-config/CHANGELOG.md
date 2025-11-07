@@ -1,5 +1,12 @@
 # Change Log
 
+## 7.4.0
+
+### Minor Changes
+
+- Allow some key `console` methods ([#267](https://github.com/stormwarning/zazen/pull/267))
+- Add rule for decorator position ([#268](https://github.com/stormwarning/zazen/pull/268))
+
 ## 7.3.0
 
 ### Minor Changes
