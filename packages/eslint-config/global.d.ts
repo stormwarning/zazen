@@ -5,6 +5,13 @@ declare module '@typescript-eslint/eslint-plugin' {
 	export default plugin
 }
 
+declare module 'eslint-plugin-decorator-position' {
+	import type { ESLint } from 'eslint'
+
+	const plugin: ESLint.Plugin
+	export default plugin
+}
+
 declare module 'eslint-plugin-etc' {
 	import type { ESLint } from 'eslint'
 

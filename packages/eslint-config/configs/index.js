@@ -42,7 +42,6 @@ const setup = defineTsConfig({
 		reportUnusedInlineConfigs: 'warn',
 	},
 	plugins: {
-		'@stylistic': pluginStylistic,
 		'@typescript-eslint': pluginTypeScript,
 		'import-sorting': pluginImportSorting,
 		'import-x': pluginImport,
@@ -257,6 +256,9 @@ const config = defineConfig([
 	/** @see https://github.com/xojs/eslint-config-xo */
 	{
 		name: 'xo:rules',
+		plugins: {
+			'@stylistic': pluginStylistic,
+		},
 		rules: {
 			...configXo[0].rules,
 
