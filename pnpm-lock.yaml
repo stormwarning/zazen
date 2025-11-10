@@ -86,8 +86,8 @@ importers:
         version: 1.8.1
     devDependencies:
       '@types/sade':
-        specifier: 1.7.8
-        version: 1.7.8
+        specifier: 1.8.0
+        version: 1.8.0
       ava:
         specifier: 5.3.1
         version: 5.3.1
@@ -1436,10 +1436,6 @@ packages:
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
     dev: true
 
-  /@types/mri@1.1.4:
-    resolution: {integrity: sha512-Yk5c3QsL1s9NjpFaVoKmEVXnHHi6MJlF6KpVh/HNnM0tWvyoi+ZrSy17r3cP/QK1ghdg5K2mKBVJbtKl5sAmXw==}
-    dev: true
-
   /@types/node@12.20.55:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: true
@@ -1454,10 +1450,11 @@ packages:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
     dev: true
 
-  /@types/sade@1.7.8:
-    resolution: {integrity: sha512-WGEWfxQ8VHLm3JS4ljRR3MSPqVjY0JMo6zsbBywOjFIxP8Cizxx1p6r6FxOnAOZpUn4VOFoRRTXFmaOLD/+VOQ==}
+  /@types/sade@1.8.0:
+    resolution: {integrity: sha512-AaEFFSbi9xUFPVmsmlo0X8gXpdUJxoT6Ve36Qqorqb/wxagc5v4W44mCPeiw5HqWjwypJ1X1qNL7lmofqX5C7g==}
+    deprecated: This is a stub types definition. sade provides its own type definitions, so you do not need this installed.
     dependencies:
-      '@types/mri': 1.1.4
+      sade: 1.8.1
     dev: true
 
   /@types/semver@7.5.5:
@@ -5100,7 +5097,6 @@ packages:
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
-    dev: false
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -5862,7 +5858,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mri: 1.2.0
-    dev: false
 
   /safe-array-concat@1.0.1:
     resolution: {integrity: sha512-6XbUAseYE2KtOuGueyeobCySj9L4+66Tn6KQMOPQJrAJEowYKW/YR/MGJZl7FdydUdaFu4LYyDZjxf4/Nmo23Q==}
