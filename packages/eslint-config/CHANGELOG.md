@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.4.1
+
+### Patch Changes
+
+- Update peerDependencies version range syntax ([#270](https://github.com/stormwarning/zazen/pull/270))
+
 ## 7.4.0
 
 ### Minor Changes
