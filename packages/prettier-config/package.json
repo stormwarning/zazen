@@ -20,6 +20,6 @@
 		"prettier-plugin-packagejson": "2.4.10"
 	},
 	"peerDependencies": {
-		"prettier": ">=3"
+		"prettier": "^3.0.0"
 	}
 }

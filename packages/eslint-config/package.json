@@ -68,8 +68,7 @@
 		"is-plain-obj": "4.1.0"
 	},
 	"peerDependencies": {
-		"eslint": ">=9.25.0",
-		"prettier": ">=2"
+		"eslint": "^9.25.0"
 	},
 	"engines": {
 		"node": ">=18"
