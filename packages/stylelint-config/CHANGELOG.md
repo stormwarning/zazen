@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- Update peerDependencies version range syntax ([#270](https://github.com/stormwarning/zazen/pull/270))
+
 ## 4.0.1
 
 ### Patch Changes

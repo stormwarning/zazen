@@ -1,5 +1,11 @@
 # @zazen/prettier-config
 
+## 1.1.4
+
+### Patch Changes
+
+- Update peerDependencies version range syntax ([#270](https://github.com/stormwarning/zazen/pull/270))
+
 ## 1.1.3
 
 ### Patch Changes
