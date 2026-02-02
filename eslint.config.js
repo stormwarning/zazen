@@ -28,6 +28,16 @@ const config = defineConfig([
 		},
 	},
 	{
+		name: 'project/rules/stylelint',
+		files: ['packages/stylelint-config/**/*.js'],
+		rules: {
+			/**
+			 * Stylelint rules use `null` to explicitly disable.
+			 */
+			'unicorn/no-null': 'off',
+		},
+	},
+	{
 		name: 'project:rules:tests',
 		files: ['**/__tests__/**/*.?(m|c)js'],
 		ignores: ['**/__tests__/*-errors.js'],
