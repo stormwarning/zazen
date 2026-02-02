@@ -146,11 +146,11 @@ export default {
 			'rules',
 			{
 				type: 'rule',
-				selector: /^&:[\w-]+$/,
+				selector: /^&::[\w-]+$/,
 			},
 			{
 				type: 'rule',
-				selector: /^&::[\w-]+$/,
+				selector: /^&:[\w-]+$/,
 			},
 			{
 				type: 'at-rule',
