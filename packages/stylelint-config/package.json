@@ -1,6 +1,6 @@
 {
 	"name": "@zazen/stylelint-config",
-	"version": "4.0.2",
+	"version": "5.0.0",
 	"description": "Lint CSS, free of weariness and confusion",
 	"keywords": [
 		"stylelint-config"
