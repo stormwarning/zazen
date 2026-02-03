@@ -10,18 +10,20 @@ import config from '../index.js'
 const VALID_CSS = readFileSync('./__tests__/valid.css', 'utf8')
 const INVALID_CSS = readFileSync('./__tests__/invalid.css', 'utf8')
 const RULE_WARNINGS = new Set([
-	'color-function-notation',
-	'alpha-value-notation',
-	'number-max-precision',
-	'no-descending-specificity',
-	'rule-empty-line-before',
-	'color-named',
 	'plugin/use-logical-properties-and-values',
-	'order/properties-order',
-	'length-zero-no-unit',
+	'plugin/use-logical-units',
 	'order/order',
-	'selector-type-no-unknown',
+	'order/properties-order',
+	'alpha-value-notation',
+	'color-function-notation',
+	'color-named',
 	'declaration-property-value-no-unknown',
+	'function-url-no-scheme-relative',
+	'length-zero-no-unit',
+	'no-descending-specificity',
+	'number-max-precision',
+	'rule-empty-line-before',
+	'selector-type-no-unknown',
 ])
 
 describe('valid css', async () => {
@@ -66,6 +68,7 @@ describe('deprecated rules are excluded', () => {
 	]
 
 	it('is not empty', () => {
+		// eslint-disable-next-line etc/prefer-less-than
 		assert.ok(ruleNames.length > 0)
 	})
 
