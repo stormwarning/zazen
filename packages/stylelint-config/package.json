@@ -5,7 +5,7 @@
 	"keywords": [
 		"stylelint-config"
 	],
-	"homepage": "https://github.com/stormwarning/zazen-stylelint-config",
+	"homepage": "https://github.com/stormwarning/zazen/blob/main/packages/stylelint-config",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/stormwarning/zazen.git",
@@ -20,20 +20,20 @@
 		"test": "node --test"
 	},
 	"dependencies": {
-		"@stylistic/stylelint-plugin": "3.1.1",
-		"stylelint-config-recess-order": "5.1.1",
-		"stylelint-config-recommended": "14.0.1",
-		"stylelint-no-unsupported-browser-features": "8.0.2",
-		"stylelint-order": "6.0.4",
-		"stylelint-plugin-logical-css": "1.2.1"
+		"@stylistic/stylelint-plugin": "5.0.1",
+		"stylelint-config-recess-order": "7.6.0",
+		"stylelint-config-recommended": "18.0.0",
+		"stylelint-no-unsupported-browser-features": "8.0.5",
+		"stylelint-order": "7.0.1",
+		"stylelint-plugin-logical-css": "1.3.0"
 	},
 	"devDependencies": {
-		"stylelint": "16.12.0"
+		"stylelint": "17.1.0"
 	},
 	"peerDependencies": {
-		"stylelint": "^16.8.0"
+		"stylelint": "^17.0.0"
 	},
 	"engines": {
-		"node": ">=18"
+		"node": ">=20.19"
 	}
 }

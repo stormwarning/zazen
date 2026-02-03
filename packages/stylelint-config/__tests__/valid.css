@@ -1,11 +1,11 @@
-@import url('x.css');
+@import url("x.css");
 
 .selector-1,
 .selector-2,
-.selector-3[type='text'] {
+.selector-3[type="text"] {
 	box-sizing: border-box;
 	display: block;
 	color: #333;
-	background: linear-gradient(#fff, rgb(0 0 0 / 80%));
 	outline: oklch(78.2% 0.177 219.6deg) solid 2px;
+	background: linear-gradient(#fff, rgb(0 0 0 / 80%));
 }

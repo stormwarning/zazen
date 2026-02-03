@@ -1,7 +1,8 @@
-@import URL('//example.com/x.css');
+@import URL("//example.com/x.css");
 
 .selector-1 {
 	& .selector-2 {
+		height: 10dvh;
 		& .selector-3 {
 			& .selector-4 {
 				color: rgba(0, 0, 0, 0.08215);
