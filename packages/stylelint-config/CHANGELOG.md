@@ -1,5 +1,17 @@
 # Change Log
 
+## 5.0.0
+
+### Major Changes
+
+- Upgrade dependencies ([#275](https://github.com/stormwarning/zazen/pull/275))
+
+  Bumps plugins and extended configs to their latest. Minimum versions of `stylelint` and `node` are now `17` and `20.19.0`.
+
+### Patch Changes
+
+- Order nested pseudo-classes after pseudo-elements ([#273](https://github.com/stormwarning/zazen/pull/273))
+
 ## 4.0.2
 
 ### Patch Changes
