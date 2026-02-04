@@ -1,31 +1,27 @@
-const KEBAB_CASE_REGEX = /([a-z][\da-z]*(-[\da-z]+)*)/
-
 /** @type {import('stylelint').Config} */
 export default {
 	ignoreFiles: ['node_modules', '**/dist/**/*.css'],
 
 	/**
+	 * @see https://github.com/stylelint-stylistic/stylelint-stylistic
+	 * @see https://github.com/hudochenkov/stylelint-order
 	 * @see https://github.com/RJWadley/stylelint-no-unsupported-browser-features
 	 * @see https://github.com/yuschick/stylelint-plugin-logical-css
 	 */
 	plugins: [
+		'@stylistic/stylelint-plugin',
 		'stylelint-no-unsupported-browser-features',
+		'stylelint-order',
 		'stylelint-plugin-logical-css',
 	],
 
 	/**
-	 * @see https://github.com/stylelint/stylelint-config-recommended
+	 * @see https://github.com/stylelint/stylelint-config-standard
+	 * @see https://github.com/stormwarning/stylelint-config-recess-order
 	 */
-	extends: ['stylelint-config-recommended', './conf/stylistic.js'],
+	extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
 
 	rules: {
-		/**
-		 * Avoid vendor prefixes in at-rules.  Autoprefixer should handle
-		 * prefixing where necessary.
-		 * @see https://stylelint.io/user-guide/rules/at-rule-no-vendor-prefix
-		 */
-		'at-rule-no-vendor-prefix': true,
-
 		/**
 		 * Ensure `font-display` and `font-style` are included in @font-face
 		 * definitions.
@@ -68,15 +64,6 @@ export default {
 		'function-url-no-scheme-relative': true,
 
 		/**
-		 * Use kebab-case for keyframe animation names.
-		 * @see https://stylelint.io/user-guide/rules/keyframes-name-pattern
-		 */
-		'keyframes-name-pattern': [
-			KEBAB_CASE_REGEX,
-			{ message: (n) => `Expected animation "${n}" to be kebab-case` },
-		],
-
-		/**
 		 * Avoid nesting too deeply as it can be harder to follow and lead to
 		 * specificity issues.
 		 * @see https://stylelint.io/user-guide/rules/max-nesting-depth
@@ -87,13 +74,6 @@ export default {
 		],
 
 		/**
-		 * Avoid vendor prefixes in media queries.  Autoprefixer should handle
-		 * prefixing where necessary.
-		 * @see https://stylelint.io/user-guide/rules/media-feature-name-no-vendor-prefix
-		 */
-		'media-feature-name-no-vendor-prefix': true,
-
-		/**
 		 * Source order matters in CSS.  Keep stylesheets legible by having
 		 * higher-specificity selectors follow lower.
 		 * @see https://stylelint.io/user-guide/rules/no-descending-specificity
@@ -101,26 +81,6 @@ export default {
 		'no-descending-specificity': [
 			true,
 			{ ignore: ['selectors-within-list'] },
-		],
-
-		/**
-		 * Avoid using greater precision than browsers care about.
-		 * @see https://stylelint.io/user-guide/rules/number-max-precision
-		 */
-		'number-max-precision': 4,
-
-		/**
-		 * Use kebab-case for class and id names.
-		 * @see https://stylelint.io/user-guide/rules/selector-class-pattern
-		 * @see https://stylelint.io/user-guide/rules/selector-id-pattern
-		 */
-		'selector-class-pattern': [
-			KEBAB_CASE_REGEX,
-			{ message: (s) => `Expected class "${s}" to be kebab-case.` },
-		],
-		'selector-id-pattern': [
-			KEBAB_CASE_REGEX,
-			{ message: (s) => `Expected id "${s}" to be kebab-case.` },
 		],
 
 		/**
@@ -136,28 +96,59 @@ export default {
 		'selector-max-universal': 1,
 
 		/**
-		 * Avoid vendor prefixes in selectors.  Autoprefixer should handle
-		 * prefixing where necessary.
-		 * @see https://stylelint.io/user-guide/rules/selector-no-vendor-prefix
+		 * Recommended in `@stylistic/stylelint-config`.
+		 * @see https://github.com/stylelint-stylistic/stylelint-config/blob/main/.stylelintrc.json
 		 */
-		'selector-no-vendor-prefix': [
-			true,
-			{ ignoreSelectors: ['::-webkit-input-placeholder'] },
+		'@stylistic/at-rule-name-case': 'lower',
+		'@stylistic/color-hex-case': 'lower',
+		'@stylistic/media-feature-name-case': 'lower',
+		'@stylistic/no-extra-semicolons': true,
+		'@stylistic/number-leading-zero': 'always',
+		'@stylistic/number-no-trailing-zeros': true,
+		'@stylistic/property-case': 'lower',
+		'@stylistic/selector-pseudo-class-case': 'lower',
+		'@stylistic/selector-pseudo-element-case': 'lower',
+		'@stylistic/unit-case': 'lower',
+
+		/**
+		 * Maintain a consistent order of the contents of declaration blocks.
+		 * @see https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md
+		 */
+		'order/order': [
+			'dollar-variables',
+			'custom-properties',
+			{
+				type: 'at-rule',
+				name: 'extend',
+			},
+			{
+				type: 'at-rule',
+				name: 'include',
+				hasBlock: false,
+			},
+			'declarations',
+			'rules',
+			{
+				type: 'rule',
+				selector: /^&::[\w-]+$/,
+			},
+			{
+				type: 'rule',
+				selector: /^&:[\w-]+$/,
+			},
+			{
+				type: 'at-rule',
+				hasBlock: true,
+			},
 		],
 
 		/**
-		 * Avoid redundant values in shorthand properties.
-		 * @see https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values
+		 * Ensure other property order settings don't conflict with the
+		 * `recess-order` config.  Turning this rule off explicitly in case it
+		 * is enabled in an extended config.
+		 * @see https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-alphabetical-order/README.md
 		 */
-		'shorthand-property-no-redundant-values': true,
-
-		/**
-		 * @see https://stylelint.io/user-guide/rules/value-no-vendor-prefix
-		 */
-		'value-no-vendor-prefix': [
-			true,
-			{ ignoreValues: ['grab', 'grabbing'] },
-		],
+		'order/properties-alphabetical-order': null,
 
 		/**
 		 * Encourage the use of logical properties and values.
