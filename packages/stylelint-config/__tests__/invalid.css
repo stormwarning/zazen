@@ -11,11 +11,12 @@
 	}
 }
 .selector-2 {
-	color: red;
+	color: LIGHT-DARK(red, white);
 	margin-top: 0px;
 	--custom-property: 0;
+	outline: NONE;
 }
 
-madeup {
+MADEUP {
 	margin: #fff;
 }

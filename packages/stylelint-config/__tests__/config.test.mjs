@@ -4,7 +4,6 @@ import { describe, it } from 'node:test'
 
 import stylelint from 'stylelint'
 
-import stylistic from '../conf/stylistic.js'
 import config from '../index.js'
 
 const VALID_CSS = readFileSync('./__tests__/valid.css', 'utf8')
@@ -14,16 +13,24 @@ const RULE_WARNINGS = new Set([
 	'plugin/use-logical-units',
 	'order/order',
 	'order/properties-order',
-	'alpha-value-notation',
-	'color-function-notation',
 	'color-named',
 	'declaration-property-value-no-unknown',
 	'function-url-no-scheme-relative',
-	'length-zero-no-unit',
 	'no-descending-specificity',
+	'selector-type-no-unknown',
+
+	// Included in stylelint-config-standard.
+	'alpha-value-notation',
+	'color-function-alias-notation',
+	'color-function-notation',
+	'custom-property-empty-line-before',
+	'declaration-empty-line-before',
+	'function-name-case', //
+	'length-zero-no-unit',
 	'number-max-precision',
 	'rule-empty-line-before',
-	'selector-type-no-unknown',
+	'selector-type-case',
+	'value-keyword-case',
 ])
 
 describe('valid css', async () => {
@@ -56,16 +63,17 @@ describe('invalid css', async () => {
 
 	it('flags correct warnings', () => {
 		for (let rule of rules) {
-			assert.ok(RULE_WARNINGS.has(rule))
+			assert.ok(RULE_WARNINGS.has(rule), `Unexpected '${rule}' warning.`)
+		}
+
+		for (let warning of RULE_WARNINGS) {
+			assert.ok(rules.has(warning), `Missing '${warning}' warning.`)
 		}
 	})
 })
 
 describe('deprecated rules are excluded', () => {
-	let ruleNames = [
-		...Object.keys(config.rules),
-		...Object.keys(stylistic.rules),
-	]
+	let ruleNames = Object.keys(config.rules ?? {})
 
 	it('is not empty', () => {
 		// eslint-disable-next-line etc/prefer-less-than
