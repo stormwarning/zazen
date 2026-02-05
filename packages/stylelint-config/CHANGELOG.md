@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.0
+
+### Minor Changes
+
+- Extend `stylelint-config-standard` and remove redundant rules ([#276](https://github.com/stormwarning/zazen/pull/276))
+
 ## 5.0.0
 
 ### Major Changes
