@@ -22,7 +22,7 @@
 		"test": "ava"
 	},
 	"dependencies": {
-		"consola": "3.2.3",
+		"consola": "3.4.2",
 		"esbuild-register": "3.5.0",
 		"eslint": "8.56.0",
 		"execa": "8.0.1",
