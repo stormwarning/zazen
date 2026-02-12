@@ -20,7 +20,7 @@
 		"package.json": "prettier --write"
 	},
 	"devDependencies": {
-		"@changesets/cli": "2.27.1",
+		"@changesets/cli": "2.29.8",
 		"@types/node": "20.14.2",
 		"@zazen/eslint-config": "workspace:*",
 		"@zazen/prettier-config": "workspace:*",
