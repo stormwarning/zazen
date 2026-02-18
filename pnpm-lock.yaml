@@ -98,8 +98,8 @@ importers:
         specifier: 4.2.1
         version: 4.2.1
       get-bin-path:
-        specifier: 11.0.0
-        version: 11.0.0
+        specifier: 11.0.1
+        version: 11.0.1
 
   packages/eslint-config:
     dependencies:
@@ -2036,8 +2036,8 @@ packages:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
 
-  get-bin-path@11.0.0:
-    resolution: {integrity: sha512-hvX/hynZJ6sxeItamADFBZo0WmLoG/qZBlRCLRv+J+oN8USw1ZxefIGJSFPu1GGd3OHWVFJKvCCN970wmpiHzg==}
+  get-bin-path@11.0.1:
+    resolution: {integrity: sha512-eKf+2wc6C9wthTse2XALEjWiKHtstG3EFWFaids1zXgDWd37GIgTyxif/b5mCDTZwWPaSDhOO1cr85xN/vu+xA==}
     engines: {node: '>=18.18.0'}
 
   get-caller-file@2.0.5:
@@ -5707,7 +5707,7 @@ snapshots:
 
   gensync@1.0.0-beta.2: {}
 
-  get-bin-path@11.0.0:
+  get-bin-path@11.0.1:
     dependencies:
       escalade: 3.2.0
 
