@@ -45,7 +45,7 @@
 		"test": "vitest run"
 	},
 	"dependencies": {
-		"@eslint/eslintrc": "3.3.1",
+		"@eslint/eslintrc": "3.3.3",
 		"@stylistic/eslint-plugin": "5.0.0-beta.4",
 		"eslint-config-prettier": "10.1.5",
 		"eslint-config-xo": "0.47.0",
