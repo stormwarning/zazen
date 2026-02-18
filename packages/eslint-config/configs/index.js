@@ -144,7 +144,7 @@ const rules = {
 		'unicorn/prevent-abbreviations': [
 			'error',
 			{
-				allowList: { args: true, lib: true },
+				allowList: { args: true, lib: true, props: true },
 				replacements: {
 					whitelist: {
 						include: true,
