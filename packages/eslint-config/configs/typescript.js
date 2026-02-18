@@ -146,11 +146,19 @@ export const rulesTs = {
 		 */
 		'perfectionist/sort-interfaces': [
 			'warn',
-			{ ignoreCase: false, groupKind: 'required-first', type: 'natural' },
+			{
+				ignoreCase: false,
+				type: 'natural',
+				groups: ['required', 'optional'],
+			},
 		],
 		'perfectionist/sort-object-types': [
 			'warn',
-			{ ignoreCase: false, groupKind: 'required-first', type: 'natural' },
+			{
+				ignoreCase: false,
+				type: 'natural',
+				groups: ['required', 'optional'],
+			},
 		],
 	},
 }
