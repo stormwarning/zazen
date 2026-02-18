@@ -52,7 +52,7 @@
 		"@stylistic/eslint-plugin": "5.8.0",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-config-xo": "0.49.0",
-		"eslint-config-xo-typescript": "9.0.1",
+		"eslint-config-xo-typescript": "9.0.0",
 		"eslint-plugin-decorator-position": "6.0.0",
 		"eslint-plugin-etc": "2.0.3",
 		"eslint-plugin-import-sorting": "2.2.0",

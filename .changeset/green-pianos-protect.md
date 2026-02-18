@@ -8,7 +8,7 @@ Upgrade plugin dependencies and change minimum Node version to 20.10.0.
 - `@stylistic/eslint-plugin` to 5.8.0
 - `eslint-config-prettier` to 10.1.8
 - `eslint-config-xo` to 0.49.0
-- `eslint-config-xo-typescript` to 9.0.1
+- `eslint-config-xo-typescript` to 9.0.0
 - `eslint-plugin-import-x` to 4.16.1
 - `eslint-plugin-n` to 17.24.0
 - `eslint-plugin-perfectionist` to 5.6.0
