@@ -86,8 +86,8 @@ importers:
         version: 1.8.1
     devDependencies:
       '@types/sade':
-        specifier: 1.7.8
-        version: 1.7.8
+        specifier: 1.8.0
+        version: 1.8.0
       ava:
         specifier: 5.3.1
         version: 5.3.1
@@ -913,18 +913,15 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/mri@1.2.0':
-    resolution: {integrity: sha512-G4+QT8Plq6q1UnOX6JgtLrEU/4QXF/Z5oNr6TWdiv9EU2hsJPbemH4rCecwNajzij+2CxrxFg2Y98Q+ViDV79Q==}
-    deprecated: This is a stub types definition. mri provides its own type definitions, so you do not need this installed.
-
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
   '@types/node@20.14.2':
     resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
 
-  '@types/sade@1.7.8':
-    resolution: {integrity: sha512-WGEWfxQ8VHLm3JS4ljRR3MSPqVjY0JMo6zsbBywOjFIxP8Cizxx1p6r6FxOnAOZpUn4VOFoRRTXFmaOLD/+VOQ==}
+  '@types/sade@1.8.0':
+    resolution: {integrity: sha512-AaEFFSbi9xUFPVmsmlo0X8gXpdUJxoT6Ve36Qqorqb/wxagc5v4W44mCPeiw5HqWjwypJ1X1qNL7lmofqX5C7g==}
+    deprecated: This is a stub types definition. sade provides its own type definitions, so you do not need this installed.
 
   '@types/semver@7.7.1':
     resolution: {integrity: sha512-FmgJfu+MOcQ370SD0ev7EI8TlCAfKYU+B4m5T3yXc1CiRN94g/SZPtsCkk506aUDtlMnFZvasDwHHUcZUEaYuA==}
@@ -4405,19 +4402,15 @@ snapshots:
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/mri@1.2.0':
-    dependencies:
-      mri: 1.2.0
-
   '@types/node@12.20.55': {}
 
   '@types/node@20.14.2':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/sade@1.7.8':
+  '@types/sade@1.8.0':
     dependencies:
-      '@types/mri': 1.2.0
+      sade: 1.8.1
 
   '@types/semver@7.7.1': {}
 
