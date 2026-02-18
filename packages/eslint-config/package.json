@@ -28,6 +28,9 @@
 		},
 		"./typescript": {
 			"import": "./configs/typescript.js"
+		},
+		"./globals": {
+			"import": "./utils/globals.js"
 		}
 	},
 	"types": "./index.d.ts",
@@ -45,22 +48,22 @@
 		"test": "vitest run"
 	},
 	"dependencies": {
-		"@eslint/eslintrc": "3.3.1",
-		"@stylistic/eslint-plugin": "5.0.0-beta.4",
-		"eslint-config-prettier": "10.1.5",
-		"eslint-config-xo": "0.47.0",
-		"eslint-config-xo-typescript": "8.0.1",
+		"@eslint/eslintrc": "3.3.3",
+		"@stylistic/eslint-plugin": "5.8.0",
+		"eslint-config-prettier": "10.1.8",
+		"eslint-config-xo": "0.49.0",
+		"eslint-config-xo-typescript": "9.0.1",
 		"eslint-plugin-decorator-position": "6.0.0",
 		"eslint-plugin-etc": "2.0.3",
 		"eslint-plugin-import-sorting": "2.2.0",
-		"eslint-plugin-import-x": "4.15.2",
-		"eslint-plugin-n": "17.20.0",
-		"eslint-plugin-perfectionist": "4.15.0",
-		"eslint-plugin-prefer-let": "4.0.0",
+		"eslint-plugin-import-x": "4.16.1",
+		"eslint-plugin-n": "17.24.0",
+		"eslint-plugin-perfectionist": "5.6.0",
+		"eslint-plugin-prefer-let": "4.1.0",
 		"eslint-plugin-promise": "7.2.1",
-		"eslint-plugin-unicorn": "59.0.1",
-		"globals": "16.2.0",
-		"typescript-eslint": "8.34.1"
+		"eslint-plugin-unicorn": "63.0.0",
+		"globals": "17.3.0",
+		"typescript-eslint": "8.56.0"
 	},
 	"devDependencies": {
 		"ava": "5.3.1",
@@ -71,6 +74,6 @@
 		"eslint": "^9.25.0"
 	},
 	"engines": {
-		"node": ">=18"
+		"node": "^20.10.0"
 	}
 }
