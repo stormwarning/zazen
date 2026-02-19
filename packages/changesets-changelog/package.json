@@ -1,6 +1,6 @@
 {
 	"name": "@zazen/changesets-changelog",
-	"version": "2.0.3",
+	"version": "2.0.4",
 	"description": "Generate changelogs, free of weariness and confusion",
 	"keywords": [
 		"changelog",
