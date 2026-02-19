@@ -9,8 +9,9 @@ import config from '../index.js'
 const VALID_CSS = readFileSync('./__tests__/valid.css', 'utf8')
 const INVALID_CSS = readFileSync('./__tests__/invalid.css', 'utf8')
 const RULE_WARNINGS = new Set([
-	'plugin/use-logical-properties-and-values',
-	'plugin/use-logical-units',
+	// 'logical-css/require-logical-keywords',
+	'logical-css/require-logical-properties',
+	'logical-css/require-logical-units',
 	'order/order',
 	'order/properties-order',
 	'color-named',

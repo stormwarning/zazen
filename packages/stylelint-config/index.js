@@ -154,10 +154,17 @@ export default {
 		 * Encourage the use of logical properties and values.
 		 * @see https://github.com/yuschick/stylelint-plugin-logical-css
 		 */
-		'plugin/use-logical-properties-and-values': [
+		'logical-css/require-logical-keywords': [
+			true,
+			{
+				ignore: ['caption-side', 'offset-anchor', 'offset-position'],
+				severity: 'warning',
+			},
+		],
+		'logical-css/require-logical-properties': [
 			true,
 			{ severity: 'warning' },
 		],
-		'plugin/use-logical-units': [true, { severity: 'warning' }],
+		'logical-css/require-logical-units': [true, { severity: 'warning' }],
 	},
 }
