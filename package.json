@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@changesets/cli": "2.29.8",
-		"@types/node": "20.14.2",
+		"@types/node": "20.19.33",
 		"@zazen/eslint-config": "workspace:*",
 		"@zazen/prettier-config": "workspace:*",
 		"eslint": "9.39.2",
