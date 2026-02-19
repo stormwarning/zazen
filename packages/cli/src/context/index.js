@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import { createRequire } from 'node:module'
 
-import { register } from 'esbuild-register/dist/node.js'
+import { register } from 'esbuild-register'
 
 import { getPathFromCwd } from '../utils.js'
 import defaultConfig from './default-config.js'
@@ -23,11 +23,11 @@ function getZazenConfig() {
 	} else {
 		return {
 			config: {},
-			configPath: null,
+			configPath: undefined,
 		}
 	}
 
-	let { unregister } = register({ target: 'node16' })
+	let { unregister } = register({ target: 'node18' })
 	let config = require(configPath)
 	unregister()
 
