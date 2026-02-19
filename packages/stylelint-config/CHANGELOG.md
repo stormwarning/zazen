@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.1
+
+### Patch Changes
+
+- Upgrade dependencies ([#279](https://github.com/stormwarning/zazen/pull/279))
+
 ## 5.1.0
 
 ### Minor Changes

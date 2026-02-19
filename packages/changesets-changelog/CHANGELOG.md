@@ -1,5 +1,11 @@
 # @zazen/changesets-changelog
 
+## 2.0.4
+
+### Patch Changes
+
+- Upgrade `@changesets/get-github-info` to 0.7.0 ([#284](https://github.com/stormwarning/zazen/pull/284))
+
 ## 2.0.3
 
 ### Patch Changes
