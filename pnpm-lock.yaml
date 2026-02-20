@@ -30,8 +30,8 @@ importers:
         specifier: 15.5.2
         version: 15.5.2
       prettier:
-        specifier: 3.4.2
-        version: 3.4.2
+        specifier: 3.8.1
+        version: 3.8.1
       typescript:
         specifier: 5.3.3
         version: 5.3.3
