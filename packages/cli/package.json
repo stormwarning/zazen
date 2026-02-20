@@ -24,7 +24,7 @@
 	"dependencies": {
 		"consola": "3.4.2",
 		"esbuild-register": "3.6.0",
-		"eslint": "9.18.0",
+		"eslint": "9.39.3",
 		"execa": "9.6.1",
 		"outdent": "0.8.0",
 		"prettier": "3.8.1",
