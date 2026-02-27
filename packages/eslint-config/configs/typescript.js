@@ -1,4 +1,5 @@
 import pluginEtc from 'eslint-plugin-etc'
+import { defineConfig } from 'eslint/config'
 import tsEslint from 'typescript-eslint'
 
 import { TS_FILES_GLOB } from '../utils/constants.js'
@@ -173,7 +174,7 @@ export const rulesDts = {
 	},
 }
 
-/** @type {tsEslint.ConfigWithExtends} */
+/** @type {import('eslint').Linter.Config} */
 const typeAware = {
 	name: 'zazen:rules:typescript:type-aware',
 	files: [TS_FILES_GLOB],
@@ -282,6 +283,6 @@ const typeAware = {
 	},
 }
 
-const config = tsEslint.config(typeAware)
+const config = defineConfig(typeAware)
 
 export default config

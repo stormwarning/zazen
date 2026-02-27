@@ -10,7 +10,6 @@ import pluginUnicorn from 'eslint-plugin-unicorn'
 import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 import {
-	config as defineTsConfig,
 	parser as parserTypeScript,
 	plugin as pluginTypeScript,
 } from 'typescript-eslint'
@@ -24,7 +23,7 @@ import {
 } from '../utils/constants.js'
 import { rulesDts, rulesTs } from './typescript.js'
 
-const setup = defineTsConfig({
+const setup = defineConfig({
 	name: 'zazen:setup',
 	languageOptions: {
 		ecmaVersion: 2022,
@@ -264,7 +263,7 @@ const config = defineConfig([
 
 			/**
 			 * Deprecated rules used in eslint-config-xo.
-			 * @todo [eslint-config-xo@>0.47.0]: Check if these are needed.
+			 * @todo [eslint-config-xo@>0.49.0]: Check if these are needed.
 			 */
 			'no-buffer-constructor': 'off',
 			'no-return-await': 'off',
