@@ -27,7 +27,7 @@
 		"eslint": "9.18.0",
 		"execa": "9.6.1",
 		"outdent": "0.8.0",
-		"prettier": "3.8.1",
+		"prettier": "3.8.3",
 		"sade": "1.8.1"
 	},
 	"devDependencies": {
