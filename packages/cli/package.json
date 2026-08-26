@@ -33,7 +33,7 @@
 	"devDependencies": {
 		"@types/sade": "1.8.0",
 		"ava": "6.4.1",
-		"esbuild": "0.27.3",
+		"esbuild": "0.28.1",
 		"esm-utils": "4.4.2",
 		"get-bin-path": "11.0.1"
 	},
