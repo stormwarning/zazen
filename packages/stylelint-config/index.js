@@ -127,18 +127,22 @@ export default {
 				hasBlock: false,
 			},
 			'declarations',
-			'rules',
-			{
-				type: 'rule',
-				selector: /^&::[\w-]+$/,
-			},
-			{
-				type: 'rule',
-				selector: /^&:[\w-]+$/,
-			},
 			{
 				type: 'at-rule',
 				hasBlock: true,
+			},
+			{
+				type: 'rule',
+				selector: /^&::/,
+			},
+			'rules',
+			{
+				type: 'rule',
+				selector: /^&:[^:]/,
+			},
+			{
+				type: 'rule',
+				selector: /^&[.[#]/,
 			},
 		],
 
