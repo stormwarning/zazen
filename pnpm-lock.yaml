@@ -131,8 +131,8 @@ importers:
         specifier: 15.5.2
         version: 15.5.2(supports-color@10.2.2)
       prettier:
-        specifier: 3.4.2
-        version: 3.4.2
+        specifier: 3.9.6
+        version: 3.9.6
       typescript:
         specifier: 5.3.3
         version: 5.3.3
@@ -180,8 +180,8 @@ importers:
         specifier: 0.8.0
         version: 0.8.0
       prettier:
-        specifier: 3.8.1
-        version: 3.8.1
+        specifier: 3.9.6
+        version: 3.9.6
       sade:
         specifier: 1.8.1
         version: 1.8.1
@@ -3262,8 +3262,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  prettier@3.8.1:
-    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
+  prettier@3.9.6:
+    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7104,9 +7104,10 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.4.2: {}
+  prettier@3.4.2:
+    optional: true
 
-  prettier@3.8.1: {}
+  prettier@3.9.6: {}
 
   pretty-format@29.7.0:
     dependencies:
