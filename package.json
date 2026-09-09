@@ -8,7 +8,7 @@
 	"scripts": {
 		"build": "pnpm --if-present --filter '@zazen/*' build",
 		"changeset": "changeset add",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"release": "pnpm run build && changeset publish",
 		"test": "pnpm --if-present --filter '@zazen/*' test"
 	},
