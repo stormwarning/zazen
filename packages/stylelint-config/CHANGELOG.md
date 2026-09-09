@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.2.0
+
+### Minor Changes
+
+- Fix block ordering and add compound selectors to the order definition ([#309](https://github.com/stormwarning/zazen/pull/309))
+
 ## 5.1.1
 
 ### Patch Changes
