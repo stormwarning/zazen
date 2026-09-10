@@ -238,8 +238,8 @@ importers:
         specifier: 5.6.0
         version: 5.6.0(eslint@9.39.5(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
       eslint-plugin-prefer-let:
-        specifier: 4.1.0
-        version: 4.1.0
+        specifier: 4.2.2
+        version: 4.2.2
       eslint-plugin-promise:
         specifier: 7.2.1
         version: 7.2.1(eslint@9.39.5(supports-color@10.2.2))
@@ -2273,8 +2273,8 @@ packages:
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
 
-  eslint-plugin-prefer-let@4.1.0:
-    resolution: {integrity: sha512-HTaW2TLQiYeiSBU0TMgU7Uog2ao28BSLLxVWAJadr3j9Bvh5Sz8gh5soW4d+7tV3eZL0sv9QRpTX2zDBRsqdIQ==}
+  eslint-plugin-prefer-let@4.2.2:
+    resolution: {integrity: sha512-FkCmQwZtc4nf6EKDKEYW/lWtApDXxsJA/VXWQQemLhIWWho676CJdgt53AMubOrSOTzzep0dBMP9zVFCCCdxsw==}
     engines: {node: '>=0.10.0'}
 
   eslint-plugin-promise@7.2.1:
@@ -6289,7 +6289,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-prefer-let@4.1.0:
+  eslint-plugin-prefer-let@4.2.2:
     dependencies:
       requireindex: 1.2.0
 
