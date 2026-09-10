@@ -220,8 +220,8 @@ importers:
         specifier: 9.0.0
         version: 9.0.0(eslint@9.39.5(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
       eslint-plugin-decorator-position:
-        specifier: 6.0.0
-        version: 6.0.0(eslint@9.39.5(supports-color@10.2.2))(supports-color@10.2.2)
+        specifier: 6.1.1
+        version: 6.1.1(eslint@9.39.5(supports-color@10.2.2))(supports-color@10.2.2)
       eslint-plugin-etc:
         specifier: 2.0.3
         version: 2.0.3(eslint@9.39.5(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
@@ -2222,12 +2222,12 @@ packages:
       unrs-resolver:
         optional: true
 
-  eslint-plugin-decorator-position@6.0.0:
-    resolution: {integrity: sha512-AUbZbt3JXnmP7Typfba4BIEFkSCc2rA6BkutsYiywIcEoX/yRL7jzqAp4UMpSDNhCMUUAfGt48k3141PhKC07w==}
+  eslint-plugin-decorator-position@6.1.1:
+    resolution: {integrity: sha512-ubUyPxDvD/bnnZdeTFiP6cOYPFk9hYPR73jTaz/iXJ6iqpP8xGBYnFVjMj+dkObD5/HLTxxYA4pkn1ndt9dXSg==}
     engines: {node: '>=14'}
     peerDependencies:
-      '@babel/eslint-parser': ^7.18.2
-      eslint: ^7.31.0 || ^8.0.0 || ^9.0.0
+      '@babel/eslint-parser': ^7.18.2 || ^8.0.0
+      eslint: ^7.31.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
     peerDependenciesMeta:
       '@babel/eslint-parser':
         optional: true
@@ -6208,7 +6208,7 @@ snapshots:
     optionalDependencies:
       unrs-resolver: 1.11.1
 
-  eslint-plugin-decorator-position@6.0.0(eslint@9.39.5(supports-color@10.2.2))(supports-color@10.2.2):
+  eslint-plugin-decorator-position@6.1.1(eslint@9.39.5(supports-color@10.2.2))(supports-color@10.2.2):
     dependencies:
       '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/plugin-proposal-decorators': 7.29.0(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
