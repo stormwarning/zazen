@@ -17,8 +17,8 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"import": "./configs/index.js",
-			"types": "./index.d.ts"
+			"types": "./index.d.ts",
+			"import": "./configs/index.js"
 		},
 		"./node": {
 			"import": "./configs/node.js"
@@ -56,14 +56,14 @@
 		"eslint-plugin-decorator-position": "6.1.1",
 		"eslint-plugin-etc": "2.0.3",
 		"eslint-plugin-import-sorting": "2.2.0",
-		"eslint-plugin-import-x": "4.16.1",
-		"eslint-plugin-n": "17.24.0",
-		"eslint-plugin-perfectionist": "5.6.0",
-		"eslint-plugin-prefer-let": "4.1.0",
-		"eslint-plugin-promise": "7.2.1",
+		"eslint-plugin-import-x": "4.17.1",
+		"eslint-plugin-n": "18.3.0",
+		"eslint-plugin-perfectionist": "5.11.0",
+		"eslint-plugin-prefer-let": "4.2.2",
+		"eslint-plugin-promise": "7.3.0",
 		"eslint-plugin-unicorn": "63.0.0",
-		"globals": "17.3.0",
-		"typescript-eslint": "8.56.0"
+		"globals": "17.12.0",
+		"typescript-eslint": "8.70.0"
 	},
 	"devDependencies": {
 		"ava": "5.3.1",
