@@ -32,6 +32,6 @@
 	"devDependencies": {
 		"@changesets/parse": "0.4.3",
 		"@changesets/types": "6.1.0",
-		"esbuild": "0.28.1"
+		"esbuild": "0.28.2"
 	}
 }
