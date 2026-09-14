@@ -26,12 +26,12 @@
 		"test": "vitest run"
 	},
 	"dependencies": {
-		"@changesets/get-github-info": "0.8.0",
+		"@changesets/get-github-info": "1.0.1",
 		"dotenv": "17.4.2"
 	},
 	"devDependencies": {
-		"@changesets/parse": "0.4.3",
-		"@changesets/types": "6.1.0",
+		"@changesets/parse": "1.0.0",
+		"@changesets/types": "7.0.0",
 		"esbuild": "0.28.2"
 	}
 }
