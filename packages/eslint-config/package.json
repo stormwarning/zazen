@@ -71,7 +71,7 @@
 		"is-plain-obj": "4.1.0"
 	},
 	"peerDependencies": {
-		"eslint": "^9.25.0 || ^10.0.0"
+		"eslint": "^10.0.0"
 	},
 	"engines": {
 		"node": "^20.10.0"
