@@ -1,9 +1,9 @@
 {
-	"$schema": "https://unpkg.com/@changesets/config@1.6.4/schema.json",
+	"$schema": "https://unpkg.com/@changesets/config@4.0.1/schema.json",
 	"access": "public",
 	"baseBranch": "main",
 	"changelog": [
-		"../packages/changesets-changelog/dist/index.cjs",
+		"../packages/changesets-changelog/index.js",
 		{ "repo": "stormwarning/zazen" }
 	],
 	"commit": false,

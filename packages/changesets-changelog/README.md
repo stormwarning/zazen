@@ -12,7 +12,7 @@ Add the following to your `.changeset/config.json`:
 
 ```json
   "changelog": [
-    "@changesets/changelog-github",
+    "@zazen/changesets-changelog",
     { "repo": "org/repo" }
   ],
 ```
