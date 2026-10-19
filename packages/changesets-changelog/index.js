@@ -4,16 +4,17 @@
  * @see https://github.com/atlassian/changesets/blob/main/packages/changelog-github/src/index.ts
  */
 
-import { getInfo, getInfoFromPullRequest } from '@changesets/get-github-info'
+import { getCommitInfo, getPullRequestInfo } from '@changesets/get-github-info'
 import { config } from 'dotenv'
 
 config()
 
 /**
- * @param {Record<string, any> | null} options
+ * @param {Record<string, unknown> | null} options
+ * @returns {asserts options is { repo: string }}
  */
 function validateOptions(options) {
-	if (!options || !options.repo) {
+	if (!options?.repo || typeof options.repo !== 'string') {
 		throw new Error(
 			'Please provide a repo to this changelog generator like this:\n"changelog": ["@zazen/changesets-changelog", { "repo": "org/repo" }]',
 		)
@@ -30,11 +31,11 @@ const changelogFunctions = {
 		let changesetCommits = await Promise.all(
 			changesets.map(async (cs) => {
 				if (cs.commit) {
-					let { links } = await getInfo({
+					let info = await getCommitInfo({
 						repo: options.repo,
 						commit: cs.commit,
 					})
-					return links.commit
+					return info?.commit.markdownLink
 				}
 			}),
 		)
@@ -48,13 +49,13 @@ const changelogFunctions = {
 		return [changesetLink, ...updatedDepenenciesList].join('\n')
 	},
 
-	async getReleaseLine(changeset, type, options) {
+	async getReleaseLine(changeset, _type, options) {
 		validateOptions(options)
 
 		let [repoOwner] = options.repo.split('/')
-		/** @type {number} */
+		/** @type {number | undefined} */
 		let prFromSummary
-		/** @type {string} */
+		/** @type {string | undefined} */
 		let commitFromSummary
 		/** @type {Array<string>} */
 		let usersFromSummary = []
@@ -82,34 +83,35 @@ const changelogFunctions = {
 
 		let links = await (async () => {
 			if (prFromSummary !== undefined) {
-				let { links } = await getInfoFromPullRequest({
+				let info = await getPullRequestInfo({
 					repo: options.repo,
 					pull: prFromSummary,
 				})
 
-				if (commitFromSummary) {
-					links = {
-						...links,
-						commit: `[\`${commitFromSummary}\`](https://github.com/${options.repo}/commit/${commitFromSummary})`,
-					}
+				return {
+					commit: commitFromSummary
+						? `[\`${commitFromSummary}\`](https://github.com/${options.repo}/commit/${commitFromSummary})`
+						: (info?.commit?.markdownLink ?? undefined),
+					pull: info?.pull.markdownLink ?? undefined,
 				}
-
-				return links
 			}
 
 			let commitToFetchFrom = commitFromSummary || changeset.commit
 			if (commitToFetchFrom) {
-				let { links } = await getInfo({
+				let info = await getCommitInfo({
 					repo: options.repo,
 					commit: commitToFetchFrom,
 				})
-				return links
+
+				return {
+					commit: info?.commit.markdownLink ?? undefined,
+					pull: info?.pull?.markdownLink ?? undefined,
+				}
 			}
 
 			return {
-				commit: null,
-				pull: null,
-				user: null,
+				commit: undefined,
+				pull: undefined,
 			}
 		})()
 		let users =
@@ -120,10 +122,14 @@ const changelogFunctions = {
 								`[@${userFromSummary}](https://github.com/${userFromSummary})`,
 						)
 						.join(', ')
-				: null
-		let userThanks = users === null ? '' : `\n  Thanks ${users}!`
+				: undefined
+		let userThanks = users === undefined ? '' : `\n  Thanks ${users}!`
 		let versionInfo =
-			links.pull === null ? ` ${links.commit}` : ` (${links.pull})`
+			links.pull === undefined
+				? links.commit === undefined
+					? ''
+					: ` ${links.commit}`
+				: ` (${links.pull})`
 		let description =
 			futureLines.length > 0
 				? `\n${futureLines.map((l) => `  ${l}`).join('\n')}`

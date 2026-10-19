@@ -25,6 +25,7 @@ const config = defineConfig([
 				'error',
 				{ allowObject: true },
 			],
+			'etc/prefer-less-than': 'off',
 		},
 	},
 	{

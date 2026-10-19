@@ -50,13 +50,12 @@ jobs:
       # https://github.com/changesets/action
       - name: Create release PR or publish to npm
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
           # This expects you to have a script called release which does a build
           # for your packages and calls changeset publish
-          publish: npm run release
-          commit: Publish release
-          title: Publish release
+          publish-script: npm run release
+          commit-message: Publish release
+          pr-title: Publish release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: true

@@ -1,5 +1,5 @@
-import parse from '@changesets/parse'
-import { vi, describe, test, it, expect } from 'vitest'
+import { parseChangesetFile } from '@changesets/parse'
+import { describe, expect, it, test, vi } from 'vitest'
 
 import changelogFunctions from '../index.js'
 
@@ -21,30 +21,32 @@ vi.mock('@changesets/get-github-info', () => {
 		pull: 420,
 		repo: 'stormwarning/zazen',
 	}
-	let links = {
-		user: `[@${data.user}](https://github.com/${data.user})`,
-		pull: `[#${data.pull}](https://github.com/${data.repo}/pull/${data.pull})`,
-		commit: `[\`${data.commit}\`](https://github.com/${data.repo}/commit/${data.commit})`,
+	let pull = {
+		number: data.pull,
+		url: `https://github.com/${data.repo}/pull/${data.pull}`,
+		markdownLink: `[#${data.pull}](https://github.com/${data.repo}/pull/${data.pull})`,
+	}
+	let commit = {
+		sha: data.commit,
+		url: `https://github.com/${data.repo}/commit/${data.commit}`,
+		markdownLink: `[\`${data.commit}\`](https://github.com/${data.repo}/commit/${data.commit})`,
+	}
+	let author = {
+		login: data.user,
+		url: `https://github.com/${data.user}`,
+		markdownLink: `[@${data.user}](https://github.com/${data.user})`,
 	}
 
 	return {
-		async getInfo({ commit, repo }) {
-			expect(commit).toBe(data.commit)
+		async getCommitInfo({ commit: sha, repo }) {
+			expect(sha).toBe(data.commit)
 			expect(repo).toBe(data.repo)
-			return {
-				pull: data.pull,
-				user: data.user,
-				links,
-			}
+			return { commit, author, pull }
 		},
-		async getInfoFromPullRequest({ pull, repo }) {
-			expect(pull).toBe(data.pull)
+		async getPullRequestInfo({ pull: number, repo }) {
+			expect(number).toBe(data.pull)
 			expect(repo).toBe(data.repo)
-			return {
-				commit: data.commit,
-				user: data.user,
-				links,
-			}
+			return { pull, author, commit }
 		},
 	}
 })
@@ -53,11 +55,12 @@ vi.mock('@changesets/get-github-info', () => {
  * @param {string} content
  * @param {string} [commit]
  * @param {string} [line]
+ * @returns {Parameters<import('@changesets/types').GetReleaseLine>}
  */
 function getChangeset(content, commit, line = 'multi') {
 	return [
 		{
-			...parse(
+			...parseChangesetFile(
 				`---
 pkg: "minor"
 ---
