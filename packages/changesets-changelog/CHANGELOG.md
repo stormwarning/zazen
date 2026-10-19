@@ -1,5 +1,13 @@
 # @zazen/changesets-changelog
 
+## 3.0.0
+
+### Major Changes
+
+- Drop CommonJS build and support Changesets v3 ([#342](https://github.com/stormwarning/zazen/pull/342))
+
+    Requires Node `^22.11 || ^24 || >=26`.
+
 ## 2.0.4
 
 ### Patch Changes
