@@ -193,8 +193,8 @@ importers:
         specifier: 17.6.0
         version: 17.6.0
       prettier:
-        specifier: 3.9.6
-        version: 3.9.6
+        specifier: 3.9.10
+        version: 3.9.10
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -239,8 +239,8 @@ importers:
         specifier: 0.8.0
         version: 0.8.0
       prettier:
-        specifier: 3.9.6
-        version: 3.9.6
+        specifier: 3.9.10
+        version: 3.9.10
       sade:
         specifier: 1.8.1
         version: 1.8.1
@@ -2933,6 +2933,11 @@ packages:
     peerDependenciesMeta:
       prettier:
         optional: true
+
+  prettier@3.9.10:
+    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   prettier@3.9.6:
     resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
@@ -6159,7 +6164,10 @@ snapshots:
     optionalDependencies:
       prettier: 3.9.6
 
-  prettier@3.9.6: {}
+  prettier@3.9.10: {}
+
+  prettier@3.9.6:
+    optional: true
 
   pretty-ms@8.0.0:
     dependencies:
